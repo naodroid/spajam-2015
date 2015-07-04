@@ -53,7 +53,7 @@
 		35EE208C1B47FCED00C92DE4 /* MyQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE208B1B47FCED00C92DE4 /* MyQuiz.swift */; };
 		35EE20901B47FDB700C92DE4 /* MyQuizViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EE208E1B47FDB700C92DE4 /* MyQuizViewController.storyboard */; };
 		35EE20911B47FDB700C92DE4 /* MyQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE208F1B47FDB700C92DE4 /* MyQuizViewController.swift */; };
-		35EE20931B47FE2E00C92DE4 /* MyQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20921B47FE2E00C92DE4 /* MyQuizTableViewCell.swift */; };
+		35EE20931B47FE2E00C92DE4 /* MyQuizCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20921B47FE2E00C92DE4 /* MyQuizCollectionViewCell.swift */; };
 		5C204D121B485916003852CA /* setting_ohako_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C204D0C1B485916003852CA /* setting_ohako_bg@2x.png */; };
 		5C204D131B485916003852CA /* settings_ohako_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C204D0D1B485916003852CA /* settings_ohako_default@2x.png */; };
 		5C204D141B485916003852CA /* settings_ohako_kentei_button_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C204D0E1B485916003852CA /* settings_ohako_kentei_button_default@2x.png */; };
@@ -138,7 +138,7 @@
 		35EE208B1B47FCED00C92DE4 /* MyQuiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuiz.swift; sourceTree = "<group>"; };
 		35EE208E1B47FDB700C92DE4 /* MyQuizViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyQuizViewController.storyboard; sourceTree = "<group>"; };
 		35EE208F1B47FDB700C92DE4 /* MyQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuizViewController.swift; sourceTree = "<group>"; };
-		35EE20921B47FE2E00C92DE4 /* MyQuizTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuizTableViewCell.swift; sourceTree = "<group>"; };
+		35EE20921B47FE2E00C92DE4 /* MyQuizCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuizCollectionViewCell.swift; sourceTree = "<group>"; };
 		3F1A743370D0FDF3F1155F43 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C204D0C1B485916003852CA /* setting_ohako_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting_ohako_bg@2x.png"; sourceTree = "<group>"; };
 		5C204D0D1B485916003852CA /* settings_ohako_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings_ohako_default@2x.png"; sourceTree = "<group>"; };
@@ -418,7 +418,7 @@
 			children = (
 				35EE208E1B47FDB700C92DE4 /* MyQuizViewController.storyboard */,
 				35EE208F1B47FDB700C92DE4 /* MyQuizViewController.swift */,
-				35EE20921B47FE2E00C92DE4 /* MyQuizTableViewCell.swift */,
+				35EE20921B47FE2E00C92DE4 /* MyQuizCollectionViewCell.swift */,
 				35B177411B48189B000FD71A /* SetQuizViewController.swift */,
 				35B177431B482071000FD71A /* SetRankViewController.swift */,
 			);
@@ -511,6 +511,7 @@
 				TargetAttributes = {
 					35EE1FF01B45768B00C92DE4 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 5JHB3Z4BRX;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -643,7 +644,7 @@
 				35EE205B1B457BD300C92DE4 /* CameraShutterButton.m in Sources */,
 				35EE205C1B457BD300C92DE4 /* CameraToggleButton.m in Sources */,
 				35B177481B484340000FD71A /* Quiz.swift in Sources */,
-				35EE20931B47FE2E00C92DE4 /* MyQuizTableViewCell.swift in Sources */,
+				35EE20931B47FE2E00C92DE4 /* MyQuizCollectionViewCell.swift in Sources */,
 				35EE20601B457BD300C92DE4 /* CameraStyleKitClass.m in Sources */,
 				35EE20531B457BD300C92DE4 /* EventBus.swift in Sources */,
 				35EE20581B457BD300C92DE4 /* CameraDismissButton.m in Sources */,
@@ -780,9 +781,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = spajam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "spajam/src/spajam-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -794,9 +798,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = spajam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "spajam/src/spajam-Bridging-Header.h";
 			};
 			name = Release;

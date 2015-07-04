@@ -13,152 +13,112 @@
                         <viewControllerLayoutGuide type="bottom" id="t5c-Be-6wg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bdh-BR-A7G">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
                             <userLayoutGuide location="290" affinity="minY"/>
                         </userGuides>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTJ-xE-fD6" userLabel="headerView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting_ohako_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="1w7-ra-Omj" userLabel="bgImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLO-hi-7kg" userLabel="contentsArea">
+                                <rect key="frame" x="55" y="100" width="320" height="567"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sae-KP-SHm" userLabel="headerInner">
-                                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="オハコリスト" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZU2-51-ls4">
-                                                <rect key="frame" x="109" y="12" width="102" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uoc-Hs-b2f">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="501"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L8g-2t-LL4">
+                                            <size key="itemSize" width="150" height="230"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="OeX-Q8-y4M" customClass="MyQuizCollectionViewCell" customModule="spajam" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="230"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nne-fb-OXe" userLabel="categoryImageView">
+                                                            <rect key="frame" x="17" y="20" width="125" height="143"/>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings_ohako_selected.png" translatesAutoresizingMaskIntoConstraints="NO" id="oan-lj-Rmr" userLabel="hexImageView">
+                                                            <rect key="frame" x="17" y="20" width="125" height="143"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings_ohako_kentei_button_default.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kk5-kH-aAf">
+                                                            <rect key="frame" x="28" y="190" width="95" height="35"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CategoryName!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDA-21-nWg">
+                                                            <rect key="frame" x="14" y="163" width="122" height="21"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <connections>
+                                                    <outlet property="categoryImageView" destination="nne-fb-OXe" id="224-wp-77w"/>
+                                                    <outlet property="categoryLabel" destination="LDA-21-nWg" id="024-th-XxE"/>
+                                                    <outlet property="hasQuizImageView" destination="Kk5-kH-aAf" id="uRh-BM-kYf"/>
+                                                    <outlet property="hexImageView" destination="oan-lj-Rmr" id="8pa-Sp-gEk"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlx-Kv-hts" userLabel="okButton">
+                                        <rect key="frame" x="43" y="513" width="234" height="42"/>
                                         <constraints>
-                                            <constraint firstAttribute="centerY" secondItem="ZU2-51-ls4" secondAttribute="centerY" id="1j3-TQ-Imt"/>
-                                            <constraint firstAttribute="centerX" secondItem="ZU2-51-ls4" secondAttribute="centerX" id="kBq-tv-dP2"/>
+                                            <constraint firstAttribute="width" constant="234" id="8DF-XH-cUj"/>
+                                            <constraint firstAttribute="height" constant="42" id="o9s-8h-hLQ"/>
                                         </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.9430831755050505" green="0.9430831755050505" blue="0.9430831755050505" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="Sae-KP-SHm" firstAttribute="top" secondItem="BTJ-xE-fD6" secondAttribute="top" constant="20" id="5JM-Il-aYd"/>
-                                    <constraint firstAttribute="height" constant="64" id="9Zs-zy-Bz4"/>
-                                    <constraint firstAttribute="trailing" secondItem="Sae-KP-SHm" secondAttribute="trailing" id="Mr2-wa-ygT"/>
-                                    <constraint firstAttribute="bottom" secondItem="Sae-KP-SHm" secondAttribute="bottom" id="hTt-v3-Szl"/>
-                                    <constraint firstItem="Sae-KP-SHm" firstAttribute="leading" secondItem="BTJ-xE-fD6" secondAttribute="leading" id="vC2-eQ-gbf"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbc-tb-zxP" userLabel="loadingView">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aEx-6u-UoA">
-                                        <rect key="frame" x="142" y="234" width="37" height="37"/>
+                                        <state key="normal" image="settings_ohako_start_button.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aEx-6u-UoA">
+                                        <rect key="frame" x="142" y="265" width="37" height="37"/>
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="centerX" secondItem="aEx-6u-UoA" secondAttribute="centerX" id="YtA-KO-Pwt"/>
-                                    <constraint firstAttribute="centerY" secondItem="aEx-6u-UoA" secondAttribute="centerY" id="vSs-Ki-EgW"/>
-                                </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="khW-Eo-QrG">
-                                <rect key="frame" x="0.0" y="64" width="320" height="452"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="dtm-CU-6Mz" customClass="MyQuizTableViewCell" customModule="spajam" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dtm-CU-6Mz" id="4ld-qX-q3D">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvu-k3-ZL0" userLabel="categoryLabel">
-                                                    <rect key="frame" x="66" y="8" width="242" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yj7-3A-fdv" userLabel="imageView">
-                                                    <rect key="frame" x="8" y="7" width="50" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="HZ1-lJ-Sgp"/>
-                                                        <constraint firstAttribute="width" constant="50" id="f2q-ec-vYL"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="クイズ未設定" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZj-VM-1yU" userLabel="quizLabel">
-                                                    <rect key="frame" x="66" y="40" width="72" height="15"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Nvu-k3-ZL0" secondAttribute="trailing" constant="12" id="3RK-jh-pO5"/>
-                                                <constraint firstItem="MZj-VM-1yU" firstAttribute="leading" secondItem="Yj7-3A-fdv" secondAttribute="trailing" constant="8" id="3ii-Ty-MDi"/>
-                                                <constraint firstItem="Nvu-k3-ZL0" firstAttribute="leading" secondItem="Yj7-3A-fdv" secondAttribute="trailing" constant="8" id="RbA-gj-ymo"/>
-                                                <constraint firstItem="Yj7-3A-fdv" firstAttribute="leading" secondItem="4ld-qX-q3D" secondAttribute="leading" constant="8" id="gXr-s2-bYj"/>
-                                                <constraint firstItem="Nvu-k3-ZL0" firstAttribute="top" secondItem="4ld-qX-q3D" secondAttribute="top" constant="8" id="r9f-MI-j0p"/>
-                                                <constraint firstAttribute="bottom" secondItem="MZj-VM-1yU" secondAttribute="bottom" constant="8" id="uwe-qg-dQ2"/>
-                                                <constraint firstAttribute="centerY" secondItem="Yj7-3A-fdv" secondAttribute="centerY" id="y0N-c7-dju"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="categoryLabel" destination="Nvu-k3-ZL0" id="ov6-aC-P7N"/>
-                                            <outlet property="iconImageView" destination="Yj7-3A-fdv" id="po7-Na-Teo"/>
-                                            <outlet property="quizLabel" destination="MZj-VM-1yU" id="ZPb-MI-t3u"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRd-fa-sxd" userLabel="bottomView">
-                                <rect key="frame" x="0.0" y="516" width="320" height="52"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HV0-53-ilI">
-                                        <rect key="frame" x="88" y="9" width="144" height="34"/>
-                                        <state key="normal" title="オハコをはじめる">
-                                            <color key="titleColor" red="0.093058648689999995" green="0.62087748149999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="didClickDecideButton:" destination="lmq-LK-m1n" eventType="touchUpInside" id="Oqh-9W-zU8"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="k1V-tD-BEG"/>
-                                    <constraint firstAttribute="centerX" secondItem="HV0-53-ilI" secondAttribute="centerX" id="keV-0J-Q8h"/>
-                                    <constraint firstAttribute="centerY" secondItem="HV0-53-ilI" secondAttribute="centerY" id="r2S-D6-GXf"/>
+                                    <constraint firstAttribute="centerX" secondItem="aEx-6u-UoA" secondAttribute="centerX" id="MJY-eK-Z5H"/>
+                                    <constraint firstAttribute="trailing" secondItem="uoc-Hs-b2f" secondAttribute="trailing" id="Rmw-xp-nEw"/>
+                                    <constraint firstAttribute="bottom" secondItem="Tlx-Kv-hts" secondAttribute="bottom" constant="12" id="Vtt-AT-Tlw"/>
+                                    <constraint firstItem="Tlx-Kv-hts" firstAttribute="top" secondItem="uoc-Hs-b2f" secondAttribute="bottom" constant="12" id="Zh1-uK-Dsx"/>
+                                    <constraint firstAttribute="centerX" secondItem="Tlx-Kv-hts" secondAttribute="centerX" id="c6R-jh-QZM"/>
+                                    <constraint firstAttribute="centerY" secondItem="aEx-6u-UoA" secondAttribute="centerY" id="dAY-aZ-1aO"/>
+                                    <constraint firstItem="uoc-Hs-b2f" firstAttribute="top" secondItem="TLO-hi-7kg" secondAttribute="top" id="iMt-yx-oIJ"/>
+                                    <constraint firstItem="uoc-Hs-b2f" firstAttribute="leading" secondItem="TLO-hi-7kg" secondAttribute="leading" id="jJE-LC-2vz"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="zbc-tb-zxP" secondAttribute="trailing" id="1vz-xi-dfb"/>
-                            <constraint firstItem="khW-Eo-QrG" firstAttribute="top" secondItem="BTJ-xE-fD6" secondAttribute="bottom" id="EEa-tM-p16"/>
-                            <constraint firstItem="BTJ-xE-fD6" firstAttribute="leading" secondItem="bdh-BR-A7G" secondAttribute="leading" id="GNi-IU-VVR"/>
-                            <constraint firstItem="t5c-Be-6wg" firstAttribute="top" secondItem="zbc-tb-zxP" secondAttribute="bottom" id="Gdl-Lr-z1Z"/>
-                            <constraint firstItem="zbc-tb-zxP" firstAttribute="top" secondItem="BTJ-xE-fD6" secondAttribute="bottom" id="KUb-9g-bFw"/>
-                            <constraint firstItem="MRd-fa-sxd" firstAttribute="top" secondItem="khW-Eo-QrG" secondAttribute="bottom" id="SSw-gc-SqF"/>
-                            <constraint firstItem="khW-Eo-QrG" firstAttribute="leading" secondItem="bdh-BR-A7G" secondAttribute="leading" id="Wc3-t7-cKJ"/>
-                            <constraint firstItem="BTJ-xE-fD6" firstAttribute="top" secondItem="bdh-BR-A7G" secondAttribute="top" id="aUR-hN-eUK"/>
-                            <constraint firstAttribute="trailing" secondItem="khW-Eo-QrG" secondAttribute="trailing" id="cx6-sR-cSO"/>
-                            <constraint firstAttribute="trailing" secondItem="BTJ-xE-fD6" secondAttribute="trailing" id="fV2-rt-esE"/>
-                            <constraint firstItem="zbc-tb-zxP" firstAttribute="leading" secondItem="bdh-BR-A7G" secondAttribute="leading" id="lPr-d8-Wfm"/>
-                            <constraint firstAttribute="trailing" secondItem="MRd-fa-sxd" secondAttribute="trailing" id="nT6-Ds-cH7"/>
-                            <constraint firstItem="t5c-Be-6wg" firstAttribute="top" secondItem="MRd-fa-sxd" secondAttribute="bottom" id="rg0-Gg-x9a"/>
-                            <constraint firstItem="MRd-fa-sxd" firstAttribute="leading" secondItem="bdh-BR-A7G" secondAttribute="leading" id="sbp-zc-CkL"/>
+                            <constraint firstItem="TLO-hi-7kg" firstAttribute="top" secondItem="4X3-yV-Xh4" secondAttribute="bottom" constant="80" id="4WQ-z4-5GD"/>
+                            <constraint firstItem="1w7-ra-Omj" firstAttribute="leading" secondItem="bdh-BR-A7G" secondAttribute="leading" id="FOW-Gi-XE9"/>
+                            <constraint firstItem="1w7-ra-Omj" firstAttribute="top" secondItem="bdh-BR-A7G" secondAttribute="top" id="GCq-FR-l9I"/>
+                            <constraint firstItem="TLO-hi-7kg" firstAttribute="leading" secondItem="bdh-BR-A7G" secondAttribute="leading" constant="55" id="LCL-k4-hlw"/>
+                            <constraint firstAttribute="trailing" secondItem="TLO-hi-7kg" secondAttribute="trailing" id="LZd-MI-uCy"/>
+                            <constraint firstItem="t5c-Be-6wg" firstAttribute="top" secondItem="1w7-ra-Omj" secondAttribute="bottom" id="WYb-5i-wbb"/>
+                            <constraint firstAttribute="trailing" secondItem="1w7-ra-Omj" secondAttribute="trailing" id="dfz-p0-h57"/>
+                            <constraint firstItem="t5c-Be-6wg" firstAttribute="top" secondItem="TLO-hi-7kg" secondAttribute="bottom" id="gOQ-tz-AXp"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="loadingView" destination="zbc-tb-zxP" id="22z-RD-V4l"/>
-                        <outlet property="tableView" destination="khW-Eo-QrG" id="RQL-Jz-2o8"/>
+                        <outlet property="collectionView" destination="uoc-Hs-b2f" id="Wgb-4K-Hmr"/>
+                        <outlet property="loadingIndicator" destination="aEx-6u-UoA" id="zwK-Mt-dOm"/>
+                        <outlet property="okButton" destination="Tlx-Kv-hts" id="OjJ-QU-FjH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1n-4Y-goG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="505"/>
+            <point key="canvasLocation" x="138.5" y="504.5"/>
         </scene>
         <!--Set Quiz View Controller-->
         <scene sceneID="Ee4-ZU-Pje">
@@ -455,6 +415,12 @@
             <point key="canvasLocation" x="905" y="505"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="setting_ohako_bg.png" width="320" height="568"/>
+        <image name="settings_ohako_kentei_button_default.png" width="95" height="35"/>
+        <image name="settings_ohako_selected.png" width="96" height="107"/>
+        <image name="settings_ohako_start_button.png" width="234" height="42"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
