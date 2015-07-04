@@ -12,7 +12,9 @@ class SetQuizViewController: UIViewController {
 
     //IB
     @IBOutlet var imageButtons: [UIButton]!
-    @IBOutlet var rankButtons: [UIButton]!
+    
+    @IBOutlet var rankViews: [QuizRankChoiceView]!
+    
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var okButton: UIButton!
     //
@@ -39,8 +41,13 @@ class SetQuizViewController: UIViewController {
         self.imageButtons.foreach {
             $0.addTarget(self, action: "didClickImageButton:", forControlEvents: .TouchUpInside)
         }
-        self.rankButtons.foreach {
-            $0.addTarget(self, action: "didClickRankButton:", forControlEvents: .TouchUpInside)
+        self.rankViews.foreach {(view) in
+            view.didRankChange = {(rank) -> Void in
+                let index = view.tag - 1
+                let ans = self.myQuiz.answers[index]
+                ans.rank = rank
+                self.setupForCurrentQuiz()
+            }
         }
         self.setupForCurrentQuiz()
     }
@@ -55,7 +62,7 @@ class SetQuizViewController: UIViewController {
         var enabled = true
         for i in 0..<count {
             let img = self.imageButtons[i]
-            let btn = self.rankButtons[i]
+            let btn = self.rankViews[i]
             
             let ans = answers[i]
             
@@ -65,9 +72,12 @@ class SetQuizViewController: UIViewController {
             } else {
                 img.setTitle("画像未設定", forState: .Normal)
                 img.setImage(nil, forState: .Normal)
+            }
+            if ans.image == nil || ans.rank == nil {
                 enabled = false
             }
-            btn.setTitle(ans.rank?.displayText(), forState: .Normal)
+            
+            btn.rank = ans.rank
             btn.hidden = false
         }
         okButton.enabled = enabled
@@ -111,7 +121,7 @@ class SetQuizViewController: UIViewController {
         }
         
     }
-    @IBAction func didClickOutside(sender: AnyObject) {
+    @IBAction func didClickCancel(sender: AnyObject) {
         startExitAnimation()
     }
     //確定処理
@@ -123,6 +133,7 @@ class SetQuizViewController: UIViewController {
         }
         
         self.loadingIndicator.startAnimating()
+        self.okButton.enabled = false
         
         Api.setQuiz(self.category, answers: answers).then {(result : String) -> Void in
             MyQuizList.instance().list[self.category] = self.myQuiz
@@ -131,6 +142,9 @@ class SetQuizViewController: UIViewController {
             EventBus.sendEvent(MyQuizUpdatedEvent(myQuiz: self.myQuiz))
             self.startExitAnimation()
             self.loadingIndicator.stopAnimating()
+        }.finally(on: dispatch_get_main_queue()) { () -> Void in
+            self.loadingIndicator.stopAnimating()
+            self.setupForCurrentQuiz()
         }
     }
     func validateAnswers() -> [MyQuizAnswer] {
@@ -144,7 +158,9 @@ class SetQuizViewController: UIViewController {
     func startImageSelection(index : Int) {
         PhotoUtil.imagePickPromise(self).then {(image : UIImage) -> Void in
             let resized = SetQuizViewController.resizeImage(image)
-            self.showRankActionSheet(index, image: resized)
+            let ans = self.myQuiz.answers[index]
+            ans.image = image
+            self.setupForCurrentQuiz()
         }
     }
     
