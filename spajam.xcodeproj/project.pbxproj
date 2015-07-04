@@ -36,6 +36,8 @@
 		35EE20671B457C0100C92DE4 /* AVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20661B457C0100C92DE4 /* AVPlayerView.m */; };
 		35EE206B1B457C6900C92DE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EE20691B457C6900C92DE4 /* Main.storyboard */; };
 		35EE206C1B457C6900C92DE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE206A1B457C6900C92DE4 /* ViewController.swift */; };
+		35EE206E1B47D04E00C92DE4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EE206D1B47D04E00C92DE4 /* MapKit.framework */; };
+		35EE20701B47D05800C92DE4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EE206F1B47D05800C92DE4 /* CoreLocation.framework */; };
 		C986EDEFB8951476949FED82 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1A743370D0FDF3F1155F43 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -97,6 +99,8 @@
 		35EE20661B457C0100C92DE4 /* AVPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerView.m; sourceTree = "<group>"; };
 		35EE20691B457C6900C92DE4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		35EE206A1B457C6900C92DE4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		35EE206D1B47D04E00C92DE4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		35EE206F1B47D05800C92DE4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3F1A743370D0FDF3F1155F43 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD42F5D5EA05AC7C02439E5E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EE20701B47D05800C92DE4 /* CoreLocation.framework in Frameworks */,
+				35EE206E1B47D04E00C92DE4 /* MapKit.framework in Frameworks */,
 				C986EDEFB8951476949FED82 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +343,8 @@
 		70968FA8193D2C0207920E93 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35EE206F1B47D05800C92DE4 /* CoreLocation.framework */,
+				35EE206D1B47D04E00C92DE4 /* MapKit.framework */,
 				3F1A743370D0FDF3F1155F43 /* Pods.framework */,
 			);
 			name = Frameworks;
