@@ -11,7 +11,7 @@ import UIKit
 
 
 class MyQuiz : NSObject, NSCoding {
-    var title : String = ""
+    var category : String = ""
     var images = [UIImage]()
     
     override init() {
@@ -19,11 +19,11 @@ class MyQuiz : NSObject, NSCoding {
     }
     
     required init(coder aDecoder: NSCoder) {
-        title = aDecoder.decodeObjectForKey("title") as! String
+        category = aDecoder.decodeObjectForKey("category") as! String
         images = aDecoder.decodeObjectForKey("images") as! [UIImage]
     }
     func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(self.title, forKey: "title")
+        aCoder.encodeObject(self.category, forKey: "category")
         aCoder.encodeObject(self.images, forKey: "images")
     }
 }
