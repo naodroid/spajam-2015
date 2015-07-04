@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35AF74431B488FBD003E7D88 /* AutoScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AF74421B488FBD003E7D88 /* AutoScaleView.swift */; };
 		35B177401B481527000FD71A /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1773F1B481527000FD71A /* Api.swift */; };
 		35B177421B48189B000FD71A /* SetQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B177411B48189B000FD71A /* SetQuizViewController.swift */; };
 		35B177441B482071000FD71A /* SetRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B177431B482071000FD71A /* SetRankViewController.swift */; };
@@ -76,6 +77,7 @@
 
 /* Begin PBXFileReference section */
 		2B99ACC730962BD127416909 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		35AF74421B488FBD003E7D88 /* AutoScaleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoScaleView.swift; sourceTree = "<group>"; };
 		35B1773F1B481527000FD71A /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		35B177411B48189B000FD71A /* SetQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetQuizViewController.swift; sourceTree = "<group>"; };
 		35B177431B482071000FD71A /* SetRankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetRankViewController.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				35EE20221B457BCA00C92DE4 /* AutoLayoutUtil.swift */,
 				35EE20231B457BCA00C92DE4 /* FileUtil.swift */,
 				35EE20241B457BCA00C92DE4 /* ViewUtil.swift */,
+				35AF74421B488FBD003E7D88 /* AutoScaleView.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				35B1774A1B4846A9000FD71A /* MyQuizUpdatedEvent.swift in Sources */,
 				35EE206C1B457C6900C92DE4 /* ViewController.swift in Sources */,
 				35EE20511B457BD300C92DE4 /* PhotoUtil.swift in Sources */,
+				35AF74431B488FBD003E7D88 /* AutoScaleView.swift in Sources */,
 				35EE205B1B457BD300C92DE4 /* CameraShutterButton.m in Sources */,
 				35EE205C1B457BD300C92DE4 /* CameraToggleButton.m in Sources */,
 				35B177481B484340000FD71A /* Quiz.swift in Sources */,
