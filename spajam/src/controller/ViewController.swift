@@ -34,6 +34,18 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-
+    //MARK: event
+    
+    @IBAction func didClickDebug(sender: AnyObject) {
+        //72のユーザIDを決め打ちで取得する
+        Api.quizListProcess(72).then {(quizList) -> Void in
+            println("RECEIVED:\(quizList)")
+            
+        }
+    }
+    
+    
+    
+    
 }
 
