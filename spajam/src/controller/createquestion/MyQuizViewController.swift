@@ -10,12 +10,17 @@ import UIKit
 import SwiftyJSON
 
 class MyQuizViewController: UIViewController,
-                         UITableViewDataSource, UITableViewDelegate {
+                         UICollectionViewDelegate, UICollectionViewDataSource {
 
     ///IB
-    @IBOutlet weak var loadingView: UIView!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var okButton: UIButton!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
+    
+    
+    //data
     private var categories = [CategoryInfo]()
     
     
@@ -30,8 +35,8 @@ class MyQuizViewController: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
         
         dispatchOnGlobal {
             let categories = self.checkMatchedCategories()
@@ -44,7 +49,7 @@ class MyQuizViewController: UIViewController,
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         MyQuizUpdatedEvent.register(self) {(event : MyQuizUpdatedEvent) in
-            self.tableView.reloadData()
+            self.collectionView.reloadData()
         }
     }
     override func viewWillDisappear(animated: Bool) {
@@ -78,12 +83,11 @@ class MyQuizViewController: UIViewController,
     }
     //
     private func setupTableViewFromCategories(categories : [CategoryInfo]) {
-        UIView.animateWithDuration(0.3, animations: { () -> Void in
-            self.loadingView.alpha = 0
-        })
+        self.loadingIndicator.stopAnimating()
+        
         self.categories = categories
         
-        self.tableView.reloadData()
+        self.collectionView.reloadData()
     }
     
     //MARK: UI event
@@ -94,12 +98,12 @@ class MyQuizViewController: UIViewController,
     
     
     //MARK: tableview
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.categories.count
     }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MyQuizTableViewCell
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! MyQuizCollectionViewCell
         
         let index = indexPath.row
         let category = self.categories[index]
@@ -107,8 +111,11 @@ class MyQuizViewController: UIViewController,
         
         cell.updateCell(category: category, hasQuiz: quiz != nil)
         
+
         return cell
     }
+    
+    
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
