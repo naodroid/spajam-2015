@@ -26,6 +26,16 @@ enum QuizRank : Int {
             return "ニワカ"
         }
     }
+    func apiText() -> String {
+        switch self {
+        case .Teacher:
+            return "teacher"
+        case .Friend:
+            return "friend"
+        case .Fickle:
+            return "fickle"
+        }
+    }
 }
 
 class MyQuiz : NSObject, NSCoding {
@@ -37,6 +47,12 @@ class MyQuiz : NSObject, NSCoding {
     }
     init(category : String) {
         self.category = category
+        self.answers = [
+            MyQuizAnswer(),
+            MyQuizAnswer(),
+            MyQuizAnswer(),
+            MyQuizAnswer(),            
+        ]
     }
     
     required init(coder aDecoder: NSCoder) {

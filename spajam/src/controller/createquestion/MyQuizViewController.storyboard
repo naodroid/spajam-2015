@@ -348,10 +348,16 @@
                                                             <action selector="didClickOkButton:" destination="usE-9s-jht" eventType="touchUpInside" id="Alk-gm-h4D"/>
                                                         </connections>
                                                     </button>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="cPu-ko-4Mj">
+                                                        <rect key="frame" x="113" y="3" width="37" height="37"/>
+                                                        <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </activityIndicatorView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="centerY" secondItem="zbg-UY-ICo" secondAttribute="centerY" id="ICf-6L-ixd"/>
+                                                    <constraint firstAttribute="centerY" secondItem="cPu-ko-4Mj" secondAttribute="centerY" id="Q8T-7I-PKR"/>
+                                                    <constraint firstAttribute="centerX" secondItem="cPu-ko-4Mj" secondAttribute="centerX" id="eWc-2X-mSw"/>
                                                     <constraint firstAttribute="centerX" secondItem="zbg-UY-ICo" secondAttribute="centerX" id="l4W-i0-ooA"/>
                                                     <constraint firstAttribute="height" constant="44" id="lBk-3z-TFu"/>
                                                 </constraints>
@@ -395,6 +401,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="loadingIndicator" destination="cPu-ko-4Mj" id="qYO-TS-ViH"/>
                         <outletCollection property="imageButtons" destination="Ekc-ZY-1yU" collectionClass="NSMutableArray" id="Faa-bH-Dov"/>
                         <outletCollection property="rankButtons" destination="1yb-PX-U58" collectionClass="NSMutableArray" id="AJd-mm-wKV"/>
                         <outletCollection property="imageButtons" destination="mbS-QE-WXf" collectionClass="NSMutableArray" id="ew3-14-XLi"/>
