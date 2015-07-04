@@ -109,7 +109,7 @@ static NSString* const kStatusKey = @"status";
     }
     NSTimeInterval time = (NSTimeInterval)[self.seekingList[0] doubleValue];
     NSTimeInterval current = CMTimeGetSeconds(self.player.currentTime);
-    NSTimeInterval max = 0.03;
+    NSTimeInterval max = 0.1;
     if (fabs(current - time) < max || time < 0) {
         [self.seekingList removeObjectAtIndex:0];
     } else {

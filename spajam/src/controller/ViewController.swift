@@ -17,8 +17,10 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        let vc = CategorySelectionViewController.createVC()
-        self.presentViewController(vc, animated: true, completion: nil)
+        if !User.hasAccount() {
+            let vc = PresentationViewController.createVC()
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {

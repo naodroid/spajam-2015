@@ -6,9 +6,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PresentationViewController" customModule="spajam" customModuleProvider="target">
             <connections>
+                <outlet property="lastView" destination="sN2-cz-sQY" id="7uk-Fl-Qr8"/>
+                <outlet property="loadingIndicator" destination="Wsk-Og-xv1" id="IXr-hW-AZ0"/>
                 <outlet property="pageControl" destination="HAx-Jp-ReR" id="Zoi-qd-NQd"/>
                 <outlet property="playerView" destination="SME-sS-7Pv" id="KUw-0R-7lp"/>
                 <outlet property="scrollView" destination="PX1-fl-h31" id="4Zy-PG-SSd"/>
+                <outlet property="userNameTextField" destination="Ebb-EQ-WoU" id="dpJ-Jy-Suy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,13 +28,13 @@
                     <rect key="frame" x="132" y="507" width="55" height="37"/>
                 </pageControl>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PX1-fl-h31" userLabel="scrollView">
-                    <rect key="frame" x="53" y="0.0" width="214" height="568"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="PX1-fl-h31" secondAttribute="trailing" constant="53" id="A7e-fS-uEt"/>
-                <constraint firstItem="PX1-fl-h31" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="53" id="ADy-yG-4ur"/>
+                <constraint firstAttribute="trailing" secondItem="PX1-fl-h31" secondAttribute="trailing" id="A7e-fS-uEt"/>
+                <constraint firstItem="PX1-fl-h31" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ADy-yG-4ur"/>
                 <constraint firstAttribute="bottom" secondItem="HAx-Jp-ReR" secondAttribute="bottom" constant="24" id="AZ6-Aj-EWa"/>
                 <constraint firstAttribute="centerX" secondItem="HAx-Jp-ReR" secondAttribute="centerX" id="BpL-gW-kfz"/>
                 <constraint firstAttribute="trailing" secondItem="SME-sS-7Pv" secondAttribute="trailing" id="CD7-2F-Zo0"/>
@@ -42,6 +45,51 @@
                 <constraint firstItem="PX1-fl-h31" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="krW-kM-Xn7"/>
             </constraints>
             <point key="canvasLocation" x="253" y="357"/>
+        </view>
+        <view contentMode="scaleToFill" id="sN2-cz-sQY" userLabel="lastView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjL-yO-vqQ">
+                    <rect key="frame" x="88" y="267" width="144" height="34"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="アプリを開始する">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didClickStartButton:" destination="-1" eventType="touchUpInside" id="8bn-vd-OZN"/>
+                    </connections>
+                </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Wsk-Og-xv1">
+                    <rect key="frame" x="142" y="266" width="37" height="37"/>
+                </activityIndicatorView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ebb-EQ-WoU">
+                    <rect key="frame" x="30" y="206" width="260" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="260" id="JnL-Cz-cDa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザ名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajZ-jq-MdM">
+                    <rect key="frame" x="30" y="177" width="68" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="cjL-yO-vqQ" secondAttribute="centerX" id="B8b-OX-HZ5"/>
+                <constraint firstAttribute="centerX" secondItem="Ebb-EQ-WoU" secondAttribute="centerX" id="QVp-DO-fef"/>
+                <constraint firstAttribute="centerY" secondItem="cjL-yO-vqQ" secondAttribute="centerY" id="UJ7-lg-P4S"/>
+                <constraint firstItem="ajZ-jq-MdM" firstAttribute="leading" secondItem="Ebb-EQ-WoU" secondAttribute="leading" id="e0T-6i-Tp5"/>
+                <constraint firstAttribute="centerY" secondItem="Wsk-Og-xv1" secondAttribute="centerY" id="kkV-Ys-xIV"/>
+                <constraint firstAttribute="centerX" secondItem="Wsk-Og-xv1" secondAttribute="centerX" id="rut-uP-sfz"/>
+                <constraint firstItem="Wsk-Og-xv1" firstAttribute="top" secondItem="Ebb-EQ-WoU" secondAttribute="bottom" constant="30" id="vf7-JC-0Tw"/>
+                <constraint firstItem="Ebb-EQ-WoU" firstAttribute="top" secondItem="ajZ-jq-MdM" secondAttribute="bottom" constant="8" id="xKl-ST-XC4"/>
+            </constraints>
+            <point key="canvasLocation" x="665" y="354"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

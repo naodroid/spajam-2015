@@ -15,6 +15,12 @@ class PresentationViewController: UIViewController, AVPlayerViewDelegate, UIScro
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    //lastview
+    @IBOutlet var lastView: UIView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var userNameTextField: UITextField!
+    
+    //
     private var lastOffsetX : CGFloat = 0
     
     private let timeInPage : [NSTimeInterval] = [2.0, 4.2, 7.0, 8.5, 11.0];
@@ -40,6 +46,19 @@ class PresentationViewController: UIViewController, AVPlayerViewDelegate, UIScro
         super.didReceiveMemoryWarning()
     }
     
+    //MARK: Event
+    
+    @IBAction func didClickStartButton(sender: AnyObject) {
+        let name = self.userNameTextField.text
+        if count(name) == 0 {
+            return
+        }
+        self.loadingIndicator.hidden = false
+        Api.register(name).then {(user : User) -> Void in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
+    
     
     //MARK: AVPlayer
     func avPlayer(player: AVPlayerView!, didStatuChanged status: AVPlayerStatus) {
@@ -58,15 +77,22 @@ class PresentationViewController: UIViewController, AVPlayerViewDelegate, UIScro
     func setupScrollView() {
         let bounds = self.scrollView.bounds
         let viewW = bounds.size.width
-        let width = viewW * 4
+        let viewH = bounds.size.height
+        let width = viewW * CGFloat(self.timeInPage.count)
         let height = bounds.size.height
         self.scrollView.contentSize = CGSizeMake(width, height)
+        
+        let view = self.lastView
+        if view.superview == nil {
+            self.scrollView.addSubview(view)
+            view.frame = CGRectMake(width - viewW, 0, viewW, viewH)
+        }
+        
         
         self.pageControl.hidden = false
         self.pageControl.numberOfPages = 4
         
         self.scrollView.contentOffset = CGPointMake(-320, 0)
-        
         self.scrollView.setContentOffset(CGPointZero, animated: true)
     }
     func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -89,12 +115,19 @@ class PresentationViewController: UIViewController, AVPlayerViewDelegate, UIScro
         let diff : CGFloat
         let sectionStart : NSTimeInterval
         let sectionEnd : NSTimeInterval
+        let count = self.timeInPage.count
         
         if offset >= 0 {
             page = Int(offset / scrollW)
-            sectionStart = self.timeInPage[page]
-            sectionEnd = self.timeInPage[page + 1]
-            diff = offset - CGFloat(page) * scrollW
+            if (page < count - 1) {
+                sectionStart = self.timeInPage[page]
+                sectionEnd = self.timeInPage[page + 1]
+                diff = offset - CGFloat(page) * scrollW
+            } else {
+                sectionStart = self.timeInPage[count - 1]
+                sectionEnd = sectionStart
+                diff = 0
+            }
         } else {
             page = 0
             sectionStart = 0

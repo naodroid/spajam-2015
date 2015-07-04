@@ -47,6 +47,7 @@
 		35EE20831B47F2C900C92DE4 /* PresentationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EE20811B47F2C900C92DE4 /* PresentationViewController.xib */; };
 		35EE20861B47F41600C92DE4 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20851B47F41600C92DE4 /* Api.swift */; };
 		35EE20881B47F41C00C92DE4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20871B47F41C00C92DE4 /* User.swift */; };
+		35EE208A1B47F6B000C92DE4 /* sample.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 35EE20891B47F6B000C92DE4 /* sample.m4v */; };
 		C986EDEFB8951476949FED82 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1A743370D0FDF3F1155F43 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -119,6 +120,7 @@
 		35EE20811B47F2C900C92DE4 /* PresentationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PresentationViewController.xib; sourceTree = "<group>"; };
 		35EE20851B47F41600C92DE4 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Api.swift; path = ../../../../spajam_fukui/spajam/src/api/Api.swift; sourceTree = "<group>"; };
 		35EE20871B47F41C00C92DE4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../../../../spajam_fukui/spajam/src/api/User.swift; sourceTree = "<group>"; };
+		35EE20891B47F6B000C92DE4 /* sample.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.m4v; sourceTree = "<group>"; };
 		3F1A743370D0FDF3F1155F43 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD42F5D5EA05AC7C02439E5E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -351,6 +353,7 @@
 				35EE20811B47F2C900C92DE4 /* PresentationViewController.xib */,
 				35EE20651B457C0100C92DE4 /* AVPlayerView.h */,
 				35EE20661B457C0100C92DE4 /* AVPlayerView.m */,
+				35EE20891B47F6B000C92DE4 /* sample.m4v */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35EE207B1B47F1F900C92DE4 /* LaunchScreen.xib in Resources */,
+				35EE208A1B47F6B000C92DE4 /* sample.m4v in Resources */,
 				35EE1FFE1B45768B00C92DE4 /* Images.xcassets in Resources */,
 				35EE20831B47F2C900C92DE4 /* PresentationViewController.xib in Resources */,
 				35EE20731B47DC1000C92DE4 /* url_schemes.json in Resources */,
