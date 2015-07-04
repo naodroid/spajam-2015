@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		35EE1FFE1B45768B00C92DE4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EE1FFD1B45768B00C92DE4 /* Images.xcassets */; };
-		35EE20011B45768B00C92DE4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EE1FFF1B45768B00C92DE4 /* LaunchScreen.xib */; };
 		35EE200D1B45768B00C92DE4 /* spajamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE200C1B45768B00C92DE4 /* spajamTests.swift */; };
 		35EE201A1B457B2C00C92DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20171B457B2C00C92DE4 /* AppDelegate.swift */; };
 		35EE20251B457BCA00C92DE4 /* AutoLayoutUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20221B457BCA00C92DE4 /* AutoLayoutUtil.swift */; };
@@ -38,6 +37,12 @@
 		35EE206C1B457C6900C92DE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE206A1B457C6900C92DE4 /* ViewController.swift */; };
 		35EE206E1B47D04E00C92DE4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EE206D1B47D04E00C92DE4 /* MapKit.framework */; };
 		35EE20701B47D05800C92DE4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EE206F1B47D05800C92DE4 /* CoreLocation.framework */; };
+		35EE20731B47DC1000C92DE4 /* url_schemes.json in Resources */ = {isa = PBXBuildFile; fileRef = 35EE20721B47DC1000C92DE4 /* url_schemes.json */; };
+		35EE20761B47DCDA00C92DE4 /* CategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20751B47DCDA00C92DE4 /* CategorySelectionViewController.swift */; };
+		35EE20781B47DCE300C92DE4 /* CategorySelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EE20771B47DCE300C92DE4 /* CategorySelection.storyboard */; };
+		35EE207B1B47F1F900C92DE4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EE1FFF1B45768B00C92DE4 /* LaunchScreen.xib */; };
+		35EE207D1B47F22C00C92DE4 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EE207C1B47F22C00C92DE4 /* CoreBluetooth.framework */; };
+		35EE207F1B47F24200C92DE4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EE207E1B47F24200C92DE4 /* AudioToolbox.framework */; };
 		C986EDEFB8951476949FED82 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1A743370D0FDF3F1155F43 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -101,6 +106,11 @@
 		35EE206A1B457C6900C92DE4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		35EE206D1B47D04E00C92DE4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		35EE206F1B47D05800C92DE4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		35EE20721B47DC1000C92DE4 /* url_schemes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = url_schemes.json; sourceTree = "<group>"; };
+		35EE20751B47DCDA00C92DE4 /* CategorySelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewController.swift; sourceTree = "<group>"; };
+		35EE20771B47DCE300C92DE4 /* CategorySelection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CategorySelection.storyboard; sourceTree = "<group>"; };
+		35EE207C1B47F22C00C92DE4 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		35EE207E1B47F24200C92DE4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3F1A743370D0FDF3F1155F43 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD42F5D5EA05AC7C02439E5E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EE207F1B47F24200C92DE4 /* AudioToolbox.framework in Frameworks */,
+				35EE207D1B47F22C00C92DE4 /* CoreBluetooth.framework in Frameworks */,
 				35EE20701B47D05800C92DE4 /* CoreLocation.framework in Frameworks */,
 				35EE206E1B47D04E00C92DE4 /* MapKit.framework in Frameworks */,
 				C986EDEFB8951476949FED82 /* Pods.framework in Frameworks */,
@@ -191,6 +203,7 @@
 				35EE202D1B457BD300C92DE4 /* ext */,
 				35EE20311B457BD300C92DE4 /* libs */,
 				35EE20641B457C0100C92DE4 /* presentation */,
+				35EE20711B47DBDB00C92DE4 /* resources */,
 				35EE20211B457BCA00C92DE4 /* util */,
 				35EE20171B457B2C00C92DE4 /* AppDelegate.swift */,
 				35EE201D1B457B8900C92DE4 /* spajam-Bridging-Header.h */,
@@ -334,15 +347,35 @@
 		35EE20681B457C6900C92DE4 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				35EE20741B47DCC200C92DE4 /* first_flow */,
 				35EE20691B457C6900C92DE4 /* Main.storyboard */,
 				35EE206A1B457C6900C92DE4 /* ViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
 		};
+		35EE20711B47DBDB00C92DE4 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				35EE20721B47DC1000C92DE4 /* url_schemes.json */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		35EE20741B47DCC200C92DE4 /* first_flow */ = {
+			isa = PBXGroup;
+			children = (
+				35EE20771B47DCE300C92DE4 /* CategorySelection.storyboard */,
+				35EE20751B47DCDA00C92DE4 /* CategorySelectionViewController.swift */,
+			);
+			path = first_flow;
+			sourceTree = "<group>";
+		};
 		70968FA8193D2C0207920E93 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35EE207E1B47F24200C92DE4 /* AudioToolbox.framework */,
+				35EE207C1B47F22C00C92DE4 /* CoreBluetooth.framework */,
 				35EE206F1B47D05800C92DE4 /* CoreLocation.framework */,
 				35EE206D1B47D04E00C92DE4 /* MapKit.framework */,
 				3F1A743370D0FDF3F1155F43 /* Pods.framework */,
@@ -442,8 +475,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35EE20011B45768B00C92DE4 /* LaunchScreen.xib in Resources */,
+				35EE207B1B47F1F900C92DE4 /* LaunchScreen.xib in Resources */,
 				35EE1FFE1B45768B00C92DE4 /* Images.xcassets in Resources */,
+				35EE20731B47DC1000C92DE4 /* url_schemes.json in Resources */,
+				35EE20781B47DCE300C92DE4 /* CategorySelection.storyboard in Resources */,
 				35EE205F1B457BD300C92DE4 /* PaintCodeFile.pcvd in Resources */,
 				35EE206B1B457C6900C92DE4 /* Main.storyboard in Resources */,
 				35EE205E1B457BD300C92DE4 /* Cool Camera Mockup.sketch in Resources */,
@@ -531,6 +566,7 @@
 				35EE20631B457BD300C92DE4 /* UIView+Toast.m in Sources */,
 				35EE20261B457BCA00C92DE4 /* FileUtil.swift in Sources */,
 				35EE20551B457BD300C92DE4 /* PromiseKit+Ext.swift in Sources */,
+				35EE20761B47DCDA00C92DE4 /* CategorySelectionViewController.swift in Sources */,
 				35EE20671B457C0100C92DE4 /* AVPlayerView.m in Sources */,
 				35EE20271B457BCA00C92DE4 /* ViewUtil.swift in Sources */,
 				35EE205A1B457BD300C92DE4 /* CameraFocalReticule.m in Sources */,

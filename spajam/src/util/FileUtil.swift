@@ -27,6 +27,9 @@ public class FileUtil {
         let path = filePathForName(fileName)
         return NSData(contentsOfFile: path)
     }
+    public class func readFileFromPath(path : String) -> NSData? {
+        return NSData(contentsOfFile: path)
+    }
     
     public class func writeToFile(data : NSData, fileName : String) -> Bool {
         let path = filePathForName(fileName)

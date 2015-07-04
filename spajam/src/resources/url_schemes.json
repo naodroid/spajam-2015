@@ -1,0 +1,14 @@
+[
+	{
+		"keyword" : "相撲",
+		"schemes" : [
+			"jpdwangosumo:",
+		]
+	},
+	{
+		"keyword" : "オオカミ姫",
+		"schemes" : [
+			"okami-hime:",
+		]
+	},
+]
