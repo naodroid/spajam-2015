@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		35B177401B481527000FD71A /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1773F1B481527000FD71A /* Api.swift */; };
 		35B177421B48189B000FD71A /* SetQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B177411B48189B000FD71A /* SetQuizViewController.swift */; };
+		35B177441B482071000FD71A /* SetRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B177431B482071000FD71A /* SetRankViewController.swift */; };
 		35EE1FFE1B45768B00C92DE4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EE1FFD1B45768B00C92DE4 /* Images.xcassets */; };
 		35EE200D1B45768B00C92DE4 /* spajamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE200C1B45768B00C92DE4 /* spajamTests.swift */; };
 		35EE201A1B457B2C00C92DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20171B457B2C00C92DE4 /* AppDelegate.swift */; };
@@ -68,6 +69,7 @@
 		2B99ACC730962BD127416909 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		35B1773F1B481527000FD71A /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		35B177411B48189B000FD71A /* SetQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetQuizViewController.swift; sourceTree = "<group>"; };
+		35B177431B482071000FD71A /* SetRankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetRankViewController.swift; sourceTree = "<group>"; };
 		35EE1FF11B45768B00C92DE4 /* spajam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spajam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EE1FF51B45768B00C92DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35EE1FFD1B45768B00C92DE4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -399,6 +401,7 @@
 				35EE208F1B47FDB700C92DE4 /* MyQuizViewController.swift */,
 				35EE20921B47FE2E00C92DE4 /* MyQuizTableViewCell.swift */,
 				35B177411B48189B000FD71A /* SetQuizViewController.swift */,
+				35B177431B482071000FD71A /* SetRankViewController.swift */,
 			);
 			path = createquestion;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				35EE20631B457BD300C92DE4 /* UIView+Toast.m in Sources */,
 				35EE20261B457BCA00C92DE4 /* FileUtil.swift in Sources */,
 				35EE20551B457BD300C92DE4 /* PromiseKit+Ext.swift in Sources */,
+				35B177441B482071000FD71A /* SetRankViewController.swift in Sources */,
 				35EE20671B457C0100C92DE4 /* AVPlayerView.m in Sources */,
 				35EE20271B457BCA00C92DE4 /* ViewUtil.swift in Sources */,
 				35EE205A1B457BD300C92DE4 /* CameraFocalReticule.m in Sources */,

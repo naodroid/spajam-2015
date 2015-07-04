@@ -91,11 +91,18 @@ class SetQuizViewController: UIViewController {
     
     func didClickImageButton(sender : UIButton) {
         let index = sender.tag - 1
-        PhotoUtil.imagePickPromise(self).then {(image : UIImage) -> () in
-        }
+        self.startImageSelection(index)
     }
+    
     func didClickRankButton(sender : UIButton) {
         let index = sender.tag - 1
+        
+        let ans = self.myQuiz.answers[index]
+        if let img = ans.image {
+            self.showRankActionSheet(index, image: img)
+        } else {
+            self.startImageSelection(index)
+        }
         
     }
     @IBAction func didClickOutside(sender: AnyObject) {
@@ -103,6 +110,30 @@ class SetQuizViewController: UIViewController {
     }
     @IBAction func didClickOkButton(sender: AnyObject) {
     }
+    
+    
+    func startImageSelection(index : Int) {
+        PhotoUtil.imagePickPromise(self).then {(image : UIImage) -> Void in
+            self.showRankActionSheet(index, image: image)
+        }
+    }
+    
+    
+    func showRankActionSheet(index : Int, image : UIImage) {
+        let sheet = UIActionSheet()
+        sheet.title = "ランク選択"
+        sheet.addButtonWithTitle("師匠")
+        sheet.addButtonWithTitle("同士")
+        sheet.addButtonWithTitle("ニワカ")
+        
+        let ans = self.myQuiz.answers[index]
+        
+        sheet.promiseInView(self.view).then {(button : Int) -> Void in
+            ans.rank = QuizRank(rawValue: button)
+            ans.image = image
+        }
+    }
+
     
     
 
