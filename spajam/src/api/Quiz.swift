@@ -34,6 +34,8 @@ class QuizAnswer {
         self.imageUrl = imageUrl
     }
     class func parse(json : JSON) -> QuizAnswer {
+        println("JS:\(json)")
+        
         let rankText = json["rank"].stringValue
         let rank = quizRankForText(rankText)!
         let imageUrl = json["image"].stringValue

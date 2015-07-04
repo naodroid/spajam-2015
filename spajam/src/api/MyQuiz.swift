@@ -9,12 +9,15 @@
 import UIKit
 
 func quizRankForText(text : String) -> QuizRank? {
-    switch (text) {
+    var nsstr = text as NSString
+    let t = nsstr.stringByReplacingOccurrencesOfString("\r\n", withString: "") as String
+    
+    switch (t) {
     case "teacher":
         return QuizRank.Teacher
     case "friend":
         return QuizRank.Friend
-    case "ficker":
+    case "fickle":
         return QuizRank.Fickle
     default:
         return nil
