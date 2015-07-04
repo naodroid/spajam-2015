@@ -1,14 +1,73 @@
 [
-	{
-		"name" : "相撲",
-		"schemes" : [
-			"jpdwangosumo:",
-		]
-	},
-	{
-		"name" : "オオカミ姫",
-		"schemes" : [
-			"okami-hime:",
-		]
-	},
+    {
+        "name": "相撲",
+        "image": "http://www.e-shiki.jp/ryoyokotsuna.jpg",
+        "schemes": [
+            "jpdwangosumo:"
+        ]
+    },
+    {
+        "name": "オオカミ姫",
+        "image": "https://yt3.ggpht.com/-K_azuqeROsg/AAAAAAAAAAI/AAAAAAAAAAA/lAsxxhrcKOw/s100-c-k-no/photo.jpg",
+        "schemes": [
+            "okami-hime:"
+        ]
+    },
+    {
+        "name": "うた詠み",
+        "image": "http://a838.phobos.apple.com/us/r30/Purple/v4/aa/d3/89/aad3897e-6d57-a871-49aa-23965063da1d/Icon.png",
+        "schemes": [
+            "com.sega.utayomi575.atom:"
+        ]
+    },
+    {
+        "name": "宇宙",
+        "image": "https://pbs.twimg.com/profile_images/378800000761698511/baef6142ce8ea459d58f9fd202b3de3b.jpeg",
+        "schemes": [
+            "utyureader: "
+        ]
+    },
+    {
+        "name": "旅行",
+        "image": "http://www.geocities.jp/thetheorier/opimg_a/ExpediaAppIcon57x57.png",
+        "schemes": [
+            "expda:"
+        ]
+    },
+    {
+        "name": "バイク",
+        "image": "http://www.goobike.com/catalog/detail/photo/1020265_00_2013_11.jpg",
+        "schemes": [
+            "jp.co.kkec.bikerss: ",
+            "bikereader:"
+        ]
+    },
+    {
+        "name": "パズドラ",
+        "image": "http://a923.phobos.apple.com/us/r30/Purple4/v4/7d/98/31/7d983167-ed91-542f-6dc3-7e190eacafb6/icon.png",
+        "schemes": [
+            "puzzleanddragons: "
+        ]
+    },
+    {
+        "name": "ポケモン",
+        "image": "http://a920.phobos.apple.com/us/r30/Purple3/v4/f3/f8/df/f3f8dfd3-f07e-d6d6-097d-7336ef6031ab/AppIcon60x60_U00402x.png",
+        "schemes": [
+            "pdclaunch: "
+        ]
+    },
+    {
+        "name": "ラブライブ",
+        "image": "http://a1916.phobos.apple.com/us/r30/Purple4/v4/fb/06/46/fb06460a-26a0-628e-6c1b-c345e1603f69/Icon.png",
+        "schemes": [
+            "jp.co.bushimo.3: "
+        ]
+    },
+    {
+        "name": "白猫",
+        "image": "http://a895.phobos.apple.com/us/r30/Purple1/v4/20/e6/2c/20e62c54-2f88-a400-2b0f-a45089b1867b/AppIcon57x57.png",
+        "schemes": [
+            "coloplwcat: "
+        ]
+    }
 ]

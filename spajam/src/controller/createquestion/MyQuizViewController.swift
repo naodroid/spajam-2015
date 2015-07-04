@@ -16,7 +16,7 @@ class MyQuizViewController: UIViewController,
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
-    private var categories = [String]()
+    private var categories = [CategoryInfo]()
     
     
     
@@ -34,10 +34,10 @@ class MyQuizViewController: UIViewController,
         self.tableView.delegate = self
         
         dispatchOnGlobal {
-            let keywords = self.checkMatchedKeyword()
+            let categories = self.checkMatchedCategories()
             NSThread.sleepForTimeInterval(1.2)
             dispatchOnMain {
-                self.setupTableViewFromKeywords(keywords)
+                self.setupTableViewFromCategories(categories)
             }
         }
     }
@@ -47,13 +47,11 @@ class MyQuizViewController: UIViewController,
     
     
     //scheme-----------------------
-    private func checkMatchedKeyword() -> [String] {
+    private func checkMatchedCategories() -> [CategoryInfo] {
         let infos = self.loadSchemesFromFile()
         let app = UIApplication.sharedApplication()
         return infos.filter {
             $0.hasApp()
-        }.map {
-            $0.name
         }
     }
     private func loadSchemesFromFile() -> [CategoryInfo] {
@@ -67,7 +65,7 @@ class MyQuizViewController: UIViewController,
         return array.map(CategoryInfo.parse)
     }
     //
-    private func setupTableViewFromKeywords(categories : [String]) {
+    private func setupTableViewFromCategories(categories : [CategoryInfo]) {
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             self.loadingView.alpha = 0
         })
@@ -93,7 +91,7 @@ class MyQuizViewController: UIViewController,
         
         let index = indexPath.row
         let category = self.categories[index]
-        let quiz = MyQuizList.instance().list[category]
+        let quiz = MyQuizList.instance().list[category.name]
         
         cell.updateCell(category: category, hasQuiz: quiz != nil)
         
@@ -106,7 +104,7 @@ class MyQuizViewController: UIViewController,
         let index = indexPath.row
         let category = self.categories[index]
         
-        let vc = SetQuizViewController.createVC(self.storyboard!, category: category)
+        let vc = SetQuizViewController.createVC(self.storyboard!, category: category.name)
         self.addChildViewController(vc)
         vc.didMoveToParentViewController(self)
         self.view.addSubview(vc.view)
@@ -117,10 +115,12 @@ class MyQuizViewController: UIViewController,
 
 class CategoryInfo {
     let name : String
+    let imageUrl : String
     let schemes : [String]
     
-    init(name : String, schemes : [String]) {
+    init(name : String, imageUrl : String, schemes : [String]) {
         self.name = name
+        self.imageUrl = imageUrl
         self.schemes = schemes
     }
     
@@ -134,9 +134,10 @@ class CategoryInfo {
     
     class func parse(json : JSON) -> CategoryInfo {
         let name = json["name"].stringValue
+        let image = json["image"].stringValue
         let arr = json["schemes"].array!
         let schemes = arr.map {$0.stringValue}
-        return CategoryInfo(name: name, schemes : [])
+        return CategoryInfo(name: name, imageUrl : image, schemes : [])
         
     }
 }

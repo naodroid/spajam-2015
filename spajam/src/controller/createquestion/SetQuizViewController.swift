@@ -14,7 +14,7 @@ class SetQuizViewController: UIViewController {
     @IBOutlet var imageButtons: [UIButton]!
     @IBOutlet var rankButtons: [UIButton]!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
-    
+    @IBOutlet weak var okButton: UIButton!
     //
     private var category : String = ""
     private var myQuiz : MyQuiz! = nil
@@ -51,6 +51,7 @@ class SetQuizViewController: UIViewController {
     private func setupForCurrentQuiz() {
         let answers = self.myQuiz.answers
         let count = self.imageButtons.count
+        var enabled = true
         for i in 0..<count {
             let img = self.imageButtons[i]
             let btn = self.rankButtons[i]
@@ -63,11 +64,12 @@ class SetQuizViewController: UIViewController {
             } else {
                 img.setTitle("画像未設定", forState: .Normal)
                 img.setImage(nil, forState: .Normal)
+                enabled = false
             }
             btn.setTitle(ans.rank?.displayText(), forState: .Normal)
             btn.hidden = false
         }
-        
+        okButton.enabled = enabled
     }
     
     //MARK: anim
@@ -114,8 +116,7 @@ class SetQuizViewController: UIViewController {
     @IBAction func didClickOkButton(sender: AnyObject) {
         //全部未設定だったら何もしない
         let answers = self.validateAnswers()
-        if answers.count == 0 {
-            startExitAnimation()
+        if answers.count < 4 {
             return
         }
         

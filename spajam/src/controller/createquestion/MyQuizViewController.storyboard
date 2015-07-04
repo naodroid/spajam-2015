@@ -15,6 +15,9 @@
                     <view key="view" contentMode="scaleToFill" id="bdh-BR-A7G">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="290" affinity="minY"/>
+                        </userGuides>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTJ-xE-fD6" userLabel="headerView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
@@ -70,13 +73,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvu-k3-ZL0" userLabel="categoryLabel">
-                                                    <rect key="frame" x="12" y="8" width="296" height="21"/>
+                                                    <rect key="frame" x="66" y="8" width="242" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yj7-3A-fdv" userLabel="imageView">
+                                                    <rect key="frame" x="8" y="7" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="HZ1-lJ-Sgp"/>
+                                                        <constraint firstAttribute="width" constant="50" id="f2q-ec-vYL"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="クイズ未設定" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZj-VM-1yU" userLabel="quizLabel">
-                                                    <rect key="frame" x="12" y="40" width="72" height="15"/>
+                                                    <rect key="frame" x="66" y="40" width="72" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -84,14 +94,17 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="Nvu-k3-ZL0" secondAttribute="trailing" constant="12" id="3RK-jh-pO5"/>
-                                                <constraint firstItem="MZj-VM-1yU" firstAttribute="leading" secondItem="4ld-qX-q3D" secondAttribute="leading" constant="12" id="esV-eV-EJs"/>
+                                                <constraint firstItem="MZj-VM-1yU" firstAttribute="leading" secondItem="Yj7-3A-fdv" secondAttribute="trailing" constant="8" id="3ii-Ty-MDi"/>
+                                                <constraint firstItem="Nvu-k3-ZL0" firstAttribute="leading" secondItem="Yj7-3A-fdv" secondAttribute="trailing" constant="8" id="RbA-gj-ymo"/>
+                                                <constraint firstItem="Yj7-3A-fdv" firstAttribute="leading" secondItem="4ld-qX-q3D" secondAttribute="leading" constant="8" id="gXr-s2-bYj"/>
                                                 <constraint firstItem="Nvu-k3-ZL0" firstAttribute="top" secondItem="4ld-qX-q3D" secondAttribute="top" constant="8" id="r9f-MI-j0p"/>
-                                                <constraint firstItem="Nvu-k3-ZL0" firstAttribute="leading" secondItem="4ld-qX-q3D" secondAttribute="leading" constant="12" id="rTN-7x-bz2"/>
                                                 <constraint firstAttribute="bottom" secondItem="MZj-VM-1yU" secondAttribute="bottom" constant="8" id="uwe-qg-dQ2"/>
+                                                <constraint firstAttribute="centerY" secondItem="Yj7-3A-fdv" secondAttribute="centerY" id="y0N-c7-dju"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="categoryLabel" destination="Nvu-k3-ZL0" id="ov6-aC-P7N"/>
+                                            <outlet property="iconImageView" destination="Yj7-3A-fdv" id="po7-Na-Teo"/>
                                             <outlet property="quizLabel" destination="MZj-VM-1yU" id="ZPb-MI-t3u"/>
                                         </connections>
                                     </tableViewCell>
@@ -402,6 +415,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="loadingIndicator" destination="cPu-ko-4Mj" id="qYO-TS-ViH"/>
+                        <outlet property="okButton" destination="zbg-UY-ICo" id="eVz-W0-GbA"/>
                         <outletCollection property="imageButtons" destination="Ekc-ZY-1yU" collectionClass="NSMutableArray" id="Faa-bH-Dov"/>
                         <outletCollection property="rankButtons" destination="1yb-PX-U58" collectionClass="NSMutableArray" id="AJd-mm-wKV"/>
                         <outletCollection property="imageButtons" destination="mbS-QE-WXf" collectionClass="NSMutableArray" id="ew3-14-XLi"/>

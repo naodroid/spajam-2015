@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MyQuizTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var quizLabel: UILabel!
+    @IBOutlet weak var iconImageView: UIImageView!
 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -22,9 +25,12 @@ class MyQuizTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func updateCell(#category : String, hasQuiz : Bool) {
-        self.categoryLabel.text = category
+    func updateCell(#category : CategoryInfo, hasQuiz : Bool) {
+        self.categoryLabel.text = category.name
         self.quizLabel.text = hasQuiz ? "クイズ設定済み" : "クイズ未設定"
+        
+        let url = NSURL(string : category.imageUrl)
+        self.iconImageView.sd_setImageWithURL(url!)
     }
 }
 
