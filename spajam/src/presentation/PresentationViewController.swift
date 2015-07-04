@@ -56,7 +56,7 @@ class PresentationViewController: UIViewController, AVPlayerViewDelegate, UIScro
         self.loadingIndicator.hidden = false
         Api.register(name).then {(user : User) -> Void in
             dispatchAfterOnMain(0.8) {
-                let vc = CategorySelectionViewController.createVC()
+                let vc = MyQuizViewController.createVC()
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }

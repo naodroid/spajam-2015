@@ -21,48 +21,5 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="aHF-AA-RFv">
-            <objects>
-                <tableViewController id="V1H-sW-CCa" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eEI-zr-AQ1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MoG-lj-zgp">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MoG-lj-zgp" id="E54-lI-f2E">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="V1H-sW-CCa" id="2e1-ni-oQ3"/>
-                            <outlet property="delegate" destination="V1H-sW-CCa" id="I0M-Fb-Jzj"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="dBx-r9-Tz6"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fWQ-Je-LDY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="747" y="652"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="fV8-Ou-5HR">
-            <objects>
-                <navigationController id="yz2-7c-Xil" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="469-oz-0PQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="V1H-sW-CCa" kind="relationship" relationship="rootViewController" id="XRJ-I1-y1E"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aYJ-La-hVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-73" y="652"/>
-        </scene>
     </scenes>
 </document>

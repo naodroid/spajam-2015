@@ -38,8 +38,6 @@
 		35EE206E1B47D04E00C92DE4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EE206D1B47D04E00C92DE4 /* MapKit.framework */; };
 		35EE20701B47D05800C92DE4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EE206F1B47D05800C92DE4 /* CoreLocation.framework */; };
 		35EE20731B47DC1000C92DE4 /* url_schemes.json in Resources */ = {isa = PBXBuildFile; fileRef = 35EE20721B47DC1000C92DE4 /* url_schemes.json */; };
-		35EE20761B47DCDA00C92DE4 /* CategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20751B47DCDA00C92DE4 /* CategorySelectionViewController.swift */; };
-		35EE20781B47DCE300C92DE4 /* CategorySelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EE20771B47DCE300C92DE4 /* CategorySelection.storyboard */; };
 		35EE207B1B47F1F900C92DE4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EE1FFF1B45768B00C92DE4 /* LaunchScreen.xib */; };
 		35EE207D1B47F22C00C92DE4 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EE207C1B47F22C00C92DE4 /* CoreBluetooth.framework */; };
 		35EE207F1B47F24200C92DE4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EE207E1B47F24200C92DE4 /* AudioToolbox.framework */; };
@@ -48,6 +46,10 @@
 		35EE20861B47F41600C92DE4 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20851B47F41600C92DE4 /* Api.swift */; };
 		35EE20881B47F41C00C92DE4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20871B47F41C00C92DE4 /* User.swift */; };
 		35EE208A1B47F6B000C92DE4 /* sample.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 35EE20891B47F6B000C92DE4 /* sample.m4v */; };
+		35EE208C1B47FCED00C92DE4 /* MyQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE208B1B47FCED00C92DE4 /* MyQuiz.swift */; };
+		35EE20901B47FDB700C92DE4 /* MyQuizViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EE208E1B47FDB700C92DE4 /* MyQuizViewController.storyboard */; };
+		35EE20911B47FDB700C92DE4 /* MyQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE208F1B47FDB700C92DE4 /* MyQuizViewController.swift */; };
+		35EE20931B47FE2E00C92DE4 /* MyQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20921B47FE2E00C92DE4 /* MyQuizTableViewCell.swift */; };
 		C986EDEFB8951476949FED82 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1A743370D0FDF3F1155F43 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -112,8 +114,6 @@
 		35EE206D1B47D04E00C92DE4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		35EE206F1B47D05800C92DE4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		35EE20721B47DC1000C92DE4 /* url_schemes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = url_schemes.json; sourceTree = "<group>"; };
-		35EE20751B47DCDA00C92DE4 /* CategorySelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewController.swift; sourceTree = "<group>"; };
-		35EE20771B47DCE300C92DE4 /* CategorySelection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CategorySelection.storyboard; sourceTree = "<group>"; };
 		35EE207C1B47F22C00C92DE4 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		35EE207E1B47F24200C92DE4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		35EE20801B47F2C900C92DE4 /* PresentationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +121,10 @@
 		35EE20851B47F41600C92DE4 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Api.swift; path = ../../../../spajam_fukui/spajam/src/api/Api.swift; sourceTree = "<group>"; };
 		35EE20871B47F41C00C92DE4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../../../../spajam_fukui/spajam/src/api/User.swift; sourceTree = "<group>"; };
 		35EE20891B47F6B000C92DE4 /* sample.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.m4v; sourceTree = "<group>"; };
+		35EE208B1B47FCED00C92DE4 /* MyQuiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuiz.swift; sourceTree = "<group>"; };
+		35EE208E1B47FDB700C92DE4 /* MyQuizViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyQuizViewController.storyboard; sourceTree = "<group>"; };
+		35EE208F1B47FDB700C92DE4 /* MyQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuizViewController.swift; sourceTree = "<group>"; };
+		35EE20921B47FE2E00C92DE4 /* MyQuizTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuizTableViewCell.swift; sourceTree = "<group>"; };
 		3F1A743370D0FDF3F1155F43 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD42F5D5EA05AC7C02439E5E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -361,7 +365,7 @@
 		35EE20681B457C6900C92DE4 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				35EE20741B47DCC200C92DE4 /* first_flow */,
+				35EE208D1B47FDB700C92DE4 /* createquestion */,
 				35EE20691B457C6900C92DE4 /* Main.storyboard */,
 				35EE206A1B457C6900C92DE4 /* ViewController.swift */,
 			);
@@ -376,22 +380,24 @@
 			path = resources;
 			sourceTree = "<group>";
 		};
-		35EE20741B47DCC200C92DE4 /* first_flow */ = {
-			isa = PBXGroup;
-			children = (
-				35EE20771B47DCE300C92DE4 /* CategorySelection.storyboard */,
-				35EE20751B47DCDA00C92DE4 /* CategorySelectionViewController.swift */,
-			);
-			path = first_flow;
-			sourceTree = "<group>";
-		};
 		35EE20841B47F3E600C92DE4 /* api */ = {
 			isa = PBXGroup;
 			children = (
 				35EE20851B47F41600C92DE4 /* Api.swift */,
 				35EE20871B47F41C00C92DE4 /* User.swift */,
+				35EE208B1B47FCED00C92DE4 /* MyQuiz.swift */,
 			);
 			path = api;
+			sourceTree = "<group>";
+		};
+		35EE208D1B47FDB700C92DE4 /* createquestion */ = {
+			isa = PBXGroup;
+			children = (
+				35EE208E1B47FDB700C92DE4 /* MyQuizViewController.storyboard */,
+				35EE208F1B47FDB700C92DE4 /* MyQuizViewController.swift */,
+				35EE20921B47FE2E00C92DE4 /* MyQuizTableViewCell.swift */,
+			);
+			path = createquestion;
 			sourceTree = "<group>";
 		};
 		70968FA8193D2C0207920E93 /* Frameworks */ = {
@@ -503,7 +509,7 @@
 				35EE1FFE1B45768B00C92DE4 /* Images.xcassets in Resources */,
 				35EE20831B47F2C900C92DE4 /* PresentationViewController.xib in Resources */,
 				35EE20731B47DC1000C92DE4 /* url_schemes.json in Resources */,
-				35EE20781B47DCE300C92DE4 /* CategorySelection.storyboard in Resources */,
+				35EE20901B47FDB700C92DE4 /* MyQuizViewController.storyboard in Resources */,
 				35EE205F1B457BD300C92DE4 /* PaintCodeFile.pcvd in Resources */,
 				35EE206B1B457C6900C92DE4 /* Main.storyboard in Resources */,
 				35EE205E1B457BD300C92DE4 /* Cool Camera Mockup.sketch in Resources */,
@@ -577,6 +583,7 @@
 				35EE20521B457BD300C92DE4 /* AbstractEvent.swift in Sources */,
 				35EE20251B457BCA00C92DE4 /* AutoLayoutUtil.swift in Sources */,
 				35EE205D1B457BD300C92DE4 /* LaunchCameraButton.m in Sources */,
+				35EE208C1B47FCED00C92DE4 /* MyQuiz.swift in Sources */,
 				35EE20881B47F41C00C92DE4 /* User.swift in Sources */,
 				35EE20821B47F2C900C92DE4 /* PresentationViewController.swift in Sources */,
 				35EE20861B47F41600C92DE4 /* Api.swift in Sources */,
@@ -585,16 +592,17 @@
 				35EE20511B457BD300C92DE4 /* PhotoUtil.swift in Sources */,
 				35EE205B1B457BD300C92DE4 /* CameraShutterButton.m in Sources */,
 				35EE205C1B457BD300C92DE4 /* CameraToggleButton.m in Sources */,
+				35EE20931B47FE2E00C92DE4 /* MyQuizTableViewCell.swift in Sources */,
 				35EE20601B457BD300C92DE4 /* CameraStyleKitClass.m in Sources */,
 				35EE20531B457BD300C92DE4 /* EventBus.swift in Sources */,
 				35EE20581B457BD300C92DE4 /* CameraDismissButton.m in Sources */,
 				35EE20571B457BD300C92DE4 /* CameraSessionView.m in Sources */,
 				35EE20541B457BD300C92DE4 /* Array+Ext.swift in Sources */,
+				35EE20911B47FDB700C92DE4 /* MyQuizViewController.swift in Sources */,
 				35EE20591B457BD300C92DE4 /* CameraFlashButton.m in Sources */,
 				35EE20631B457BD300C92DE4 /* UIView+Toast.m in Sources */,
 				35EE20261B457BCA00C92DE4 /* FileUtil.swift in Sources */,
 				35EE20551B457BD300C92DE4 /* PromiseKit+Ext.swift in Sources */,
-				35EE20761B47DCDA00C92DE4 /* CategorySelectionViewController.swift in Sources */,
 				35EE20671B457C0100C92DE4 /* AVPlayerView.m in Sources */,
 				35EE20271B457BCA00C92DE4 /* ViewUtil.swift in Sources */,
 				35EE205A1B457BD300C92DE4 /* CameraFocalReticule.m in Sources */,

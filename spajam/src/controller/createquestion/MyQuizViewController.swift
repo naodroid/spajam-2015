@@ -9,20 +9,21 @@
 import UIKit
 import SwiftyJSON
 
-class CategorySelectionViewController: UIViewController,
+class MyQuizViewController: UIViewController,
                          UITableViewDataSource, UITableViewDelegate {
 
     ///IB
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
-    private var keywords = [String]()
-    private var selections = [Bool]()
+    private var categories = [String]()
+    
+    
     
     ///
-    class func createVC() -> CategorySelectionViewController {
-        let sb = UIStoryboard(name: "CategorySelection", bundle: nil)
-        let vc = sb.instantiateInitialViewController() as! CategorySelectionViewController
+    class func createVC() -> MyQuizViewController {
+        let sb = UIStoryboard(name: "MyQuizViewController", bundle: nil)
+        let vc = sb.instantiateInitialViewController() as! MyQuizViewController
         return vc
     }
     
@@ -52,7 +53,7 @@ class CategorySelectionViewController: UIViewController,
         return infos.filter {
             $0.hasApp()
         }.map {
-            $0.keyword
+            $0.name
         }
     }
     private func loadSchemesFromFile() -> [CategoryInfo] {
@@ -66,15 +67,11 @@ class CategorySelectionViewController: UIViewController,
         return array.map(CategoryInfo.parse)
     }
     //
-    private func setupTableViewFromKeywords(keywords : [String]) {
+    private func setupTableViewFromKeywords(categories : [String]) {
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             self.loadingView.alpha = 0
         })
-        self.keywords = keywords
-        self.selections = [Bool]()
-        for i in 0..<keywords.count {
-            self.selections.append(true)
-        }
+        self.categories = categories
         
         self.tableView.reloadData()
     }
@@ -88,42 +85,27 @@ class CategorySelectionViewController: UIViewController,
     
     //MARK: tableview
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.keywords.count
+        return self.categories.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MyQuizTableViewCell
         
         let index = indexPath.row
         
-        let sw = cell.viewWithTag(1) as! UISwitch
-        let label = cell.viewWithTag(2) as! UILabel
         
-        let act = sw.targetForAction("didSwitchChanged:", withSender: self)
-        if act == nil {
-            sw.addTarget(self, action: "didSwitchChanged:", forControlEvents: .ValueChanged)
-        }
-        cell.tag = index
-        sw.selected = self.selections[index]
-        label.text = self.keywords[index]
+        
         
         return cell
-    }
-    func didSwitchChanged(sender : AnyObject?) {
-        if let sw = sender as? UIView {
-            let parent = sw.superview!
-            let tag = parent.tag
-            self.selections[tag] = !self.selections[tag];
-        }
     }
 }
 
 class CategoryInfo {
-    let keyword : String
+    let name : String
     let schemes : [String]
     
-    init(keyword : String, schemes : [String]) {
-        self.keyword = keyword
+    init(name : String, schemes : [String]) {
+        self.name = name
         self.schemes = schemes
     }
     
@@ -136,10 +118,10 @@ class CategoryInfo {
     }
     
     class func parse(json : JSON) -> CategoryInfo {
-        let keyword = json["keyword"].stringValue
+        let name = json["name"].stringValue
         let arr = json["schemes"].array!
         let schemes = arr.map {$0.stringValue}
-        return CategoryInfo(keyword: keyword, schemes : [])
+        return CategoryInfo(name: name, schemes : [])
         
     }
 }
