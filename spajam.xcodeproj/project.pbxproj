@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3597132E1B48A8CA00976153 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597132D1B48A8CA00976153 /* icon@2x.png */; };
 		35AF74431B488FBD003E7D88 /* AutoScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AF74421B488FBD003E7D88 /* AutoScaleView.swift */; };
 		35AF744E1B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AF74441B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png */; };
 		35AF744F1B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AF74451B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png */; };
@@ -89,6 +90,7 @@
 
 /* Begin PBXFileReference section */
 		2B99ACC730962BD127416909 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		3597132D1B48A8CA00976153 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		35AF74421B488FBD003E7D88 /* AutoScaleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoScaleView.swift; sourceTree = "<group>"; };
 		35AF74441B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ohako_kentei_setting_1_button_default@2x.png"; sourceTree = "<group>"; };
 		35AF74451B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ohako_kentei_setting_1_button_selected@2x.png"; sourceTree = "<group>"; };
@@ -460,6 +462,7 @@
 		5C204D0B1B485916003852CA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3597132D1B48A8CA00976153 /* icon@2x.png */,
 				35AF74441B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png */,
 				35AF74451B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png */,
 				35AF74461B4895BB003E7D88 /* ohako_kentei_setting_2_button_default@2x.png */,
@@ -616,6 +619,7 @@
 				35AF744F1B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png in Resources */,
 				35AF74501B4895BB003E7D88 /* ohako_kentei_setting_2_button_default@2x.png in Resources */,
 				35AF74561B4895BB003E7D88 /* ohako_kentei_setting_mock.png in Resources */,
+				3597132E1B48A8CA00976153 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -835,7 +839,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2B99ACC730962BD127416909 /* Pods.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -852,7 +855,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD42F5D5EA05AC7C02439E5E /* Pods.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
