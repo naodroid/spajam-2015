@@ -54,6 +54,12 @@
 		35EE20901B47FDB700C92DE4 /* MyQuizViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EE208E1B47FDB700C92DE4 /* MyQuizViewController.storyboard */; };
 		35EE20911B47FDB700C92DE4 /* MyQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE208F1B47FDB700C92DE4 /* MyQuizViewController.swift */; };
 		35EE20931B47FE2E00C92DE4 /* MyQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20921B47FE2E00C92DE4 /* MyQuizTableViewCell.swift */; };
+		5C204D121B485916003852CA /* setting_ohako_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C204D0C1B485916003852CA /* setting_ohako_bg@2x.png */; };
+		5C204D131B485916003852CA /* settings_ohako_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C204D0D1B485916003852CA /* settings_ohako_default@2x.png */; };
+		5C204D141B485916003852CA /* settings_ohako_kentei_button_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C204D0E1B485916003852CA /* settings_ohako_kentei_button_default@2x.png */; };
+		5C204D151B485916003852CA /* settings_ohako_kentei_button_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C204D0F1B485916003852CA /* settings_ohako_kentei_button_selected@2x.png */; };
+		5C204D161B485916003852CA /* settings_ohako_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C204D101B485916003852CA /* settings_ohako_selected@2x.png */; };
+		5C204D171B485916003852CA /* settings_ohako_start_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C204D111B485916003852CA /* settings_ohako_start_button@2x.png */; };
 		C986EDEFB8951476949FED82 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1A743370D0FDF3F1155F43 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -134,6 +140,12 @@
 		35EE208F1B47FDB700C92DE4 /* MyQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuizViewController.swift; sourceTree = "<group>"; };
 		35EE20921B47FE2E00C92DE4 /* MyQuizTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuizTableViewCell.swift; sourceTree = "<group>"; };
 		3F1A743370D0FDF3F1155F43 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C204D0C1B485916003852CA /* setting_ohako_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting_ohako_bg@2x.png"; sourceTree = "<group>"; };
+		5C204D0D1B485916003852CA /* settings_ohako_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings_ohako_default@2x.png"; sourceTree = "<group>"; };
+		5C204D0E1B485916003852CA /* settings_ohako_kentei_button_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings_ohako_kentei_button_default@2x.png"; sourceTree = "<group>"; };
+		5C204D0F1B485916003852CA /* settings_ohako_kentei_button_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings_ohako_kentei_button_selected@2x.png"; sourceTree = "<group>"; };
+		5C204D101B485916003852CA /* settings_ohako_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings_ohako_selected@2x.png"; sourceTree = "<group>"; };
+		5C204D111B485916003852CA /* settings_ohako_start_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings_ohako_start_button@2x.png"; sourceTree = "<group>"; };
 		CD42F5D5EA05AC7C02439E5E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				35EE20161B457B2C00C92DE4 /* src */,
+				5C204D0B1B485916003852CA /* images */,
 				35EE1FFD1B45768B00C92DE4 /* Images.xcassets */,
 				35EE1FFF1B45768B00C92DE4 /* LaunchScreen.xib */,
 				35EE1FF41B45768B00C92DE4 /* Supporting Files */,
@@ -412,6 +425,19 @@
 			path = createquestion;
 			sourceTree = "<group>";
 		};
+		5C204D0B1B485916003852CA /* images */ = {
+			isa = PBXGroup;
+			children = (
+				5C204D0C1B485916003852CA /* setting_ohako_bg@2x.png */,
+				5C204D0D1B485916003852CA /* settings_ohako_default@2x.png */,
+				5C204D0E1B485916003852CA /* settings_ohako_kentei_button_default@2x.png */,
+				5C204D0F1B485916003852CA /* settings_ohako_kentei_button_selected@2x.png */,
+				5C204D101B485916003852CA /* settings_ohako_selected@2x.png */,
+				5C204D111B485916003852CA /* settings_ohako_start_button@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		70968FA8193D2C0207920E93 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -522,12 +548,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				35EE207B1B47F1F900C92DE4 /* LaunchScreen.xib in Resources */,
+				5C204D151B485916003852CA /* settings_ohako_kentei_button_selected@2x.png in Resources */,
 				35EE208A1B47F6B000C92DE4 /* sample.m4v in Resources */,
 				35EE1FFE1B45768B00C92DE4 /* Images.xcassets in Resources */,
 				35EE20831B47F2C900C92DE4 /* PresentationViewController.xib in Resources */,
+				5C204D141B485916003852CA /* settings_ohako_kentei_button_default@2x.png in Resources */,
 				35EE20731B47DC1000C92DE4 /* url_schemes.json in Resources */,
+				5C204D161B485916003852CA /* settings_ohako_selected@2x.png in Resources */,
 				35EE20901B47FDB700C92DE4 /* MyQuizViewController.storyboard in Resources */,
 				35EE205F1B457BD300C92DE4 /* PaintCodeFile.pcvd in Resources */,
+				5C204D121B485916003852CA /* setting_ohako_bg@2x.png in Resources */,
+				5C204D131B485916003852CA /* settings_ohako_default@2x.png in Resources */,
+				5C204D171B485916003852CA /* settings_ohako_start_button@2x.png in Resources */,
 				35EE206B1B457C6900C92DE4 /* Main.storyboard in Resources */,
 				35EE205E1B457BD300C92DE4 /* Cool Camera Mockup.sketch in Resources */,
 			);
