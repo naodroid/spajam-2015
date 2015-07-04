@@ -19,6 +19,7 @@ class SetQuizViewController: UIViewController {
     private var category : String = ""
     private var myQuiz : MyQuiz! = nil
     
+    
     //------------------
     class func createVC(storyboard : UIStoryboard, category : String) -> SetQuizViewController {
         let vc = storyboard.instantiateViewControllerWithIdentifier("SetQuiz") as! SetQuizViewController
@@ -113,6 +114,7 @@ class SetQuizViewController: UIViewController {
     @IBAction func didClickOutside(sender: AnyObject) {
         startExitAnimation()
     }
+    //確定処理
     @IBAction func didClickOkButton(sender: AnyObject) {
         //全部未設定だったら何もしない
         let answers = self.validateAnswers()
@@ -123,6 +125,10 @@ class SetQuizViewController: UIViewController {
         self.loadingIndicator.startAnimating()
         
         Api.setQuiz(self.category, answers: answers).then {(result : String) -> Void in
+            MyQuizList.instance().list[self.category] = self.myQuiz
+            MyQuizList.instance().writeToFile()
+            
+            EventBus.sendEvent(MyQuizUpdatedEvent(myQuiz: self.myQuiz))
             self.startExitAnimation()
             self.loadingIndicator.stopAnimating()
         }
@@ -134,7 +140,7 @@ class SetQuizViewController: UIViewController {
         
     }
     
-    
+    //画像選択系
     func startImageSelection(index : Int) {
         PhotoUtil.imagePickPromise(self).then {(image : UIImage) -> Void in
             let resized = SetQuizViewController.resizeImage(image)

@@ -73,6 +73,7 @@ class Api {
            readCookie()
         }
         if let c = _cookieString {
+            println("USERID:\(c)")
             request.addValue(c, forHTTPHeaderField: "Cookie")
         }
     }
@@ -157,9 +158,15 @@ class Api {
             .then {(data : NSData) -> String in
                 return "Success"
         }
-
+    }
+    ///指定ユーザのクイズ一覧を取得
+    class func quizListProcess(userId : Int) -> Promise<[Quiz]> {
+        let path = "\(basePath)/quizlist?user_id=\(userId)"
         
-        
+        return getPromise(path).then {(data : NSData) -> [Quiz] in
+            let json = JSON(data : data)
+            return json.arrayValue.map(Quiz.parse)
+        }
     }
     
     

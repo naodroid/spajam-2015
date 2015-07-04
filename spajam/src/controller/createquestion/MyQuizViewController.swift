@@ -41,6 +41,18 @@ class MyQuizViewController: UIViewController,
             }
         }
     }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        MyQuizUpdatedEvent.register(self) {(event : MyQuizUpdatedEvent) in
+            self.tableView.reloadData()
+        }
+    }
+    override func viewWillDisappear(animated: Bool) {
+        MyQuizUpdatedEvent.unregister(self)
+        super.viewWillDisappear(animated)
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

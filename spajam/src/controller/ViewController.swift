@@ -22,7 +22,7 @@ class ViewController: UIViewController {
             let nc = UINavigationController(rootViewController: vc)
             nc.setNavigationBarHidden(true, animated: false)
             self.presentViewController(nc, animated: true, completion: nil)
-        } else {
+        } else if MyQuizList.instance().list.count == 0 {
             let vc = MyQuizViewController.createVC()
             let nc = UINavigationController(rootViewController: vc)
             nc.setNavigationBarHidden(true, animated: false)

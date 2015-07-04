@@ -11,6 +11,8 @@
 		35B177421B48189B000FD71A /* SetQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B177411B48189B000FD71A /* SetQuizViewController.swift */; };
 		35B177441B482071000FD71A /* SetRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B177431B482071000FD71A /* SetRankViewController.swift */; };
 		35B177461B4823A1000FD71A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B177451B4823A1000FD71A /* User.swift */; };
+		35B177481B484340000FD71A /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B177471B484340000FD71A /* Quiz.swift */; };
+		35B1774A1B4846A9000FD71A /* MyQuizUpdatedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B177491B4846A9000FD71A /* MyQuizUpdatedEvent.swift */; };
 		35EE1FFE1B45768B00C92DE4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EE1FFD1B45768B00C92DE4 /* Images.xcassets */; };
 		35EE200D1B45768B00C92DE4 /* spajamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE200C1B45768B00C92DE4 /* spajamTests.swift */; };
 		35EE201A1B457B2C00C92DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20171B457B2C00C92DE4 /* AppDelegate.swift */; };
@@ -71,6 +73,8 @@
 		35B177411B48189B000FD71A /* SetQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetQuizViewController.swift; sourceTree = "<group>"; };
 		35B177431B482071000FD71A /* SetRankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetRankViewController.swift; sourceTree = "<group>"; };
 		35B177451B4823A1000FD71A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		35B177471B484340000FD71A /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		35B177491B4846A9000FD71A /* MyQuizUpdatedEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuizUpdatedEvent.swift; sourceTree = "<group>"; };
 		35EE1FF11B45768B00C92DE4 /* spajam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spajam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EE1FF51B45768B00C92DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35EE1FFD1B45768B00C92DE4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -253,6 +257,7 @@
 			children = (
 				35EE202B1B457BD300C92DE4 /* AbstractEvent.swift */,
 				35EE202C1B457BD300C92DE4 /* EventBus.swift */,
+				35B177491B4846A9000FD71A /* MyQuizUpdatedEvent.swift */,
 			);
 			path = event;
 			sourceTree = "<group>";
@@ -390,6 +395,7 @@
 				35B1773F1B481527000FD71A /* Api.swift */,
 				35B177451B4823A1000FD71A /* User.swift */,
 				35EE208B1B47FCED00C92DE4 /* MyQuiz.swift */,
+				35B177471B484340000FD71A /* Quiz.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -594,10 +600,12 @@
 				35EE208C1B47FCED00C92DE4 /* MyQuiz.swift in Sources */,
 				35EE20821B47F2C900C92DE4 /* PresentationViewController.swift in Sources */,
 				35EE20621B457BD300C92DE4 /* Constants.m in Sources */,
+				35B1774A1B4846A9000FD71A /* MyQuizUpdatedEvent.swift in Sources */,
 				35EE206C1B457C6900C92DE4 /* ViewController.swift in Sources */,
 				35EE20511B457BD300C92DE4 /* PhotoUtil.swift in Sources */,
 				35EE205B1B457BD300C92DE4 /* CameraShutterButton.m in Sources */,
 				35EE205C1B457BD300C92DE4 /* CameraToggleButton.m in Sources */,
+				35B177481B484340000FD71A /* Quiz.swift in Sources */,
 				35EE20931B47FE2E00C92DE4 /* MyQuizTableViewCell.swift in Sources */,
 				35EE20601B457BD300C92DE4 /* CameraStyleKitClass.m in Sources */,
 				35EE20531B457BD300C92DE4 /* EventBus.swift in Sources */,

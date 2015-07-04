@@ -8,6 +8,20 @@
 
 import UIKit
 
+func quizRankForText(text : String) -> QuizRank? {
+    switch (text) {
+    case "teacher":
+        return QuizRank.Teacher
+    case "friend":
+        return QuizRank.Friend
+    case "ficker":
+        return QuizRank.Fickle
+    default:
+        return nil
+    }
+}
+
+
 
 enum QuizRank : Int {
     //師匠、同士、ニワカ
@@ -99,6 +113,7 @@ class MyQuizList {
     class func instance() -> MyQuizList {
         if (_instance == nil) {
             _instance = MyQuizList()
+            _instance?.readFromFile()
         }
         return _instance!
     }
