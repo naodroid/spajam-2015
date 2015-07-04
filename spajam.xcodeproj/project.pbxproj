@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35B177401B481527000FD71A /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1773F1B481527000FD71A /* Api.swift */; };
+		35B177421B48189B000FD71A /* SetQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B177411B48189B000FD71A /* SetQuizViewController.swift */; };
 		35EE1FFE1B45768B00C92DE4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EE1FFD1B45768B00C92DE4 /* Images.xcassets */; };
 		35EE200D1B45768B00C92DE4 /* spajamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE200C1B45768B00C92DE4 /* spajamTests.swift */; };
 		35EE201A1B457B2C00C92DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20171B457B2C00C92DE4 /* AppDelegate.swift */; };
@@ -66,6 +67,7 @@
 /* Begin PBXFileReference section */
 		2B99ACC730962BD127416909 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		35B1773F1B481527000FD71A /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		35B177411B48189B000FD71A /* SetQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetQuizViewController.swift; sourceTree = "<group>"; };
 		35EE1FF11B45768B00C92DE4 /* spajam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spajam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EE1FF51B45768B00C92DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35EE1FFD1B45768B00C92DE4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 				35EE208E1B47FDB700C92DE4 /* MyQuizViewController.storyboard */,
 				35EE208F1B47FDB700C92DE4 /* MyQuizViewController.swift */,
 				35EE20921B47FE2E00C92DE4 /* MyQuizTableViewCell.swift */,
+				35B177411B48189B000FD71A /* SetQuizViewController.swift */,
 			);
 			path = createquestion;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				35EE20601B457BD300C92DE4 /* CameraStyleKitClass.m in Sources */,
 				35EE20531B457BD300C92DE4 /* EventBus.swift in Sources */,
 				35EE20581B457BD300C92DE4 /* CameraDismissButton.m in Sources */,
+				35B177421B48189B000FD71A /* SetQuizViewController.swift in Sources */,
 				35EE20571B457BD300C92DE4 /* CameraSessionView.m in Sources */,
 				35EE20541B457BD300C92DE4 /* Array+Ext.swift in Sources */,
 				35EE20911B47FDB700C92DE4 /* MyQuizViewController.swift in Sources */,

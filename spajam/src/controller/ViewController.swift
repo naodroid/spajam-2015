@@ -17,12 +17,17 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        //if !User.hasAccount() {
+        if !User.hasAccount() {
             let vc = PresentationViewController.createVC()
             let nc = UINavigationController(rootViewController: vc)
-            nc .setNavigationBarHidden(true, animated: false)
+            nc.setNavigationBarHidden(true, animated: false)
             self.presentViewController(nc, animated: true, completion: nil)
-        //}
+        } else {
+            let vc = MyQuizViewController.createVC()
+            let nc = UINavigationController(rootViewController: vc)
+            nc.setNavigationBarHidden(true, animated: false)
+            self.presentViewController(nc, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {

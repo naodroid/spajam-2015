@@ -92,12 +92,27 @@ class MyQuizViewController: UIViewController,
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MyQuizTableViewCell
         
         let index = indexPath.row
+        let category = self.categories[index]
+        let quiz = MyQuizList.instance().list[category]
         
-        
-        
+        cell.updateCell(category: category, hasQuiz: quiz != nil)
         
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let index = indexPath.row
+        let category = self.categories[index]
+        
+        let vc = SetQuizViewController.createVC(self.storyboard!, category: category)
+        self.addChildViewController(vc)
+        vc.didMoveToParentViewController(self)
+        self.view.addSubview(vc.view)
+        vc.startEnterAnimation()
+    }
+    
 }
 
 class CategoryInfo {
