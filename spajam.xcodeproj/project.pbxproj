@@ -54,6 +54,7 @@
 		35EE20901B47FDB700C92DE4 /* MyQuizViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EE208E1B47FDB700C92DE4 /* MyQuizViewController.storyboard */; };
 		35EE20911B47FDB700C92DE4 /* MyQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE208F1B47FDB700C92DE4 /* MyQuizViewController.swift */; };
 		35EE20931B47FE2E00C92DE4 /* MyQuizCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20921B47FE2E00C92DE4 /* MyQuizCollectionViewCell.swift */; };
+		35FE950F1B48654900FF1F98 /* MyQuizCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE950E1B48654900FF1F98 /* MyQuizCollectionView.swift */; };
 		5C204D121B485916003852CA /* setting_ohako_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C204D0C1B485916003852CA /* setting_ohako_bg@2x.png */; };
 		5C204D131B485916003852CA /* settings_ohako_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C204D0D1B485916003852CA /* settings_ohako_default@2x.png */; };
 		5C204D141B485916003852CA /* settings_ohako_kentei_button_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C204D0E1B485916003852CA /* settings_ohako_kentei_button_default@2x.png */; };
@@ -139,6 +140,7 @@
 		35EE208E1B47FDB700C92DE4 /* MyQuizViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyQuizViewController.storyboard; sourceTree = "<group>"; };
 		35EE208F1B47FDB700C92DE4 /* MyQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuizViewController.swift; sourceTree = "<group>"; };
 		35EE20921B47FE2E00C92DE4 /* MyQuizCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuizCollectionViewCell.swift; sourceTree = "<group>"; };
+		35FE950E1B48654900FF1F98 /* MyQuizCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuizCollectionView.swift; sourceTree = "<group>"; };
 		3F1A743370D0FDF3F1155F43 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C204D0C1B485916003852CA /* setting_ohako_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting_ohako_bg@2x.png"; sourceTree = "<group>"; };
 		5C204D0D1B485916003852CA /* settings_ohako_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings_ohako_default@2x.png"; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 			children = (
 				35EE208E1B47FDB700C92DE4 /* MyQuizViewController.storyboard */,
 				35EE208F1B47FDB700C92DE4 /* MyQuizViewController.swift */,
+				35FE950E1B48654900FF1F98 /* MyQuizCollectionView.swift */,
 				35EE20921B47FE2E00C92DE4 /* MyQuizCollectionViewCell.swift */,
 				35B177411B48189B000FD71A /* SetQuizViewController.swift */,
 				35B177431B482071000FD71A /* SetRankViewController.swift */,
@@ -657,6 +660,7 @@
 				35EE20261B457BCA00C92DE4 /* FileUtil.swift in Sources */,
 				35EE20551B457BD300C92DE4 /* PromiseKit+Ext.swift in Sources */,
 				35B177441B482071000FD71A /* SetRankViewController.swift in Sources */,
+				35FE950F1B48654900FF1F98 /* MyQuizCollectionView.swift in Sources */,
 				35EE20671B457C0100C92DE4 /* AVPlayerView.m in Sources */,
 				35EE20271B457BCA00C92DE4 /* ViewUtil.swift in Sources */,
 				35EE205A1B457BD300C92DE4 /* CameraFocalReticule.m in Sources */,

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lmq-LK-m1n">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--My Quiz View Controller-->
@@ -13,23 +14,23 @@
                         <viewControllerLayoutGuide type="bottom" id="t5c-Be-6wg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bdh-BR-A7G">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
                             <userLayoutGuide location="290" affinity="minY"/>
                         </userGuides>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting_ohako_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="1w7-ra-Omj" userLabel="bgImageView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLO-hi-7kg" userLabel="contentsArea">
-                                <rect key="frame" x="55" y="100" width="320" height="567"/>
+                                <rect key="frame" x="47" y="85" width="273" height="483"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uoc-Hs-b2f">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="501"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L8g-2t-LL4">
-                                            <size key="itemSize" width="150" height="230"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uoc-Hs-b2f" customClass="MyQuizCollectionView" customModule="spajam" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="8" width="273" height="401"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="L8g-2t-LL4">
+                                            <size key="itemSize" width="130" height="200"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -39,24 +40,30 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="230"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="200"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nne-fb-OXe" userLabel="categoryImageView">
-                                                            <rect key="frame" x="17" y="20" width="125" height="143"/>
-                                                        </imageView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings_ohako_selected.png" translatesAutoresizingMaskIntoConstraints="NO" id="oan-lj-Rmr" userLabel="hexImageView">
-                                                            <rect key="frame" x="17" y="20" width="125" height="143"/>
-                                                        </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings_ohako_kentei_button_default.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kk5-kH-aAf">
-                                                            <rect key="frame" x="28" y="190" width="95" height="35"/>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CategoryName!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDA-21-nWg">
-                                                            <rect key="frame" x="14" y="163" width="122" height="21"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c9y-pl-cgD">
+                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="200"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nne-fb-OXe" userLabel="categoryImageView">
+                                                                    <rect key="frame" x="17" y="25" width="96" height="107"/>
+                                                                </imageView>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings_ohako_selected.png" translatesAutoresizingMaskIntoConstraints="NO" id="oan-lj-Rmr" userLabel="hexImageView">
+                                                                    <rect key="frame" x="17" y="25" width="96" height="107"/>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CategoryName!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDA-21-nWg">
+                                                                    <rect key="frame" x="4" y="134" width="122" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings_ohako_kentei_button_default.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kk5-kH-aAf">
+                                                                    <rect key="frame" x="18" y="157" width="95" height="35"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
@@ -65,51 +72,73 @@
                                                     <outlet property="categoryLabel" destination="LDA-21-nWg" id="024-th-XxE"/>
                                                     <outlet property="hasQuizImageView" destination="Kk5-kH-aAf" id="uRh-BM-kYf"/>
                                                     <outlet property="hexImageView" destination="oan-lj-Rmr" id="8pa-Sp-gEk"/>
+                                                    <outlet property="rootView" destination="c9y-pl-cgD" id="4A6-QC-pi9"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlx-Kv-hts" userLabel="okButton">
-                                        <rect key="frame" x="43" y="513" width="234" height="42"/>
+                                        <rect key="frame" x="20" y="425" width="234" height="42"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="234" id="8DF-XH-cUj"/>
-                                            <constraint firstAttribute="height" constant="42" id="o9s-8h-hLQ"/>
+                                            <constraint firstAttribute="width" secondItem="Tlx-Kv-hts" secondAttribute="height" multiplier="39:7" id="fQo-g3-gnz"/>
                                         </constraints>
                                         <state key="normal" image="settings_ohako_start_button.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aEx-6u-UoA">
-                                        <rect key="frame" x="142" y="265" width="37" height="37"/>
+                                        <rect key="frame" x="118" y="223" width="37" height="37"/>
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Tlx-Kv-hts" secondAttribute="trailing" constant="19" id="1MY-cS-JCj"/>
                                     <constraint firstAttribute="centerX" secondItem="aEx-6u-UoA" secondAttribute="centerX" id="MJY-eK-Z5H"/>
                                     <constraint firstAttribute="trailing" secondItem="uoc-Hs-b2f" secondAttribute="trailing" id="Rmw-xp-nEw"/>
-                                    <constraint firstAttribute="bottom" secondItem="Tlx-Kv-hts" secondAttribute="bottom" constant="12" id="Vtt-AT-Tlw"/>
-                                    <constraint firstItem="Tlx-Kv-hts" firstAttribute="top" secondItem="uoc-Hs-b2f" secondAttribute="bottom" constant="12" id="Zh1-uK-Dsx"/>
+                                    <constraint firstAttribute="bottom" secondItem="Tlx-Kv-hts" secondAttribute="bottom" constant="16" id="Vtt-AT-Tlw"/>
+                                    <constraint firstItem="Tlx-Kv-hts" firstAttribute="top" secondItem="uoc-Hs-b2f" secondAttribute="bottom" constant="16" id="Zh1-uK-Dsx"/>
                                     <constraint firstAttribute="centerX" secondItem="Tlx-Kv-hts" secondAttribute="centerX" id="c6R-jh-QZM"/>
                                     <constraint firstAttribute="centerY" secondItem="aEx-6u-UoA" secondAttribute="centerY" id="dAY-aZ-1aO"/>
-                                    <constraint firstItem="uoc-Hs-b2f" firstAttribute="top" secondItem="TLO-hi-7kg" secondAttribute="top" id="iMt-yx-oIJ"/>
-                                    <constraint firstItem="uoc-Hs-b2f" firstAttribute="leading" secondItem="TLO-hi-7kg" secondAttribute="leading" id="jJE-LC-2vz"/>
+                                    <constraint firstItem="uoc-Hs-b2f" firstAttribute="top" secondItem="TLO-hi-7kg" secondAttribute="top" constant="8" id="iMt-yx-oIJ"/>
+                                    <constraint firstItem="uoc-Hs-b2f" firstAttribute="leading" secondItem="TLO-hi-7kg" secondAttribute="leading" id="jfb-7Y-kaQ"/>
+                                    <constraint firstItem="Tlx-Kv-hts" firstAttribute="leading" secondItem="TLO-hi-7kg" secondAttribute="leading" constant="20" id="qRv-yE-rsG"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hwq-Sr-umW" userLabel="sideBarDummyView">
+                                <rect key="frame" x="0.0" y="0.0" width="47" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Hwq-Sr-umW" secondAttribute="height" multiplier="47:568" id="A2R-Ew-w1I"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1x-40-UGU" userLabel="topBarDummyView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G1x-40-UGU" secondAttribute="height" multiplier="15:4" id="fET-SZ-xFG"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TLO-hi-7kg" firstAttribute="top" secondItem="4X3-yV-Xh4" secondAttribute="bottom" constant="80" id="4WQ-z4-5GD"/>
+                            <constraint firstItem="t5c-Be-6wg" firstAttribute="top" secondItem="Hwq-Sr-umW" secondAttribute="bottom" id="7Dn-0v-R6J"/>
+                            <constraint firstAttribute="trailing" secondItem="G1x-40-UGU" secondAttribute="trailing" id="8xP-we-rA5"/>
                             <constraint firstItem="1w7-ra-Omj" firstAttribute="leading" secondItem="bdh-BR-A7G" secondAttribute="leading" id="FOW-Gi-XE9"/>
                             <constraint firstItem="1w7-ra-Omj" firstAttribute="top" secondItem="bdh-BR-A7G" secondAttribute="top" id="GCq-FR-l9I"/>
-                            <constraint firstItem="TLO-hi-7kg" firstAttribute="leading" secondItem="bdh-BR-A7G" secondAttribute="leading" constant="55" id="LCL-k4-hlw"/>
                             <constraint firstAttribute="trailing" secondItem="TLO-hi-7kg" secondAttribute="trailing" id="LZd-MI-uCy"/>
                             <constraint firstItem="t5c-Be-6wg" firstAttribute="top" secondItem="1w7-ra-Omj" secondAttribute="bottom" id="WYb-5i-wbb"/>
                             <constraint firstAttribute="trailing" secondItem="1w7-ra-Omj" secondAttribute="trailing" id="dfz-p0-h57"/>
                             <constraint firstItem="t5c-Be-6wg" firstAttribute="top" secondItem="TLO-hi-7kg" secondAttribute="bottom" id="gOQ-tz-AXp"/>
+                            <constraint firstItem="Hwq-Sr-umW" firstAttribute="leading" secondItem="bdh-BR-A7G" secondAttribute="leading" id="haD-CX-DCa"/>
+                            <constraint firstItem="Hwq-Sr-umW" firstAttribute="top" secondItem="bdh-BR-A7G" secondAttribute="top" id="jUw-rF-d1n"/>
+                            <constraint firstItem="TLO-hi-7kg" firstAttribute="leading" secondItem="Hwq-Sr-umW" secondAttribute="trailing" id="nY3-Cd-meZ"/>
+                            <constraint firstItem="TLO-hi-7kg" firstAttribute="top" secondItem="G1x-40-UGU" secondAttribute="bottom" id="roc-iN-8bY"/>
+                            <constraint firstItem="G1x-40-UGU" firstAttribute="leading" secondItem="bdh-BR-A7G" secondAttribute="leading" id="un8-RB-kqe"/>
+                            <constraint firstItem="G1x-40-UGU" firstAttribute="top" secondItem="bdh-BR-A7G" secondAttribute="top" id="wDm-xT-KQI"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="collectionView" destination="uoc-Hs-b2f" id="Wgb-4K-Hmr"/>
                         <outlet property="loadingIndicator" destination="aEx-6u-UoA" id="zwK-Mt-dOm"/>
@@ -118,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1n-4Y-goG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.5" y="504.5"/>
+            <point key="canvasLocation" x="137" y="503"/>
         </scene>
         <!--Set Quiz View Controller-->
         <scene sceneID="Ee4-ZU-Pje">
