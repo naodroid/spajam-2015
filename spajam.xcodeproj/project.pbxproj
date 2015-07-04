@@ -10,6 +10,7 @@
 		35B177401B481527000FD71A /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1773F1B481527000FD71A /* Api.swift */; };
 		35B177421B48189B000FD71A /* SetQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B177411B48189B000FD71A /* SetQuizViewController.swift */; };
 		35B177441B482071000FD71A /* SetRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B177431B482071000FD71A /* SetRankViewController.swift */; };
+		35B177461B4823A1000FD71A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B177451B4823A1000FD71A /* User.swift */; };
 		35EE1FFE1B45768B00C92DE4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EE1FFD1B45768B00C92DE4 /* Images.xcassets */; };
 		35EE200D1B45768B00C92DE4 /* spajamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE200C1B45768B00C92DE4 /* spajamTests.swift */; };
 		35EE201A1B457B2C00C92DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20171B457B2C00C92DE4 /* AppDelegate.swift */; };
@@ -46,7 +47,6 @@
 		35EE207F1B47F24200C92DE4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EE207E1B47F24200C92DE4 /* AudioToolbox.framework */; };
 		35EE20821B47F2C900C92DE4 /* PresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20801B47F2C900C92DE4 /* PresentationViewController.swift */; };
 		35EE20831B47F2C900C92DE4 /* PresentationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EE20811B47F2C900C92DE4 /* PresentationViewController.xib */; };
-		35EE20881B47F41C00C92DE4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20871B47F41C00C92DE4 /* User.swift */; };
 		35EE208A1B47F6B000C92DE4 /* sample.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 35EE20891B47F6B000C92DE4 /* sample.m4v */; };
 		35EE208C1B47FCED00C92DE4 /* MyQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE208B1B47FCED00C92DE4 /* MyQuiz.swift */; };
 		35EE20901B47FDB700C92DE4 /* MyQuizViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EE208E1B47FDB700C92DE4 /* MyQuizViewController.storyboard */; };
@@ -70,6 +70,7 @@
 		35B1773F1B481527000FD71A /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		35B177411B48189B000FD71A /* SetQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetQuizViewController.swift; sourceTree = "<group>"; };
 		35B177431B482071000FD71A /* SetRankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetRankViewController.swift; sourceTree = "<group>"; };
+		35B177451B4823A1000FD71A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		35EE1FF11B45768B00C92DE4 /* spajam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spajam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EE1FF51B45768B00C92DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35EE1FFD1B45768B00C92DE4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -123,7 +124,6 @@
 		35EE207E1B47F24200C92DE4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		35EE20801B47F2C900C92DE4 /* PresentationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationViewController.swift; sourceTree = "<group>"; };
 		35EE20811B47F2C900C92DE4 /* PresentationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PresentationViewController.xib; sourceTree = "<group>"; };
-		35EE20871B47F41C00C92DE4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../../../../spajam_fukui/spajam/src/api/User.swift; sourceTree = "<group>"; };
 		35EE20891B47F6B000C92DE4 /* sample.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.m4v; sourceTree = "<group>"; };
 		35EE208B1B47FCED00C92DE4 /* MyQuiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuiz.swift; sourceTree = "<group>"; };
 		35EE208E1B47FDB700C92DE4 /* MyQuizViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyQuizViewController.storyboard; sourceTree = "<group>"; };
@@ -388,7 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				35B1773F1B481527000FD71A /* Api.swift */,
-				35EE20871B47F41C00C92DE4 /* User.swift */,
+				35B177451B4823A1000FD71A /* User.swift */,
 				35EE208B1B47FCED00C92DE4 /* MyQuiz.swift */,
 			);
 			path = api;
@@ -588,10 +588,10 @@
 				35EE20611B457BD300C92DE4 /* CaptureSessionManager.m in Sources */,
 				35EE20521B457BD300C92DE4 /* AbstractEvent.swift in Sources */,
 				35EE20251B457BCA00C92DE4 /* AutoLayoutUtil.swift in Sources */,
+				35B177461B4823A1000FD71A /* User.swift in Sources */,
 				35EE205D1B457BD300C92DE4 /* LaunchCameraButton.m in Sources */,
 				35B177401B481527000FD71A /* Api.swift in Sources */,
 				35EE208C1B47FCED00C92DE4 /* MyQuiz.swift in Sources */,
-				35EE20881B47F41C00C92DE4 /* User.swift in Sources */,
 				35EE20821B47F2C900C92DE4 /* PresentationViewController.swift in Sources */,
 				35EE20621B457BD300C92DE4 /* Constants.m in Sources */,
 				35EE206C1B457C6900C92DE4 /* ViewController.swift in Sources */,
