@@ -19,7 +19,9 @@ class ViewController: UIViewController {
         
         if !User.hasAccount() {
             let vc = PresentationViewController.createVC()
-            self.presentViewController(vc, animated: true, completion: nil)
+            let nc = UINavigationController(rootViewController: vc)
+            nc .setNavigationBarHidden(true, animated: false)
+            self.presentViewController(nc, animated: true, completion: nil)
         }
     }
 

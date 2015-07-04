@@ -55,10 +55,12 @@ class PresentationViewController: UIViewController, AVPlayerViewDelegate, UIScro
         }
         self.loadingIndicator.hidden = false
         Api.register(name).then {(user : User) -> Void in
-            self.dismissViewControllerAnimated(true, completion: nil)
+            dispatchAfterOnMain(0.8) {
+                let vc = CategorySelectionViewController.createVC()
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
     }
-    
     
     //MARK: AVPlayer
     func avPlayer(player: AVPlayerView!, didStatuChanged status: AVPlayerStatus) {

@@ -82,7 +82,7 @@ class CategorySelectionViewController: UIViewController,
     //MARK: UI event
     
     @IBAction func didClickDecideButton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
     
