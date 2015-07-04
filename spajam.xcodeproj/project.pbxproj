@@ -43,6 +43,10 @@
 		35EE207B1B47F1F900C92DE4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EE1FFF1B45768B00C92DE4 /* LaunchScreen.xib */; };
 		35EE207D1B47F22C00C92DE4 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EE207C1B47F22C00C92DE4 /* CoreBluetooth.framework */; };
 		35EE207F1B47F24200C92DE4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EE207E1B47F24200C92DE4 /* AudioToolbox.framework */; };
+		35EE20821B47F2C900C92DE4 /* PresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20801B47F2C900C92DE4 /* PresentationViewController.swift */; };
+		35EE20831B47F2C900C92DE4 /* PresentationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EE20811B47F2C900C92DE4 /* PresentationViewController.xib */; };
+		35EE20861B47F41600C92DE4 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20851B47F41600C92DE4 /* Api.swift */; };
+		35EE20881B47F41C00C92DE4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE20871B47F41C00C92DE4 /* User.swift */; };
 		C986EDEFB8951476949FED82 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1A743370D0FDF3F1155F43 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -111,6 +115,10 @@
 		35EE20771B47DCE300C92DE4 /* CategorySelection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CategorySelection.storyboard; sourceTree = "<group>"; };
 		35EE207C1B47F22C00C92DE4 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		35EE207E1B47F24200C92DE4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		35EE20801B47F2C900C92DE4 /* PresentationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationViewController.swift; sourceTree = "<group>"; };
+		35EE20811B47F2C900C92DE4 /* PresentationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PresentationViewController.xib; sourceTree = "<group>"; };
+		35EE20851B47F41600C92DE4 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Api.swift; path = ../../../../spajam_fukui/spajam/src/api/Api.swift; sourceTree = "<group>"; };
+		35EE20871B47F41C00C92DE4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../../../../spajam_fukui/spajam/src/api/User.swift; sourceTree = "<group>"; };
 		3F1A743370D0FDF3F1155F43 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD42F5D5EA05AC7C02439E5E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,6 +205,7 @@
 		35EE20161B457B2C00C92DE4 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				35EE20841B47F3E600C92DE4 /* api */,
 				35EE20681B457C6900C92DE4 /* controller */,
 				35EE20281B457BD300C92DE4 /* device */,
 				35EE202A1B457BD300C92DE4 /* event */,
@@ -338,6 +347,8 @@
 		35EE20641B457C0100C92DE4 /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				35EE20801B47F2C900C92DE4 /* PresentationViewController.swift */,
+				35EE20811B47F2C900C92DE4 /* PresentationViewController.xib */,
 				35EE20651B457C0100C92DE4 /* AVPlayerView.h */,
 				35EE20661B457C0100C92DE4 /* AVPlayerView.m */,
 			);
@@ -369,6 +380,15 @@
 				35EE20751B47DCDA00C92DE4 /* CategorySelectionViewController.swift */,
 			);
 			path = first_flow;
+			sourceTree = "<group>";
+		};
+		35EE20841B47F3E600C92DE4 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				35EE20851B47F41600C92DE4 /* Api.swift */,
+				35EE20871B47F41C00C92DE4 /* User.swift */,
+			);
+			path = api;
 			sourceTree = "<group>";
 		};
 		70968FA8193D2C0207920E93 /* Frameworks */ = {
@@ -477,6 +497,7 @@
 			files = (
 				35EE207B1B47F1F900C92DE4 /* LaunchScreen.xib in Resources */,
 				35EE1FFE1B45768B00C92DE4 /* Images.xcassets in Resources */,
+				35EE20831B47F2C900C92DE4 /* PresentationViewController.xib in Resources */,
 				35EE20731B47DC1000C92DE4 /* url_schemes.json in Resources */,
 				35EE20781B47DCE300C92DE4 /* CategorySelection.storyboard in Resources */,
 				35EE205F1B457BD300C92DE4 /* PaintCodeFile.pcvd in Resources */,
@@ -552,6 +573,9 @@
 				35EE20521B457BD300C92DE4 /* AbstractEvent.swift in Sources */,
 				35EE20251B457BCA00C92DE4 /* AutoLayoutUtil.swift in Sources */,
 				35EE205D1B457BD300C92DE4 /* LaunchCameraButton.m in Sources */,
+				35EE20881B47F41C00C92DE4 /* User.swift in Sources */,
+				35EE20821B47F2C900C92DE4 /* PresentationViewController.swift in Sources */,
+				35EE20861B47F41600C92DE4 /* Api.swift in Sources */,
 				35EE20621B457BD300C92DE4 /* Constants.m in Sources */,
 				35EE206C1B457C6900C92DE4 /* ViewController.swift in Sources */,
 				35EE20511B457BD300C92DE4 /* PhotoUtil.swift in Sources */,
