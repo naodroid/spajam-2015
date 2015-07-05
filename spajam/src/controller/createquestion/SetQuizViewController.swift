@@ -130,19 +130,23 @@ class SetQuizViewController: UIViewController {
             return
         }
         
+        self.loadingIndicator.hidden = false
         self.loadingIndicator.startAnimating()
         self.okButton.enabled = false
         
-        Api.setQuiz(self.category, answers: answers).then {(result : String) -> Void in
-            MyQuizList.instance().list[self.category] = self.myQuiz
-            MyQuizList.instance().writeToFile()
-            
-            EventBus.sendEvent(MyQuizUpdatedEvent(myQuiz: self.myQuiz))
-            self.startExitAnimation()
-            self.loadingIndicator.stopAnimating()
-        }.finally(on: dispatch_get_main_queue()) { () -> Void in
-            self.loadingIndicator.stopAnimating()
-            self.setupForCurrentQuiz()
+        //なぜかprogresが出るまでに時間がかかる。よくわからないので処理遅延させる
+        dispatchAfterOnMain(0.5) {
+            Api.setQuiz(self.category, answers: answers).then {(result : String) -> Void in
+                MyQuizList.instance().list[self.category] = self.myQuiz
+                MyQuizList.instance().writeToFile()
+                
+                EventBus.sendEvent(MyQuizUpdatedEvent(myQuiz: self.myQuiz))
+                self.startExitAnimation()
+                self.loadingIndicator.stopAnimating()
+                }.finally(on: dispatch_get_main_queue()) { () -> Void in
+                    self.loadingIndicator.stopAnimating()
+                    self.setupForCurrentQuiz()
+            }
         }
     }
     func validateAnswers() -> [MyQuizAnswer] {

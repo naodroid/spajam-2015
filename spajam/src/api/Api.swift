@@ -103,6 +103,7 @@ class Api {
     }
     private class func writeCookie() {
         if let c = _cookieString {
+            println("USERID:\(c)")
             let path = FileUtil.filePathForName("cookie")
             NSKeyedArchiver.archiveRootObject(c, toFile: path)
         }
