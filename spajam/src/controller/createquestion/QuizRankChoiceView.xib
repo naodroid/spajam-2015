@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuizRankChoiceView" customModule="spajam" customModuleProvider="target">
+            <connections>
+                <outlet property="button1" destination="gMa-BP-qDR" id="oEv-Mn-RYl"/>
+                <outlet property="button2" destination="MSX-qZ-3Bx" id="yHu-sT-YZu"/>
+                <outlet property="button3" destination="qBH-D7-L4c" id="7ag-KB-HFk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="47"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMa-BP-qDR" userLabel="Button1">
+                    <rect key="frame" x="3" y="3" width="42" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="CqS-Gz-BrZ"/>
+                        <constraint firstAttribute="width" constant="42" id="KRz-6z-BK6"/>
+                    </constraints>
+                    <state key="normal" image="ohako_kentei_setting_1_button_default.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didClickButton1:" destination="-1" eventType="touchUpInside" id="LxW-FG-1Ex"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSX-qZ-3Bx" userLabel="Button2">
+                    <rect key="frame" x="49" y="3" width="42" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="9T3-dl-gUO"/>
+                        <constraint firstAttribute="width" constant="42" id="zrc-0s-kwf"/>
+                    </constraints>
+                    <state key="normal" image="ohako_kentei_setting_2_button_default.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didClickButton2:" destination="-1" eventType="touchUpInside" id="LoW-4T-zBM"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBH-D7-L4c" userLabel="Button3">
+                    <rect key="frame" x="95" y="3" width="42" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="dJt-97-DnD"/>
+                        <constraint firstAttribute="width" constant="42" id="rRE-yC-JUg"/>
+                    </constraints>
+                    <state key="normal" image="ohako_kentei_setting_3_button_default.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didClickButton3:" destination="-1" eventType="touchUpInside" id="sW4-4D-s7K"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="MSX-qZ-3Bx" firstAttribute="leading" secondItem="gMa-BP-qDR" secondAttribute="trailing" constant="4" id="58Q-hC-0C6"/>
+                <constraint firstAttribute="centerY" secondItem="MSX-qZ-3Bx" secondAttribute="centerY" id="FH1-Oa-d1O"/>
+                <constraint firstAttribute="centerY" secondItem="gMa-BP-qDR" secondAttribute="centerY" id="eDW-Ys-x1E"/>
+                <constraint firstItem="qBH-D7-L4c" firstAttribute="leading" secondItem="MSX-qZ-3Bx" secondAttribute="trailing" constant="4" id="kC8-HU-5B9"/>
+                <constraint firstAttribute="centerX" secondItem="MSX-qZ-3Bx" secondAttribute="centerX" id="s4N-S8-PIH"/>
+                <constraint firstAttribute="centerY" secondItem="qBH-D7-L4c" secondAttribute="centerY" id="yW3-Ia-ICo"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="275" y="295.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ohako_kentei_setting_1_button_default.png" width="42" height="42"/>
+        <image name="ohako_kentei_setting_2_button_default.png" width="42" height="42"/>
+        <image name="ohako_kentei_setting_3_button_default.png" width="41" height="42"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
