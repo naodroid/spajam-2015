@@ -29,6 +29,8 @@
 		359713551B48DA2000976153 /* FriendBalloonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 359713541B48DA2000976153 /* FriendBalloonView.xib */; };
 		359713571B48DB0A00976153 /* FriendBalloonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359713561B48DB0A00976153 /* FriendBalloonView.swift */; };
 		359713591B48DB7000976153 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359713581B48DB7000976153 /* QuartzCore.framework */; };
+		3597135B1B48E5E600976153 /* TimerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3597135A1B48E5E600976153 /* TimerEvent.swift */; };
+		3597135D1B48EB5C00976153 /* FriendListUpdateRequestEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3597135C1B48EB5C00976153 /* FriendListUpdateRequestEvent.swift */; };
 		35AF74431B488FBD003E7D88 /* AutoScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AF74421B488FBD003E7D88 /* AutoScaleView.swift */; };
 		35AF744E1B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AF74441B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png */; };
 		35AF744F1B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AF74451B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png */; };
@@ -132,6 +134,8 @@
 		359713541B48DA2000976153 /* FriendBalloonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendBalloonView.xib; sourceTree = "<group>"; };
 		359713561B48DB0A00976153 /* FriendBalloonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendBalloonView.swift; sourceTree = "<group>"; };
 		359713581B48DB7000976153 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3597135A1B48E5E600976153 /* TimerEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerEvent.swift; sourceTree = "<group>"; };
+		3597135C1B48EB5C00976153 /* FriendListUpdateRequestEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListUpdateRequestEvent.swift; sourceTree = "<group>"; };
 		35AF74421B488FBD003E7D88 /* AutoScaleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoScaleView.swift; sourceTree = "<group>"; };
 		35AF74441B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ohako_kentei_setting_1_button_default@2x.png"; sourceTree = "<group>"; };
 		35AF74451B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ohako_kentei_setting_1_button_selected@2x.png"; sourceTree = "<group>"; };
@@ -353,6 +357,8 @@
 				35EE202B1B457BD300C92DE4 /* AbstractEvent.swift */,
 				35EE202C1B457BD300C92DE4 /* EventBus.swift */,
 				35B177491B4846A9000FD71A /* MyQuizUpdatedEvent.swift */,
+				3597135A1B48E5E600976153 /* TimerEvent.swift */,
+				3597135C1B48EB5C00976153 /* FriendListUpdateRequestEvent.swift */,
 			);
 			path = event;
 			sourceTree = "<group>";
@@ -773,6 +779,7 @@
 				35EE20611B457BD300C92DE4 /* CaptureSessionManager.m in Sources */,
 				35EE20521B457BD300C92DE4 /* AbstractEvent.swift in Sources */,
 				35EE20251B457BCA00C92DE4 /* AutoLayoutUtil.swift in Sources */,
+				3597135B1B48E5E600976153 /* TimerEvent.swift in Sources */,
 				35B177461B4823A1000FD71A /* User.swift in Sources */,
 				359713371B48BB3200976153 /* AnswerViewController.swift in Sources */,
 				35EE205D1B457BD300C92DE4 /* LaunchCameraButton.m in Sources */,
@@ -789,6 +796,7 @@
 				35EE205C1B457BD300C92DE4 /* CameraToggleButton.m in Sources */,
 				35B177481B484340000FD71A /* Quiz.swift in Sources */,
 				35EE20931B47FE2E00C92DE4 /* MyQuizCollectionViewCell.swift in Sources */,
+				3597135D1B48EB5C00976153 /* FriendListUpdateRequestEvent.swift in Sources */,
 				359713571B48DB0A00976153 /* FriendBalloonView.swift in Sources */,
 				35EE20601B457BD300C92DE4 /* CameraStyleKitClass.m in Sources */,
 				35EE20531B457BD300C92DE4 /* EventBus.swift in Sources */,

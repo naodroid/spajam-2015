@@ -171,6 +171,7 @@
                         <outlet property="image2" destination="9LX-Qq-iKR" id="hqK-cc-XdQ"/>
                         <outlet property="image3" destination="TdU-dH-bcs" id="ih3-qf-8VN"/>
                         <outlet property="image4" destination="reX-vh-HFz" id="E6q-uK-utf"/>
+                        <outlet property="titleLabel" destination="Ep7-KK-ChN" id="F9F-Hf-FcS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5S-ax-CIj" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -11,10 +11,18 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var mainRootView: MainRootView!
-    
+    private var timerRunning = false
+    private var lastPollingCallTime : NSTimeInterval = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        TimerEvent.register(self, {(ev: TimerEvent) -> Void in
+            self.didReceiveTimerEvent(ev)
+        })
+        
+        FriendListUpdateRequestEvent.register(self, {(ev : FriendListUpdateRequestEvent) -> Void in
+            self.didReceiveFriendListUpdateEvent(ev)
+        })
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -35,7 +43,11 @@ class ViewController: UIViewController {
             Api.getFriendList().then {(list) -> Void in
                 self.mainRootView.friends = list
             }
+            self.timerRunning = true
+            self.startPolling()
         }
+    }
+    override func viewDidDisappear(animated: Bool) {
     }
     
 
@@ -44,10 +56,19 @@ class ViewController: UIViewController {
     }
 
     //MARK: event
+    func didReceiveTimerEvent(ev : TimerEvent) {
+        self.timerRunning = ev.running
+        if ev.running {
+            self.startPolling()
+        }
+    }
+    func didReceiveFriendListUpdateEvent(ev : FriendListUpdateRequestEvent) {
+        
+    }
     
     @IBAction func didClickDebug(sender: AnyObject) {
         //特定ユーザIDを決め打ちで取得する
-        accessToUserQuiz(84)
+        accessToUserQuiz(89)
     }
     private func accessToUserQuiz(userId : Int) {
         Api.quizListProcess(userId).then {(quizList) -> Void in
@@ -60,6 +81,7 @@ class ViewController: UIViewController {
                 nc.didMoveToParentViewController(self)
                 self.view.addSubview(nc.view)
                 vc.startEnterAnimation()
+                EventBus.sendEvent(TimerEvent(running: false))
             }
         }
     }
@@ -75,6 +97,59 @@ class ViewController: UIViewController {
             }
             return nil
         }
+    }
+    
+    
+    
+    //POlling
+    func startPolling() {
+        let time = NSDate.timeIntervalSinceReferenceDate()
+        self.lastPollingCallTime = time
+        dispatchAfterOnMain(3.0) {
+            self.pollingProcess(time)
+        }
+    }
+    func pollingProcess(time : NSTimeInterval) {
+        if (!self.timerRunning || self.lastPollingCallTime != time) {
+            return
+        }
+        Api.getAllUsers().then {(users) -> Void in
+            let filtered = self.filterFriends(users)
+            if let picked = self.randomPick(filtered) {
+                self.accessToUserQuiz(picked.userId.toInt()!)
+            }
+        }.finally(on: dispatch_get_main_queue()) { () -> Void in
+            dispatchAfterOnMain(10) {
+                self.pollingProcess(time)
+            }
+        }
+    }
+    //フレンドになっているユーザを除去する
+    func filterFriends(users : [User]) -> [User] {
+        let friends = self.mainRootView.friends
+        let owner = User.owner()
+        
+        return users.filter {
+            let id = $0.userId
+            if id == owner.userId {
+                return false
+            }
+            for f in friends {
+                if f.userId == id.toInt() {
+                    return false
+                }
+            }
+            return true
+        }
+    }
+    ///ランダムに抽出
+    func randomPick(users : [User]) -> User? {
+        let count = users.count
+        if (count == 0) {
+            return nil
+        }
+        let index = arc4random_uniform(UInt32(count))
+        return users[Int(index)]
     }
     
     

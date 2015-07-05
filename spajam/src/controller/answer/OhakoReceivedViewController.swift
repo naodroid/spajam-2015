@@ -26,6 +26,8 @@ class OhakoReceivedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let name = self.quiz.userName
+        self.textLabel.text = "\(name)さんの\nオハコが届きました"
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -51,14 +53,17 @@ class OhakoReceivedViewController: UIViewController {
 
     @IBAction func didClickOpen(sender: AnyObject) {
         let vc = AnswerViewController.createVCWithQuiz(self.storyboard!, quiz: self.quiz)
-//        self.addChildViewController(vc)
-//        vc.didMoveToParentViewController(self)
-//        self.view.addSubview(vc.view)
-//        vc.view.frame = self.view.bounds
-        self.presentViewController(vc, animated: true, completion: nil)
+        let parent = self.parentViewController!
+        
+        self.willMoveToParentViewController(nil)
+        self.view.removeFromSuperview()
+        self.removeFromParentViewController()
+        
+        parent.presentViewController(vc, animated: true, completion: nil)
     }
     
     @IBAction func didClickCancel(sender: AnyObject) {
         self.startExitAnimation()
+        EventBus.sendEvent(TimerEvent(running: true))
     }
 }

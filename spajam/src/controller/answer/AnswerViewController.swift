@@ -22,6 +22,9 @@ class AnswerViewController: UIViewController {
     @IBOutlet weak var image3: UIImageView!
     @IBOutlet weak var image4: UIImageView!
     
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    
     @IBOutlet weak var countDownLabel: UILabel!
     
     private var buttons : Array<UIButton>! = nil;
@@ -41,6 +44,9 @@ class AnswerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let name = self.quiz.userName
+        self.titleLabel.text = "\(name)さんのオハコ検定"
         
         self.callForWait()
         
@@ -90,11 +96,11 @@ class AnswerViewController: UIViewController {
             category: self.quiz.category).then {(result) -> Void in
                self.showResultWithRank(rank)
         }
-        
-        
     }
     func showResultWithRank(rank: QuizRank) {
         //結果をどう表示すべきか
+        EventBus.sendEvent(FriendListUpdateRequestEvent())
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     

@@ -222,6 +222,18 @@ class Api {
             return json.arrayValue.map(Friend.parse)
         }
     }
+    //全ユーザ取得
+    class func getAllUsers() -> Promise<[User]> {
+        let path = "\(basePath)/all_users"
+        
+        return getPromise(path).then {(data : NSData) -> [User] in
+            let text = NSString(data: data, encoding: 0)
+            let json = JSON(data : data)
+            
+            return json.arrayValue.map(User.parse)
+        }
+        
+    }
     
     
 }
