@@ -62,14 +62,16 @@ class MainRootView: UIView {
         let centerX = viewW / 2
         let centerY = viewH / 2
         
+        let radius = viewW * CGFloat(0.4)
+        
         self.friendViews.foreach {(view) in
             let a = start + angle + Int(arc4random_uniform(10)) - 5
             
             let dx = cos(Double(a) / 180.0 * M_PI)
             let dy = sin(Double(a) / 180.0 * M_PI)
             
-            let cx = centerX + CGFloat(dx)
-            let cy = centerY + CGFloat(dy)
+            let cx = centerX + CGFloat(dx) * radius
+            let cy = centerY + CGFloat(dy) * radius
             
             view.center = CGPointMake(cx, cy)
             

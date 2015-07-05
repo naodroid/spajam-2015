@@ -205,7 +205,7 @@ class Api {
         
         let dict = NSMutableDictionary()
         dict["userId"] = targetUser
-        dict["rank"] = answerRank.rawValue
+        dict["rank"] = answerRank.apiText()
         dict["image"] = selectedImage
         dict["category"] = category
         

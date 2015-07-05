@@ -31,9 +31,15 @@ class Friend {
         let image = json["image"].stringValue
         let category = json["category"].stringValue
         let rankText = json["rank"].stringValue
-        let rank = quizRankForText(rankText)!
+        let rank : QuizRank?
+        if let raw = rankText.toInt() {
+            rank = QuizRank(rawValue: raw)
+        } else {
+            rank = quizRankForText(rankText)
+        }
+        let useRank = rank ?? QuizRank.Friend
         
-        return Friend(userId: userId, name: name, image: image, category: category, rank: rank)
+        return Friend(userId: userId, name: name, image: image, category: category, rank: useRank)
     }
     
 }

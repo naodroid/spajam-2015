@@ -20,8 +20,12 @@ class FriendBalloonView: UIView {
     }
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    override func awakeFromNib() {
         let layer = self.iconImageView.layer
         layer.cornerRadius = CGFloat(38)
+        layer.masksToBounds = true
     }
    
     

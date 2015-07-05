@@ -14,7 +14,6 @@
 		359713371B48BB3200976153 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359713361B48BB3200976153 /* AnswerViewController.swift */; };
 		359713401B48C22E00976153 /* main_ballon_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 359713381B48C22E00976153 /* main_ballon_bg@2x.png */; };
 		359713411B48C22E00976153 /* main_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 359713391B48C22E00976153 /* main_bg@2x.png */; };
-		359713421B48C22E00976153 /* main_mock.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597133A1B48C22E00976153 /* main_mock.png */; };
 		359713431B48C22E00976153 /* main_ohako_list_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597133B1B48C22E00976153 /* main_ohako_list_button@2x.png */; };
 		359713441B48C22E00976153 /* receive_ohako_dialog_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597133C1B48C22E00976153 /* receive_ohako_dialog_bg@2x.png */; };
 		359713451B48C22E00976153 /* receive_ohako_dialog_cancel_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597133D1B48C22E00976153 /* receive_ohako_dialog_cancel_button@2x.png */; };
@@ -31,6 +30,11 @@
 		359713591B48DB7000976153 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359713581B48DB7000976153 /* QuartzCore.framework */; };
 		3597135B1B48E5E600976153 /* TimerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3597135A1B48E5E600976153 /* TimerEvent.swift */; };
 		3597135D1B48EB5C00976153 /* FriendListUpdateRequestEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3597135C1B48EB5C00976153 /* FriendListUpdateRequestEvent.swift */; };
+		359713631B48ED2C00976153 /* common_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597135E1B48ED2C00976153 /* common_bg@2x.png */; };
+		359713641B48ED2C00976153 /* name_header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597135F1B48ED2C00976153 /* name_header@2x.png */; };
+		359713661B48ED2C00976153 /* name_start_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 359713611B48ED2C00976153 /* name_start_button@2x.png */; };
+		359713671B48ED2C00976153 /* name_textbox_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 359713621B48ED2C00976153 /* name_textbox_bg@2x.png */; };
+		359713691B48F2A200976153 /* main_player@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 359713681B48F2A200976153 /* main_player@2x.png */; };
 		35AF74431B488FBD003E7D88 /* AutoScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AF74421B488FBD003E7D88 /* AutoScaleView.swift */; };
 		35AF744E1B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AF74441B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png */; };
 		35AF744F1B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AF74451B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png */; };
@@ -119,7 +123,6 @@
 		359713361B48BB3200976153 /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		359713381B48C22E00976153 /* main_ballon_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_ballon_bg@2x.png"; sourceTree = "<group>"; };
 		359713391B48C22E00976153 /* main_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_bg@2x.png"; sourceTree = "<group>"; };
-		3597133A1B48C22E00976153 /* main_mock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_mock.png; sourceTree = "<group>"; };
 		3597133B1B48C22E00976153 /* main_ohako_list_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_ohako_list_button@2x.png"; sourceTree = "<group>"; };
 		3597133C1B48C22E00976153 /* receive_ohako_dialog_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "receive_ohako_dialog_bg@2x.png"; sourceTree = "<group>"; };
 		3597133D1B48C22E00976153 /* receive_ohako_dialog_cancel_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "receive_ohako_dialog_cancel_button@2x.png"; sourceTree = "<group>"; };
@@ -136,6 +139,11 @@
 		359713581B48DB7000976153 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3597135A1B48E5E600976153 /* TimerEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerEvent.swift; sourceTree = "<group>"; };
 		3597135C1B48EB5C00976153 /* FriendListUpdateRequestEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListUpdateRequestEvent.swift; sourceTree = "<group>"; };
+		3597135E1B48ED2C00976153 /* common_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_bg@2x.png"; sourceTree = "<group>"; };
+		3597135F1B48ED2C00976153 /* name_header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "name_header@2x.png"; sourceTree = "<group>"; };
+		359713611B48ED2C00976153 /* name_start_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "name_start_button@2x.png"; sourceTree = "<group>"; };
+		359713621B48ED2C00976153 /* name_textbox_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "name_textbox_bg@2x.png"; sourceTree = "<group>"; };
+		359713681B48F2A200976153 /* main_player@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_player@2x.png"; sourceTree = "<group>"; };
 		35AF74421B488FBD003E7D88 /* AutoScaleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoScaleView.swift; sourceTree = "<group>"; };
 		35AF74441B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ohako_kentei_setting_1_button_default@2x.png"; sourceTree = "<group>"; };
 		35AF74451B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ohako_kentei_setting_1_button_selected@2x.png"; sourceTree = "<group>"; };
@@ -523,13 +531,17 @@
 		5C204D0B1B485916003852CA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3597135E1B48ED2C00976153 /* common_bg@2x.png */,
+				3597135F1B48ED2C00976153 /* name_header@2x.png */,
+				359713611B48ED2C00976153 /* name_start_button@2x.png */,
+				359713621B48ED2C00976153 /* name_textbox_bg@2x.png */,
 				3597134E1B48D7A100976153 /* kentei_bg@2x.png */,
 				3597134F1B48D7A100976153 /* kentei_count_down_bg@2x.png */,
 				359713501B48D7A100976153 /* kentei_count_icon@2x.png */,
 				3597134C1B48D3FA00976153 /* Splash@2x.png */,
 				359713381B48C22E00976153 /* main_ballon_bg@2x.png */,
 				359713391B48C22E00976153 /* main_bg@2x.png */,
-				3597133A1B48C22E00976153 /* main_mock.png */,
+				359713681B48F2A200976153 /* main_player@2x.png */,
 				3597133B1B48C22E00976153 /* main_ohako_list_button@2x.png */,
 				3597133C1B48C22E00976153 /* receive_ohako_dialog_bg@2x.png */,
 				3597133D1B48C22E00976153 /* receive_ohako_dialog_cancel_button@2x.png */,
@@ -674,6 +686,7 @@
 				35EE207B1B47F1F900C92DE4 /* LaunchScreen.xib in Resources */,
 				35AF74511B4895BB003E7D88 /* ohako_kentei_setting_2_button_selected@2x.png in Resources */,
 				359713471B48C22E00976153 /* receive_ohako_dialog_open_button@2x.png in Resources */,
+				359713631B48ED2C00976153 /* common_bg@2x.png in Resources */,
 				35AF74531B4895BB003E7D88 /* ohako_kentei_setting_3_button_selected@2x.png in Resources */,
 				359713521B48D7A100976153 /* kentei_count_down_bg@2x.png in Resources */,
 				5C204D151B485916003852CA /* settings_ohako_kentei_button_selected@2x.png in Resources */,
@@ -681,14 +694,17 @@
 				359713301B48B0B800976153 /* color_pink@2x.png in Resources */,
 				35EE1FFE1B45768B00C92DE4 /* Images.xcassets in Resources */,
 				35EE20831B47F2C900C92DE4 /* PresentationViewController.xib in Resources */,
+				359713691B48F2A200976153 /* main_player@2x.png in Resources */,
 				5C204D141B485916003852CA /* settings_ohako_kentei_button_default@2x.png in Resources */,
 				35AF744E1B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png in Resources */,
+				359713661B48ED2C00976153 /* name_start_button@2x.png in Resources */,
 				359713461B48C22E00976153 /* receive_ohako_dialog_mock.png in Resources */,
 				35EE20731B47DC1000C92DE4 /* url_schemes.json in Resources */,
 				35AF74571B4895BB003E7D88 /* ohako_kentei_setting_ok_button@2x.png in Resources */,
-				359713421B48C22E00976153 /* main_mock.png in Resources */,
+				359713641B48ED2C00976153 /* name_header@2x.png in Resources */,
 				5C204D161B485916003852CA /* settings_ohako_selected@2x.png in Resources */,
 				359713431B48C22E00976153 /* main_ohako_list_button@2x.png in Resources */,
+				359713671B48ED2C00976153 /* name_textbox_bg@2x.png in Resources */,
 				35EE20901B47FDB700C92DE4 /* MyQuizViewController.storyboard in Resources */,
 				359713451B48C22E00976153 /* receive_ohako_dialog_cancel_button@2x.png in Resources */,
 				359713401B48C22E00976153 /* main_ballon_bg@2x.png in Resources */,

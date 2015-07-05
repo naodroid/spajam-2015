@@ -31,15 +31,27 @@
                                 <rect key="frame" x="0.0" y="90" width="320" height="478"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkS-Ni-oZy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_player.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rcb-Et-WyF">
+                                <rect key="frame" x="87" y="256" width="147" height="147"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkS-Ni-oZy">
                                 <rect key="frame" x="16" y="530" width="105" height="30"/>
-                                <state key="normal" title="デバッグボタン">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="didClickDebug:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Oxj-Vi-TQh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXさん" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IUr-Pn-kCV" userLabel="ownerNameLabel">
+                                <rect key="frame" x="115" y="364" width="90" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="HaO-mx-Ic0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -47,19 +59,24 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="TkS-Ni-oZy" secondAttribute="bottom" constant="8" id="336-b0-aAT"/>
                             <constraint firstItem="AHM-aV-IVS" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="79g-gZ-Z9X"/>
                             <constraint firstAttribute="trailing" secondItem="QR9-zt-AK6" secondAttribute="trailing" id="7BU-Jx-J06"/>
+                            <constraint firstItem="IUr-Pn-kCV" firstAttribute="centerY" secondItem="Rcb-Et-WyF" secondAttribute="centerY" constant="45" id="7hu-jG-bGJ"/>
+                            <constraint firstItem="IUr-Pn-kCV" firstAttribute="centerX" secondItem="Rcb-Et-WyF" secondAttribute="centerX" id="Gnr-Rg-HCj"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="QR9-zt-AK6" secondAttribute="bottom" id="HPK-WL-wjI"/>
                             <constraint firstItem="TkS-Ni-oZy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="RFu-Zi-bK8"/>
                             <constraint firstItem="QR9-zt-AK6" firstAttribute="top" secondItem="AHM-aV-IVS" secondAttribute="bottom" id="T0s-N5-3JZ"/>
                             <constraint firstItem="5ne-Vb-Dlw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="V5S-IK-c9w"/>
                             <constraint firstItem="5ne-Vb-Dlw" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="gaj-Jz-RIx"/>
+                            <constraint firstItem="QR9-zt-AK6" firstAttribute="centerY" secondItem="Rcb-Et-WyF" secondAttribute="centerY" id="ghU-ID-bbC"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5ne-Vb-Dlw" secondAttribute="bottom" id="hMH-Qh-Ezg"/>
                             <constraint firstItem="AHM-aV-IVS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="kQ7-e8-kjh"/>
                             <constraint firstAttribute="trailing" secondItem="5ne-Vb-Dlw" secondAttribute="trailing" id="v2k-Qm-awa"/>
                             <constraint firstItem="QR9-zt-AK6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="wnV-9z-VcL"/>
+                            <constraint firstItem="QR9-zt-AK6" firstAttribute="centerX" secondItem="Rcb-Et-WyF" secondAttribute="centerX" id="yfa-a2-7UI"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mainRootView" destination="QR9-zt-AK6" id="GFu-Nj-55R"/>
+                        <outlet property="ownerNameLabel" destination="IUr-Pn-kCV" id="bIv-vF-UCx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -69,6 +86,7 @@
     </scenes>
     <resources>
         <image name="main_bg.png" width="320" height="568"/>
+        <image name="main_player.png" width="147" height="147"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

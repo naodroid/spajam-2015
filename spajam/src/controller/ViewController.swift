@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var ownerNameLabel: UILabel!
     @IBOutlet weak var mainRootView: MainRootView!
     private var timerRunning = false
     private var lastPollingCallTime : NSTimeInterval = 0
@@ -43,6 +44,8 @@ class ViewController: UIViewController {
             Api.getFriendList().then {(list) -> Void in
                 self.mainRootView.friends = list
             }
+            let name = User.owner().name
+            self.ownerNameLabel.text = "\(name)さん"
             self.timerRunning = true
             self.startPolling()
         }
