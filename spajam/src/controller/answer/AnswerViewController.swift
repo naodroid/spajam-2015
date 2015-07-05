@@ -21,11 +21,8 @@ class AnswerViewController: UIViewController {
     @IBOutlet weak var image2: UIImageView!
     @IBOutlet weak var image3: UIImageView!
     @IBOutlet weak var image4: UIImageView!
-    @IBOutlet weak var image5: UIImageView!
     
     @IBOutlet weak var countDownLabel: UILabel!
-    
-    @IBOutlet weak var countdownContenerView: UIView!
     
     private var buttons : Array<UIButton>! = nil;
     private var images : Array<UIImageView>! = nil
@@ -33,6 +30,7 @@ class AnswerViewController: UIViewController {
     
     var quiz : Quiz! = nil
     var loadImageCount = 0
+    var countdownTime = 10
     
     //
     class func createVCWithQuiz(storyboard : UIStoryboard, quiz : Quiz) -> AnswerViewController {
@@ -43,6 +41,8 @@ class AnswerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.callForWait()
         
         self.buttons = [
             self.button1, self.button2, self.button3, self.button4
@@ -101,15 +101,6 @@ class AnswerViewController: UIViewController {
     //
     private func imageLoadFinished() {
         self.loadImageCount++;
-        
-        UIView.animateWithDuration(0.6, animations: { () -> Void in
-            for i in 0..<4 {
-                let img = self.image5
-                img.transform = CGAffineTransformMakeTranslation(0, 210)
-                img.alpha = 0
-            }
-        })
-        
         if (self.loadImageCount >= 4) {
             //アニメーションスタート
             for i in 0..<4 {
@@ -140,5 +131,23 @@ class AnswerViewController: UIViewController {
         //dismiss
     }
 
+    func callForWait(){
+        let delay = 1 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue()) {
+            self.stepsAfterDelay()
+        }
+    }
+    
+    
+    func stepsAfterDelay(){
+        if countdownTime <= 0 {
+            // 終了
+            return
+        }
+        self.countDownLabel.text = String(countdownTime)
+        countdownTime--
+        self.callForWait()
+    }
 }
 
