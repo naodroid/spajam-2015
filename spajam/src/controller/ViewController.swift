@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     
     @IBAction func didClickDebug(sender: AnyObject) {
         //特定ユーザIDを決め打ちで取得する
-        accessToUserQuiz(83)
+        accessToUserQuiz(84)
     }
     private func accessToUserQuiz(userId : Int) {
         Api.quizListProcess(userId).then {(quizList) -> Void in

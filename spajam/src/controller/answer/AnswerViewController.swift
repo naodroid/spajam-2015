@@ -22,8 +22,7 @@ class AnswerViewController: UIViewController {
     @IBOutlet weak var image3: UIImageView!
     @IBOutlet weak var image4: UIImageView!
     
-    
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var countDownLabel: UILabel!
     
     private var buttons : Array<UIButton>! = nil;
     private var images : Array<UIImageView>! = nil
@@ -80,29 +79,19 @@ class AnswerViewController: UIViewController {
     func didSelectButton(button : UIButton) {
         let index = button.tag
         let rank = self.quiz.answers[index].rank
-        
-        let text : String
-        switch rank {
-        case .Teacher:
-            text = "師匠と呼ばせてください"
-        case .Friend:
-            text = "同士よ！"
-        case .Fickle:
-            text = "このニワカめ！"
+        let img = self.quiz.answers[index].imageUrl
+        //通信処理
+        Api.addFriend(self.quiz.userId,
+            answerRank: rank,
+            selectedImage: img,
+            category: self.quiz.category).then {(result) -> Void in
+               self.showResultWithRank(rank)
         }
-        self.resultLabel.text = text
-        self.resultLabel.hidden = false
-        self.resultLabel.alpha = 0
-        var transform = CGAffineTransformMakeScale(2.0, 2.0)
-        transform = CGAffineTransformRotate(transform, -55.0  / 180.0 * 3.1415)
-        self.resultLabel.transform = transform
         
-        UIView.animateWithDuration(0.4) {
-            var transform = CGAffineTransformMakeScale(1.0, 1.0)
-            transform = CGAffineTransformRotate(transform, -45.0  / 180.0 * 3.1415)
-            self.resultLabel.transform = transform
-            self.resultLabel.alpha = 1
-        }
+        
+    }
+    func showResultWithRank(rank: QuizRank) {
+        //結果をどう表示すべきか
     }
     
     

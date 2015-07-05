@@ -23,6 +23,9 @@
 		359713491B48CB3A00976153 /* MainRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359713481B48CB3A00976153 /* MainRootView.swift */; };
 		3597134B1B48CBE700976153 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3597134A1B48CBE700976153 /* Friend.swift */; };
 		3597134D1B48D3FA00976153 /* Splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597134C1B48D3FA00976153 /* Splash@2x.png */; };
+		359713511B48D7A100976153 /* kentei_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597134E1B48D7A100976153 /* kentei_bg@2x.png */; };
+		359713521B48D7A100976153 /* kentei_count_down_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597134F1B48D7A100976153 /* kentei_count_down_bg@2x.png */; };
+		359713531B48D7A100976153 /* kentei_count_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 359713501B48D7A100976153 /* kentei_count_icon@2x.png */; };
 		35AF74431B488FBD003E7D88 /* AutoScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AF74421B488FBD003E7D88 /* AutoScaleView.swift */; };
 		35AF744E1B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AF74441B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png */; };
 		35AF744F1B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AF74451B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png */; };
@@ -120,6 +123,9 @@
 		359713481B48CB3A00976153 /* MainRootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRootView.swift; sourceTree = "<group>"; };
 		3597134A1B48CBE700976153 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		3597134C1B48D3FA00976153 /* Splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash@2x.png"; sourceTree = "<group>"; };
+		3597134E1B48D7A100976153 /* kentei_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kentei_bg@2x.png"; sourceTree = "<group>"; };
+		3597134F1B48D7A100976153 /* kentei_count_down_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kentei_count_down_bg@2x.png"; sourceTree = "<group>"; };
+		359713501B48D7A100976153 /* kentei_count_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kentei_count_icon@2x.png"; sourceTree = "<group>"; };
 		35AF74421B488FBD003E7D88 /* AutoScaleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoScaleView.swift; sourceTree = "<group>"; };
 		35AF74441B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ohako_kentei_setting_1_button_default@2x.png"; sourceTree = "<group>"; };
 		35AF74451B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ohako_kentei_setting_1_button_selected@2x.png"; sourceTree = "<group>"; };
@@ -502,6 +508,9 @@
 		5C204D0B1B485916003852CA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3597134E1B48D7A100976153 /* kentei_bg@2x.png */,
+				3597134F1B48D7A100976153 /* kentei_count_down_bg@2x.png */,
+				359713501B48D7A100976153 /* kentei_count_icon@2x.png */,
 				3597134C1B48D3FA00976153 /* Splash@2x.png */,
 				359713381B48C22E00976153 /* main_ballon_bg@2x.png */,
 				359713391B48C22E00976153 /* main_bg@2x.png */,
@@ -644,11 +653,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				359713331B48B28700976153 /* Answer.storyboard in Resources */,
+				359713511B48D7A100976153 /* kentei_bg@2x.png in Resources */,
 				35AF745B1B489DF2003E7D88 /* QuizRankChoiceView.xib in Resources */,
 				35EE207B1B47F1F900C92DE4 /* LaunchScreen.xib in Resources */,
 				35AF74511B4895BB003E7D88 /* ohako_kentei_setting_2_button_selected@2x.png in Resources */,
 				359713471B48C22E00976153 /* receive_ohako_dialog_open_button@2x.png in Resources */,
 				35AF74531B4895BB003E7D88 /* ohako_kentei_setting_3_button_selected@2x.png in Resources */,
+				359713521B48D7A100976153 /* kentei_count_down_bg@2x.png in Resources */,
 				5C204D151B485916003852CA /* settings_ohako_kentei_button_selected@2x.png in Resources */,
 				35EE208A1B47F6B000C92DE4 /* sample.m4v in Resources */,
 				359713301B48B0B800976153 /* color_pink@2x.png in Resources */,
@@ -677,6 +688,7 @@
 				3597134D1B48D3FA00976153 /* Splash@2x.png in Resources */,
 				35EE205E1B457BD300C92DE4 /* Cool Camera Mockup.sketch in Resources */,
 				35AF744F1B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png in Resources */,
+				359713531B48D7A100976153 /* kentei_count_icon@2x.png in Resources */,
 				359713441B48C22E00976153 /* receive_ohako_dialog_bg@2x.png in Resources */,
 				35AF74501B4895BB003E7D88 /* ohako_kentei_setting_2_button_default@2x.png in Resources */,
 				35AF74561B4895BB003E7D88 /* ohako_kentei_setting_mock.png in Resources */,

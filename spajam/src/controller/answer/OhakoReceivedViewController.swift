@@ -51,10 +51,11 @@ class OhakoReceivedViewController: UIViewController {
 
     @IBAction func didClickOpen(sender: AnyObject) {
         let vc = AnswerViewController.createVCWithQuiz(self.storyboard!, quiz: self.quiz)
-        self.addChildViewController(vc)
-        vc.didMoveToParentViewController(self)
-        self.view.addSubview(vc.view)
-        vc.view.frame = self.view.bounds
+//        self.addChildViewController(vc)
+//        vc.didMoveToParentViewController(self)
+//        self.view.addSubview(vc.view)
+//        vc.view.frame = self.view.bounds
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     
     @IBAction func didClickCancel(sender: AnyObject) {
