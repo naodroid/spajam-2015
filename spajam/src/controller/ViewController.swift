@@ -44,7 +44,7 @@ class ViewController: UIViewController {
             Api.getFriendList().then {(list) -> Void in
                 self.mainRootView.friends = list
             }
-            let name = User.owner().name
+            let name = User.owner().name!
             self.ownerNameLabel.text = "\(name)さん"
             self.timerRunning = true
             self.startPolling()

@@ -148,6 +148,10 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kentei_result1@2.png" id="5yY-nP-xWp" userLabel="resultImageView">
+                                        <rect key="frame" x="20" y="27" width="280" height="280"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -171,6 +175,7 @@
                         <outlet property="image2" destination="9LX-Qq-iKR" id="hqK-cc-XdQ"/>
                         <outlet property="image3" destination="TdU-dH-bcs" id="ih3-qf-8VN"/>
                         <outlet property="image4" destination="reX-vh-HFz" id="E6q-uK-utf"/>
+                        <outlet property="resultImageView" destination="5yY-nP-xWp" id="ymu-9V-NEl"/>
                         <outlet property="titleLabel" destination="Ep7-KK-ChN" id="F9F-Hf-FcS"/>
                     </connections>
                 </viewController>
@@ -183,6 +188,7 @@
         <image name="kentei_bg.png" width="320" height="568"/>
         <image name="kentei_count_down_bg.png" width="95" height="108"/>
         <image name="kentei_count_icon.png" width="95" height="68"/>
+        <image name="kentei_result1@2.png" width="280" height="280"/>
         <image name="receive_ohako_dialog_bg.png" width="213" height="250"/>
         <image name="receive_ohako_dialog_cancel_button.png" width="115" height="30"/>
         <image name="receive_ohako_dialog_open_button.png" width="165" height="35"/>

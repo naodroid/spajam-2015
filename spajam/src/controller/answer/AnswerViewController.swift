@@ -27,8 +27,13 @@ class AnswerViewController: UIViewController {
     
     @IBOutlet weak var countDownLabel: UILabel!
     
+    @IBOutlet weak var resultImageView: UIImageView!
+    
+    
     private var buttons : Array<UIButton>! = nil;
     private var images : Array<UIImageView>! = nil
+    
+    private var countDownRunning = true
     
     
     var quiz : Quiz! = nil
@@ -86,6 +91,8 @@ class AnswerViewController: UIViewController {
     //MARK: Event
     
     func didSelectButton(button : UIButton) {
+        self.countDownRunning = false
+        
         let index = button.tag
         let rank = self.quiz.answers[index].rank
         let img = self.quiz.answers[index].imageUrl
@@ -100,7 +107,18 @@ class AnswerViewController: UIViewController {
     func showResultWithRank(rank: QuizRank) {
         //結果をどう表示すべきか
         EventBus.sendEvent(FriendListUpdateRequestEvent())
-        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        self.resultImageView.hidden = false
+        self.resultImageView.transform = CGAffineTransformMakeScale(1.5, 1.5)
+        self.resultImageView.alpha = 0
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.resultImageView.transform = CGAffineTransformIdentity
+            self.resultImageView.alpha = 1
+            
+            dispatchAfterOnMain(2.0) {
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+        });
     }
     
     
@@ -147,6 +165,9 @@ class AnswerViewController: UIViewController {
     
     
     func stepsAfterDelay(){
+        if (!self.countDownRunning) {
+            return
+        }
         if countdownTime <= 0 {
             // 終了
             return
