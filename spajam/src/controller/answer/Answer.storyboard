@@ -151,10 +151,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kentei_count_icon.png" id="wnH-23-GWJ">
-                                <rect key="frame" x="112" y="250" width="95" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXさんのオハコ検定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ep7-KK-ChN">
                                 <rect key="frame" x="0.0" y="25" width="320" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -171,12 +167,10 @@
                         <outlet property="button3" destination="cVg-ET-RBa" id="6fE-qH-3oM"/>
                         <outlet property="button4" destination="WFX-z4-Apy" id="Ygg-Rl-xTs"/>
                         <outlet property="countDownLabel" destination="Nwi-VB-EaG" id="PTD-g5-T0X"/>
-                        <outlet property="countdownContenerView" destination="gpe-c6-lXN" id="fgp-N3-v8l"/>
                         <outlet property="image1" destination="fSm-Mn-XUA" id="4gF-F0-jYV"/>
                         <outlet property="image2" destination="9LX-Qq-iKR" id="hqK-cc-XdQ"/>
                         <outlet property="image3" destination="TdU-dH-bcs" id="ih3-qf-8VN"/>
                         <outlet property="image4" destination="reX-vh-HFz" id="E6q-uK-utf"/>
-                        <outlet property="image5" destination="wnH-23-GWJ" id="Lc9-Et-upa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5S-ax-CIj" userLabel="First Responder" sceneMemberID="firstResponder"/>
