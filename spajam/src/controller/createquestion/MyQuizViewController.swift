@@ -17,7 +17,6 @@ class MyQuizViewController: UIViewController,
     
     @IBOutlet weak var okButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var backButtonHideView: UIView!
     
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
@@ -118,10 +117,10 @@ class MyQuizViewController: UIViewController,
     
     //MARK: UI event
     @IBAction func didClickOkButton(sender: AnyObject) {
-        self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     @IBAction func didClickBackButton(sender: AnyObject) {
-        self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     //MARK: tableview
@@ -151,8 +150,8 @@ class MyQuizViewController: UIViewController,
         
         let vc = SetQuizViewController.createVC(self.storyboard!, category: category.name)
         self.addChildViewController(vc)
-        vc.didMoveToParentViewController(self)
         self.view.addSubview(vc.view)
+        vc.didMoveToParentViewController(self)
         vc.startEnterAnimation()
     }
     

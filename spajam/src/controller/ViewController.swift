@@ -37,9 +37,8 @@ class ViewController: UIViewController {
         } else if MyQuizList.instance().list.count == 0 {
             self.showListVC(false)
         } else {
-            Api.getFriendList().then {(list) -> Void in
-                self.mainRootView.friends = list
-            }
+            accessFriendList()
+
             let name = User.owner().name!
             self.ownerNameLabel.text = "\(name)さん"
             self.timerRunning = true
@@ -51,9 +50,7 @@ class ViewController: UIViewController {
     
     func showListVC(backEnabled : Bool) {
         let vc = MyQuizViewController.createVC(backEnabled)
-        let nc = UINavigationController(rootViewController: vc)
-        nc.setNavigationBarHidden(true, animated: false)
-        self.presentViewController(nc, animated: true, completion: nil)
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     
 
@@ -87,8 +84,8 @@ class ViewController: UIViewController {
                 nc.setNavigationBarHidden(true, animated: false)
                 
                 self.addChildViewController(nc)
-                nc.didMoveToParentViewController(self)
                 self.view.addSubview(nc.view)
+                nc.didMoveToParentViewController(self)
                 vc.startEnterAnimation()
                 EventBus.sendEvent(TimerEvent(running: false))
             }
@@ -111,6 +108,17 @@ class ViewController: UIViewController {
     
     
     //POlling
+    private var lastFriendCount = 0;
+    func accessFriendList() {
+        //フレンド一覧のポーリング
+        Api.getFriendList().then {(list) -> Void in
+            if (list.count != self.lastFriendCount) {
+                self.mainRootView.friends = list
+                self.lastFriendCount = list.count;
+            }
+        }
+    }
+    
     func startPolling() {
         let time = NSDate.timeIntervalSinceReferenceDate()
         self.lastPollingCallTime = time
@@ -140,12 +148,6 @@ class ViewController: UIViewController {
         }
         let index = arc4random_uniform(UInt32(count))
         return users[Int(index)]
-    }
-    
-    
-    
-    
-    
-    
+    }    
 }
 

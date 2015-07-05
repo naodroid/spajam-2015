@@ -124,17 +124,9 @@
                                             <action selector="didClickBackButton:" destination="lmq-LK-m1n" eventType="touchUpInside" id="PHa-K1-dGh"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="color_pink.png" translatesAutoresizingMaskIntoConstraints="NO" id="KCV-nS-2ts" userLabel="backButtonHide">
-                                        <rect key="frame" x="0.0" y="0.0" width="44" height="70"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="44" id="DnC-5f-tgQ"/>
-                                            <constraint firstAttribute="height" constant="70" id="QHC-q1-Ajz"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="KCV-nS-2ts" firstAttribute="top" secondItem="HZi-Xt-Sjh" secondAttribute="top" id="0zo-mO-emS"/>
                                     <constraint firstAttribute="width" constant="320" id="Aaf-GF-ur1"/>
                                     <constraint firstItem="1w7-ra-Omj" firstAttribute="leading" secondItem="HZi-Xt-Sjh" secondAttribute="leading" id="BOa-PK-aSq"/>
                                     <constraint firstItem="1w7-ra-Omj" firstAttribute="top" secondItem="HZi-Xt-Sjh" secondAttribute="top" id="Cnv-0h-bYh"/>
@@ -146,7 +138,6 @@
                                     <constraint firstAttribute="trailing" secondItem="TLO-hi-7kg" secondAttribute="trailing" id="YYr-FI-k8O"/>
                                     <constraint firstAttribute="trailing" secondItem="1w7-ra-Omj" secondAttribute="trailing" id="Zrj-co-fdH"/>
                                     <constraint firstAttribute="bottom" secondItem="1w7-ra-Omj" secondAttribute="bottom" id="oMf-HS-lLf"/>
-                                    <constraint firstItem="KCV-nS-2ts" firstAttribute="leading" secondItem="HZi-Xt-Sjh" secondAttribute="leading" id="pTb-wc-Hqb"/>
                                     <constraint firstAttribute="bottom" secondItem="TLO-hi-7kg" secondAttribute="bottom" id="zAU-ny-1b4"/>
                                 </constraints>
                             </view>
@@ -160,7 +151,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="backButton" destination="aaT-rI-jRh" id="imy-Ml-94V"/>
-                        <outlet property="backButtonHideView" destination="KCV-nS-2ts" id="Bn8-Fp-Ha3"/>
                         <outlet property="collectionView" destination="uoc-Hs-b2f" id="Wgb-4K-Hmr"/>
                         <outlet property="loadingIndicator" destination="aEx-6u-UoA" id="zwK-Mt-dOm"/>
                         <outlet property="okButton" destination="Tlx-Kv-hts" id="OjJ-QU-FjH"/>
@@ -404,7 +394,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="color_pink.png" width="5" height="5"/>
         <image name="ohako_kentei_setting_bg.png" width="320" height="568"/>
         <image name="ohako_kentei_setting_ok_button.png" width="234" height="42"/>
         <image name="setting_ohako_bg.png" width="320" height="568"/>

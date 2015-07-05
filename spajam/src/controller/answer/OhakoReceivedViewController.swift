@@ -8,6 +8,7 @@
 
 import UIKit
 import PromiseKit
+import AudioToolbox
 
 class OhakoReceivedViewController: UIViewController {
     
@@ -26,6 +27,9 @@ class OhakoReceivedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+        
         let name = self.quiz.userName
         self.textLabel.text = "\(name)さんの\nオハコが届きました"
     }
@@ -44,8 +48,8 @@ class OhakoReceivedViewController: UIViewController {
             self.view.alpha = 0
             
         }) { (finished) -> Void in
-            self.view.removeFromSuperview()
             self.willMoveToParentViewController(nil)
+            self.view.removeFromSuperview()
             self.removeFromParentViewController()
         }
     }

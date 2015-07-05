@@ -94,8 +94,8 @@ class SetQuizViewController: UIViewController {
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             self.view.alpha = 0
         }) { (finished) -> Void in
-            self.view.removeFromSuperview()
             self.willMoveToParentViewController(nil)
+            self.view.removeFromSuperview()
             self.removeFromParentViewController()
         }
     }
