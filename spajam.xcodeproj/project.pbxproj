@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3597132E1B48A8CA00976153 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597132D1B48A8CA00976153 /* icon@2x.png */; };
 		359713301B48B0B800976153 /* color_pink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597132F1B48B0B800976153 /* color_pink@2x.png */; };
+		359713331B48B28700976153 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 359713321B48B28700976153 /* Storyboard.storyboard */; };
 		35AF74431B488FBD003E7D88 /* AutoScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AF74421B488FBD003E7D88 /* AutoScaleView.swift */; };
 		35AF744E1B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AF74441B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png */; };
 		35AF744F1B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AF74451B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png */; };
@@ -92,6 +93,7 @@
 		2B99ACC730962BD127416909 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3597132D1B48A8CA00976153 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		3597132F1B48B0B800976153 /* color_pink@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "color_pink@2x.png"; sourceTree = "<group>"; };
+		359713321B48B28700976153 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		35AF74421B488FBD003E7D88 /* AutoScaleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoScaleView.swift; sourceTree = "<group>"; };
 		35AF74441B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ohako_kentei_setting_1_button_default@2x.png"; sourceTree = "<group>"; };
 		35AF74451B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ohako_kentei_setting_1_button_selected@2x.png"; sourceTree = "<group>"; };
@@ -202,6 +204,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		359713311B48B27E00976153 /* answer */ = {
+			isa = PBXGroup;
+			children = (
+				359713321B48B28700976153 /* Storyboard.storyboard */,
+			);
+			path = answer;
+			sourceTree = "<group>";
+		};
 		35EE1FE81B45768B00C92DE4 = {
 			isa = PBXGroup;
 			children = (
@@ -418,6 +428,7 @@
 		35EE20681B457C6900C92DE4 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				359713311B48B27E00976153 /* answer */,
 				35EE208D1B47FDB700C92DE4 /* createquestion */,
 				35EE20691B457C6900C92DE4 /* Main.storyboard */,
 				35EE206A1B457C6900C92DE4 /* ViewController.swift */,
@@ -593,6 +604,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				359713331B48B28700976153 /* Storyboard.storyboard in Resources */,
 				35AF745B1B489DF2003E7D88 /* QuizRankChoiceView.xib in Resources */,
 				35EE207B1B47F1F900C92DE4 /* LaunchScreen.xib in Resources */,
 				35AF74511B4895BB003E7D88 /* ohako_kentei_setting_2_button_selected@2x.png in Resources */,

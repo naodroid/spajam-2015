@@ -22,9 +22,8 @@ class ViewController: UIViewController {
             let nc = UINavigationController(rootViewController: vc)
             nc.setNavigationBarHidden(true, animated: false)
             self.presentViewController(nc, animated: true, completion: nil)
-        //} else if MyQuizList.instance().list.count == 0 {
-        } else {
-            
+        
+        } else if MyQuizList.instance().list.count == 0 {
             let vc = MyQuizViewController.createVC(false)
             let nc = UINavigationController(rootViewController: vc)
             nc.setNavigationBarHidden(true, animated: false)
@@ -41,7 +40,7 @@ class ViewController: UIViewController {
     @IBAction func didClickDebug(sender: AnyObject) {
         //72のユーザIDを決め打ちで取得する
         Api.quizListProcess(72).then {(quizList) -> Void in
-            println("RECEIVED:\(quizList)")
+            
             
         }
     }

@@ -45,20 +45,6 @@ class MyQuizCollectionViewCell: UICollectionViewCell {
         
         
     }
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        let rw = CGFloat(130)
-        let rh = CGFloat(200)
-        let pw = self.bounds.size.width
-        let ph = self.bounds.size.height
-        self.rootView.bounds = CGRectMake(0, 0, rw, rh);//(pw - rw) / 2, (ph - rh) / 2, rw, rh)
-        self.rootView.center = CGPointMake(pw / 2, ph / 2)
-        
-        
-        let scale = min(pw / rw, ph / rh)
-        self.rootView.transform = CGAffineTransformMakeScale(scale, scale)
-        
-    }
 }
 
 
