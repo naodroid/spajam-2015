@@ -123,32 +123,13 @@ class ViewController: UIViewController {
             return
         }
         Api.getAllUsers().then {(users) -> Void in
-            let filtered = self.filterFriends(users)
-            if let picked = self.randomPick(filtered) {
+            if let picked = self.randomPick(users) {
                 self.accessToUserQuiz(picked.userId.toInt()!)
             }
         }.finally(on: dispatch_get_main_queue()) { () -> Void in
             dispatchAfterOnMain(10) {
                 self.pollingProcess(time)
             }
-        }
-    }
-    //フレンドになっているユーザを除去する
-    func filterFriends(users : [User]) -> [User] {
-        let friends = self.mainRootView.friends
-        let owner = User.owner()
-        
-        return users.filter {
-            let id = $0.userId
-            if id == owner.userId {
-                return false
-            }
-            for f in friends {
-                if f.userId == id.toInt() {
-                    return false
-                }
-            }
-            return true
         }
     }
     ///ランダムに抽出

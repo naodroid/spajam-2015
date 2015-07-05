@@ -16,6 +16,15 @@ let basePath = "http://api.spajam.tys11.net"
 
 private var _cookieString : String? = nil
 
+extension String {
+    
+    func escapeStr() -> String {
+        var raw: NSString = self as NSString
+        var str = CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,raw,"[].",":/?&=;+!@#$()',*",CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding))
+        return str as String
+    }
+}
+
 class Api {
     
     class func getPromise(path : String) -> Promise<NSData> {
@@ -138,12 +147,14 @@ class Api {
     //ユーザ登録
     class func register(name : String) -> Promise<User> {
         let path = "\(basePath)/regist"
-        let nsstr = name as NSString
-        let encoded = nsstr.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        let encodedStr = encoded!
-        let dict = ["name" : encodedStr]
         
-        return postPromise(path, dict: dict)
+        let multipart = OMGMultipartFormData()
+        multipart.addParameters(["name" : name])
+
+        let req = OMGHTTPURLRQ.POST(path, multipart)
+        req.addValue("keep-alive", forHTTPHeaderField: "Connection")
+        
+        return NSURLConnection.promise(req)
             .then {(data: NSData) -> User in
                 let json = JSON(data : data)
                 let user = User.parse(json)
@@ -168,10 +179,10 @@ class Api {
             let data = UIImageJPEGRepresentation(img, 0.8)
             
             let imgParamName = "answer\(i + 1)Image"
-            let imgFileName = "image\(i + 1).png"
+            let imgFileName = "image\(i + 1).jpeg"
             let rankParamName = "answer\(i + 1)Rank"
             
-            multipart.addFile(data, parameterName : imgParamName, filename: imgFileName, contentType:"image/png")
+            multipart.addFile(data, parameterName : imgParamName, filename: imgFileName, contentType:"image/jpeg")
             multipart.addParameters([rankParamName : rank.apiText()])
         }
         

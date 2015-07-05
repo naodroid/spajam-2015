@@ -96,6 +96,17 @@ class AnswerViewController: UIViewController {
         let index = button.tag
         let rank = self.quiz.answers[index].rank
         let img = self.quiz.answers[index].imageUrl
+        
+        switch rank {
+        case .Teacher:
+            self.resultImageView.image = UIImage(named: "kentei_result3")
+        case .Friend:
+            self.resultImageView.image = UIImage(named: "kentei_result2")
+        case .Fickle:
+            self.resultImageView.image = UIImage(named: "kentei_result1")
+        }
+        
+        
         //通信処理
         Api.addFriend(self.quiz.userId,
             answerRank: rank,

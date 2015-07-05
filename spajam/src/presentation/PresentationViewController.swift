@@ -8,7 +8,8 @@
 
 import UIKit
 
-class PresentationViewController: UIViewController, AVPlayerViewDelegate, UIScrollViewDelegate  {
+class PresentationViewController: UIViewController,
+              AVPlayerViewDelegate, UIScrollViewDelegate, UITextFieldDelegate  {
 
     @IBOutlet weak var playerView: AVPlayerView!
     
@@ -41,6 +42,9 @@ class PresentationViewController: UIViewController, AVPlayerViewDelegate, UIScro
         
         self.playerView.delegate = self
         self.playerView.setupWithFile("spajam_tutorial.m4a")
+        
+        self.userNameTextField.delegate = self
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -61,6 +65,12 @@ class PresentationViewController: UIViewController, AVPlayerViewDelegate, UIScro
             }
         }
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.didClickStartButton(textField)
+        return true
+    }
+    
     
     //MARK: AVPlayer
     func avPlayer(player: AVPlayerView!, didStatuChanged status: AVPlayerStatus) {
