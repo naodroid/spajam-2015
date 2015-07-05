@@ -21,8 +21,11 @@ class AnswerViewController: UIViewController {
     @IBOutlet weak var image2: UIImageView!
     @IBOutlet weak var image3: UIImageView!
     @IBOutlet weak var image4: UIImageView!
+    @IBOutlet weak var image5: UIImageView!
     
     @IBOutlet weak var countDownLabel: UILabel!
+    
+    @IBOutlet weak var countdownContenerView: UIView!
     
     private var buttons : Array<UIButton>! = nil;
     private var images : Array<UIImageView>! = nil
@@ -98,6 +101,15 @@ class AnswerViewController: UIViewController {
     //
     private func imageLoadFinished() {
         self.loadImageCount++;
+        
+        UIView.animateWithDuration(0.6, animations: { () -> Void in
+            for i in 0..<4 {
+                let img = self.image5
+                img.transform = CGAffineTransformMakeTranslation(0, 210)
+                img.alpha = 0
+            }
+        })
+        
         if (self.loadImageCount >= 4) {
             //アニメーションスタート
             for i in 0..<4 {
