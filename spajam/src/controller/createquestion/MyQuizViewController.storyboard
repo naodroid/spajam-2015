@@ -49,7 +49,7 @@
                                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c9y-pl-cgD">
                                                                     <rect key="frame" x="0.0" y="0.0" width="130" height="200"/>
                                                                     <subviews>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nne-fb-OXe" userLabel="categoryImageView">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nne-fb-OXe" userLabel="categoryImageView">
                                                                             <rect key="frame" x="15" y="25" width="96" height="107"/>
                                                                         </imageView>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings_ohako_selected.png" translatesAutoresizingMaskIntoConstraints="NO" id="oan-lj-Rmr" userLabel="hexImageView">
