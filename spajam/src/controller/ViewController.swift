@@ -34,12 +34,8 @@ class ViewController: UIViewController {
             let nc = UINavigationController(rootViewController: vc)
             nc.setNavigationBarHidden(true, animated: false)
             self.presentViewController(nc, animated: true, completion: nil)
-        
         } else if MyQuizList.instance().list.count == 0 {
-            let vc = MyQuizViewController.createVC(false)
-            let nc = UINavigationController(rootViewController: vc)
-            nc.setNavigationBarHidden(true, animated: false)
-            self.presentViewController(nc, animated: true, completion: nil)
+            self.showListVC(false)
         } else {
             Api.getFriendList().then {(list) -> Void in
                 self.mainRootView.friends = list
@@ -51,6 +47,13 @@ class ViewController: UIViewController {
         }
     }
     override func viewDidDisappear(animated: Bool) {
+    }
+    
+    func showListVC(backEnabled : Bool) {
+        let vc = MyQuizViewController.createVC(backEnabled)
+        let nc = UINavigationController(rootViewController: vc)
+        nc.setNavigationBarHidden(true, animated: false)
+        self.presentViewController(nc, animated: true, completion: nil)
     }
     
 
@@ -69,6 +72,9 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func didClickListButton(sender: AnyObject) {
+        self.showListVC(true)
+    }
     @IBAction func didClickDebug(sender: AnyObject) {
         //特定ユーザIDを決め打ちで取得する
         accessToUserQuiz(89)

@@ -43,6 +43,15 @@
                                     <action selector="didClickDebug:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Oxj-Vi-TQh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPP-Fx-LWv">
+                                <rect key="frame" x="43" y="510" width="234" height="42"/>
+                                <state key="normal" image="main_ohako_list_button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickListButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rM9-Zo-tgS"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXさん" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IUr-Pn-kCV" userLabel="ownerNameLabel">
                                 <rect key="frame" x="115" y="364" width="90" height="21"/>
                                 <constraints>
@@ -60,11 +69,13 @@
                             <constraint firstItem="AHM-aV-IVS" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="79g-gZ-Z9X"/>
                             <constraint firstAttribute="trailing" secondItem="QR9-zt-AK6" secondAttribute="trailing" id="7BU-Jx-J06"/>
                             <constraint firstItem="IUr-Pn-kCV" firstAttribute="centerY" secondItem="Rcb-Et-WyF" secondAttribute="centerY" constant="45" id="7hu-jG-bGJ"/>
+                            <constraint firstAttribute="centerX" secondItem="UPP-Fx-LWv" secondAttribute="centerX" id="BbK-kL-Qqq"/>
                             <constraint firstItem="IUr-Pn-kCV" firstAttribute="centerX" secondItem="Rcb-Et-WyF" secondAttribute="centerX" id="Gnr-Rg-HCj"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="QR9-zt-AK6" secondAttribute="bottom" id="HPK-WL-wjI"/>
                             <constraint firstItem="TkS-Ni-oZy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="RFu-Zi-bK8"/>
                             <constraint firstItem="QR9-zt-AK6" firstAttribute="top" secondItem="AHM-aV-IVS" secondAttribute="bottom" id="T0s-N5-3JZ"/>
                             <constraint firstItem="5ne-Vb-Dlw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="V5S-IK-c9w"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="UPP-Fx-LWv" secondAttribute="bottom" constant="16" id="Zbq-5N-cd7"/>
                             <constraint firstItem="5ne-Vb-Dlw" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="gaj-Jz-RIx"/>
                             <constraint firstItem="QR9-zt-AK6" firstAttribute="centerY" secondItem="Rcb-Et-WyF" secondAttribute="centerY" id="ghU-ID-bbC"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5ne-Vb-Dlw" secondAttribute="bottom" id="hMH-Qh-Ezg"/>
@@ -86,6 +97,7 @@
     </scenes>
     <resources>
         <image name="main_bg.png" width="320" height="568"/>
+        <image name="main_ohako_list_button.png" width="234" height="42"/>
         <image name="main_player.png" width="147" height="147"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
