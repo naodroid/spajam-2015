@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainRootView: MainRootView!
     private var timerRunning = false
     private var lastPollingCallTime : NSTimeInterval = 0
+    private var isVisible = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,8 +46,12 @@ class ViewController: UIViewController {
             self.timerRunning = true
             self.startPolling()
         }
+        self.isVisible = true
     }
     override func viewDidDisappear(animated: Bool) {
+        self.isVisible = false
+        EventBus.sendEvent(TimerEvent(running: false))
+        super.viewDidDisappear(animated)
     }
     
     func showListVC(backEnabled : Bool) {
@@ -78,12 +83,33 @@ class ViewController: UIViewController {
         accessToUserQuiz(89)
     }
     
-    private func accessToUsers(users : [User]) {
-        if users.count < 1 {
+    private func accessToUsers(index : Int, users : [User]) {
+        if index >= users.count  {
             return
         }
         let user = users[0]
-        self.accessToUserQuiz(user.userId.toInt()!)
+        let userId = user.userId.toInt()!
+        
+        Api.quizListProcess(userId).then {(quizList) -> Void in
+            if (!self.isVisible) {
+                return
+            }
+            if let quiz = self.findEnableQuiz(userId, quizList: quizList) {
+                let vc = OhakoReceivedViewController.createVCWithQuiz(quiz)
+                let nc = UINavigationController(rootViewController: vc)
+                nc.setNavigationBarHidden(true, animated: false)
+                
+                self.addChildViewController(nc)
+                self.view.addSubview(nc.view)
+                nc.didMoveToParentViewController(self)
+                vc.startEnterAnimation()
+                EventBus.sendEvent(TimerEvent(running: false))
+            } else {
+                //クイズがなければ次へ
+                self.accessToUsers(index + 1, users: users)
+            }
+        }
+        
     }
     
     private func accessToUserQuiz(userId : Int)  {
@@ -141,13 +167,25 @@ class ViewController: UIViewController {
             return
         }
         Api.getAllUsers().then {(users) -> Void in
-            let r = self.randomSort(users)
-            self.accessToUsers(r)
+            let filtered = self.filterOwner(users)
+            let r = self.randomSort(filtered)
+            self.accessToUsers(0, users: r)
         }.finally(on: dispatch_get_main_queue()) { () -> Void in
             dispatchAfterOnMain(10) {
                 self.pollingProcess(time)
             }
         }
+    }
+    func filterOwner(users : [User]) -> [User] {
+        var result = [User]()
+        let ownerId = User.owner().userId
+        
+        for user in users {
+            if user.userId != ownerId {
+                result.append(user)
+            }
+        }
+        return result
     }
     
     func randomSort(users : [User]) -> [User] {
