@@ -23,7 +23,7 @@ class PresentationViewController: UIViewController, AVPlayerViewDelegate, UIScro
     //
     private var lastOffsetX : CGFloat = 0
     
-    private let timeInPage : [NSTimeInterval] = [2.0, 4.2, 7.0, 8.5, 11.0];
+    private let timeInPage : [NSTimeInterval] = [0.0, 3.8, 5.3, 6.9, 8.5, 10.1];
     
     
     //-----------------------------------
@@ -40,7 +40,7 @@ class PresentationViewController: UIViewController, AVPlayerViewDelegate, UIScro
         self.pageControl.hidden = true
         
         self.playerView.delegate = self
-        self.playerView.setupWithFile("sample.m4a")
+        self.playerView.setupWithFile("spajam_tutorial.m4a")
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -92,6 +92,7 @@
 		5C204D151B485916003852CA /* settings_ohako_kentei_button_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C204D0F1B485916003852CA /* settings_ohako_kentei_button_selected@2x.png */; };
 		5C204D161B485916003852CA /* settings_ohako_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C204D101B485916003852CA /* settings_ohako_selected@2x.png */; };
 		5C204D171B485916003852CA /* settings_ohako_start_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C204D111B485916003852CA /* settings_ohako_start_button@2x.png */; };
+		B66368391B48F60A0014007D /* spajam_tutorial.m4v in Resources */ = {isa = PBXBuildFile; fileRef = B66368381B48F51B0014007D /* spajam_tutorial.m4v */; };
 		C986EDEFB8951476949FED82 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1A743370D0FDF3F1155F43 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -210,6 +211,7 @@
 		5C204D0F1B485916003852CA /* settings_ohako_kentei_button_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings_ohako_kentei_button_selected@2x.png"; sourceTree = "<group>"; };
 		5C204D101B485916003852CA /* settings_ohako_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings_ohako_selected@2x.png"; sourceTree = "<group>"; };
 		5C204D111B485916003852CA /* settings_ohako_start_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings_ohako_start_button@2x.png"; sourceTree = "<group>"; };
+		B66368381B48F51B0014007D /* spajam_tutorial.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = spajam_tutorial.m4v; sourceTree = "<group>"; };
 		CD42F5D5EA05AC7C02439E5E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -452,6 +454,7 @@
 			children = (
 				35EE20801B47F2C900C92DE4 /* PresentationViewController.swift */,
 				35EE20811B47F2C900C92DE4 /* PresentationViewController.xib */,
+				B66368381B48F51B0014007D /* spajam_tutorial.m4v */,
 				35EE20651B457C0100C92DE4 /* AVPlayerView.h */,
 				35EE20661B457C0100C92DE4 /* AVPlayerView.m */,
 				35EE20891B47F6B000C92DE4 /* sample.m4v */,
@@ -652,6 +655,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B66368391B48F60A0014007D /* spajam_tutorial.m4v in Resources */,
 				359713331B48B28700976153 /* Answer.storyboard in Resources */,
 				359713511B48D7A100976153 /* kentei_bg@2x.png in Resources */,
 				35AF745B1B489DF2003E7D88 /* QuizRankChoiceView.xib in Resources */,

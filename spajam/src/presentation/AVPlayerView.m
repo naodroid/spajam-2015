@@ -49,7 +49,7 @@ static NSString* const kStatusKey = @"status";
 //--
 - (void)setupWithFile:(NSString *)file {
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path = [bundle pathForResource:@"sample" ofType:@"m4v"];
+    NSString *path = [bundle pathForResource:@"spajam_tutorial" ofType:@"m4v"];
     
     NSURL *url = [NSURL fileURLWithPath:path];
     AVAsset *asset = [AVAsset assetWithURL:url];
