@@ -1,4 +1,12 @@
 [
+     {
+        "name": "めがねっこ",
+        "image": "https://pbs.twimg.com/profile_images/2152994036/image.jpg",
+        "schemes": [
+            "utyurear: "
+        ]
+    },
+
     {
         "name": "相撲",
         "image": "http://www.e-shiki.jp/ryoyokotsuna.jpg",
@@ -6,6 +14,14 @@
             "jpdwangosumo:"
         ]
     },
+    {
+        "name": "宇宙",
+        "image": "https://pbs.twimg.com/profile_images/378800000761698511/baef6142ce8ea459d58f9fd202b3de3b.jpeg",
+        "schemes": [
+            "utyureader: "
+        ]
+    },
+
     {
         "name": "オオカミ姫",
         "image": "https://yt3.ggpht.com/-K_azuqeROsg/AAAAAAAAAAI/AAAAAAAAAAA/lAsxxhrcKOw/s100-c-k-no/photo.jpg",
@@ -18,13 +34,6 @@
         "image": "http://a838.phobos.apple.com/us/r30/Purple/v4/aa/d3/89/aad3897e-6d57-a871-49aa-23965063da1d/Icon.png",
         "schemes": [
             "com.sega.utayomi575.atom:"
-        ]
-    },
-    {
-        "name": "宇宙",
-        "image": "https://pbs.twimg.com/profile_images/378800000761698511/baef6142ce8ea459d58f9fd202b3de3b.jpeg",
-        "schemes": [
-            "utyureader: "
         ]
     },
     {
