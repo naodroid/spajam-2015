@@ -10,19 +10,22 @@ import Foundation
 import SwiftyJSON
 
 class Quiz {
+    let userName : String
     let category : String
     let answers : [QuizAnswer]
     
-    init(category : String, answers : [QuizAnswer]) {
+    init(userName : String, category : String, answers : [QuizAnswer]) {
+        self.userName = userName
         self.category = category
         self.answers = answers
     }
     
     class func parse(json : JSON) -> Quiz {
-        let category = json["category"].stringValue
-        let array = json["answers"].array!
+        let userName = json["user"]["name"].stringValue
+        let category = json["quiz"]["category"].stringValue
+        let array = json["quiz"]["answers"].array!
         let answers = array.map(QuizAnswer.parse)
-        return Quiz(category: category, answers: answers)
+        return Quiz(userName: userName, category: category, answers: answers)
     }
 }
 class QuizAnswer {

@@ -130,6 +130,13 @@
                                         <rect key="frame" x="166" y="218" width="146" height="149"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="このニワカめ！" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yJm-Dw-ZdF" userLabel="resultLabel">
+                                        <rect key="frame" x="46" y="188" width="266" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                        <color key="textColor" red="0.93333333330000001" green="0.27450980390000002" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -145,6 +152,7 @@
                         <outlet property="image2" destination="9LX-Qq-iKR" id="hqK-cc-XdQ"/>
                         <outlet property="image3" destination="TdU-dH-bcs" id="ih3-qf-8VN"/>
                         <outlet property="image4" destination="reX-vh-HFz" id="E6q-uK-utf"/>
+                        <outlet property="resultLabel" destination="yJm-Dw-ZdF" id="1RW-DM-gRe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5S-ax-CIj" userLabel="First Responder" sceneMemberID="firstResponder"/>
