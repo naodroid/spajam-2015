@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import PromiseKit
 
 class OhakoReceivedViewController: UIViewController {
     
     private var quiz : Quiz! = nil
+    
+    @IBOutlet weak var textLabel: UILabel!
+    
+    
     
     class func createVCWithQuiz(quiz : Quiz) -> OhakoReceivedViewController {
         let sb = UIStoryboard(name: "Answer", bundle: nil)
@@ -27,9 +32,9 @@ class OhakoReceivedViewController: UIViewController {
     }
     
     func startEnterAnimation() {
-        self.view.alpha = 0
+        self.view.transform = CGAffineTransformMakeTranslation(0, 320)
         UIView.animateWithDuration(0.3, animations: { () -> Void in
-            self.view.alpha = 1
+            self.view.transform = CGAffineTransformIdentity
         })
     }
     func startExitAnimation() {
