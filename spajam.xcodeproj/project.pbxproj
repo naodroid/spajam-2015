@@ -38,6 +38,7 @@
 		3597136D1B48F3C500976153 /* kentei_result1@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597136A1B48F3C500976153 /* kentei_result1@2.png */; };
 		3597136E1B48F3C500976153 /* kentei_result2@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597136B1B48F3C500976153 /* kentei_result2@2.png */; };
 		3597136F1B48F3C500976153 /* kentei_result3@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597136C1B48F3C500976153 /* kentei_result3@2.png */; };
+		359713711B48F9DD00976153 /* AnsweredData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359713701B48F9DD00976153 /* AnsweredData.swift */; };
 		35AF74431B488FBD003E7D88 /* AutoScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AF74421B488FBD003E7D88 /* AutoScaleView.swift */; };
 		35AF744E1B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AF74441B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png */; };
 		35AF744F1B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AF74451B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png */; };
@@ -151,6 +152,7 @@
 		3597136A1B48F3C500976153 /* kentei_result1@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kentei_result1@2.png"; sourceTree = "<group>"; };
 		3597136B1B48F3C500976153 /* kentei_result2@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kentei_result2@2.png"; sourceTree = "<group>"; };
 		3597136C1B48F3C500976153 /* kentei_result3@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kentei_result3@2.png"; sourceTree = "<group>"; };
+		359713701B48F9DD00976153 /* AnsweredData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnsweredData.swift; sourceTree = "<group>"; };
 		35AF74421B488FBD003E7D88 /* AutoScaleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoScaleView.swift; sourceTree = "<group>"; };
 		35AF74441B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ohako_kentei_setting_1_button_default@2x.png"; sourceTree = "<group>"; };
 		35AF74451B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ohako_kentei_setting_1_button_selected@2x.png"; sourceTree = "<group>"; };
@@ -519,6 +521,7 @@
 				35EE208B1B47FCED00C92DE4 /* MyQuiz.swift */,
 				35B177471B484340000FD71A /* Quiz.swift */,
 				3597134A1B48CBE700976153 /* Friend.swift */,
+				359713701B48F9DD00976153 /* AnsweredData.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -808,6 +811,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35EE201A1B457B2C00C92DE4 /* AppDelegate.swift in Sources */,
+				359713711B48F9DD00976153 /* AnsweredData.swift in Sources */,
 				35EE20611B457BD300C92DE4 /* CaptureSessionManager.m in Sources */,
 				35EE20521B457BD300C92DE4 /* AbstractEvent.swift in Sources */,
 				35EE20251B457BCA00C92DE4 /* AutoLayoutUtil.swift in Sources */,

@@ -52,6 +52,10 @@ class OhakoReceivedViewController: UIViewController {
         
 
     @IBAction func didClickOpen(sender: AnyObject) {
+        let data = AnsweredData(userId: self.quiz.userId, category: self.quiz.category)
+        AnsweredList.instance().list.append(data)
+        AnsweredList.instance().writeToFile()
+        
         let vc = AnswerViewController.createVCWithQuiz(self.storyboard!, quiz: self.quiz)
         let parent = self.parentViewController!
         
@@ -64,6 +68,11 @@ class OhakoReceivedViewController: UIViewController {
     
     @IBAction func didClickCancel(sender: AnyObject) {
         self.startExitAnimation()
+        
+        let data = AnsweredData(userId: self.quiz.userId, category: self.quiz.category)
+        AnsweredList.instance().list.append(data)
+        AnsweredList.instance().writeToFile()
+        
         EventBus.sendEvent(TimerEvent(running: true))
     }
 }

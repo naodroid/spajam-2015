@@ -39,13 +39,13 @@ class MyQuizViewController: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if (self.backEnabled) {
-            self.backButton.hidden = false
-            self.backButtonHideView.hidden = true
-        } else {
-            self.backButton.hidden = true
-            self.backButtonHideView.hidden = false
-        }
+//        if (self.backEnabled) {
+//            self.backButton.hidden = false
+//            self.backButtonHideView.hidden = true
+//        } else {
+//            self.backButton.hidden = true
+//            self.backButtonHideView.hidden = false
+//        }
         
         self.collectionView.dataSource = self
         self.collectionView.delegate = self

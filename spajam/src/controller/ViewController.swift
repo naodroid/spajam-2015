@@ -81,7 +81,7 @@ class ViewController: UIViewController {
     }
     private func accessToUserQuiz(userId : Int) {
         Api.quizListProcess(userId).then {(quizList) -> Void in
-            if let quiz = self.isMatchCategory(quizList) {
+            if let quiz = self.findEnableQuiz(userId, quizList: quizList) {
                 let vc = OhakoReceivedViewController.createVCWithQuiz(quiz)
                 let nc = UINavigationController(rootViewController: vc)
                 nc.setNavigationBarHidden(true, animated: false)
@@ -94,14 +94,14 @@ class ViewController: UIViewController {
             }
         }
     }
-    private func isMatchCategory(quizList : [Quiz]) -> Quiz? {
+    private func findEnableQuiz(userId: Int, quizList : [Quiz]) -> Quiz? {
         let myList = MyQuizList.instance().list
         return quizList.reduce(nil) {(value : Quiz?, quiz) -> Quiz? in
             if (value != nil) {
                 return value
             }
             let c = quiz.category
-            if myList[c] != nil {
+            if myList[c] != nil && !AnsweredList.instance().hasData(userId, category: c) {
                 return quiz
             }
             return nil
