@@ -16,27 +16,40 @@ class MyQuizViewController: UIViewController,
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var okButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var backButtonHideView: UIView!
+    
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     
     
     //data
     private var categories = [CategoryInfo]()
-    
+    private var backEnabled : Bool = false
     
     
     ///
-    class func createVC() -> MyQuizViewController {
+    class func createVC(backEnabled : Bool) -> MyQuizViewController {
         let sb = UIStoryboard(name: "MyQuizViewController", bundle: nil)
         let vc = sb.instantiateInitialViewController() as! MyQuizViewController
+        vc.backEnabled = backEnabled
         return vc
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if (self.backEnabled) {
+            self.backButton.hidden = false
+            self.backButtonHideView.hidden = true
+        } else {
+            self.backButton.hidden = true
+            self.backButtonHideView.hidden = false
+        }
+        
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
+        self.okButton.enabled = false
         
         dispatchOnGlobal {
             let categories = self.checkMatchedCategories()
@@ -88,14 +101,27 @@ class MyQuizViewController: UIViewController,
         self.categories = categories
         
         self.collectionView.reloadData()
+        self.updateOkButton()
+    }
+    
+    
+    private func updateOkButton() {
+        self.okButton.enabled = self.categories.reduce(false, combine: { (enabled, category) -> Bool in
+            if enabled {
+                return true
+            }
+            let quiz = MyQuizList.instance().list[category.name]
+            return quiz != nil
+        })
     }
     
     //MARK: UI event
-    
-    @IBAction func didClickDecideButton(sender: AnyObject) {
+    @IBAction func didClickOkButton(sender: AnyObject) {
         self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
     }
-    
+    @IBAction func didClickBackButton(sender: AnyObject) {
+        self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     //MARK: tableview
     

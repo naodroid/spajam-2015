@@ -101,8 +101,6 @@ class SetQuizViewController: UIViewController {
     }
     
     
-    
-    
     //MARK: Event
     
     func didClickImageButton(sender : UIButton) {
