@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mainRootView: MainRootView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -28,8 +31,13 @@ class ViewController: UIViewController {
             let nc = UINavigationController(rootViewController: vc)
             nc.setNavigationBarHidden(true, animated: false)
             self.presentViewController(nc, animated: true, completion: nil)
+        } else {
+            Api.getFriendList().then {(list) -> Void in
+                self.mainRootView.friends = list
+            }
         }
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

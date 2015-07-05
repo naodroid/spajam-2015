@@ -27,7 +27,7 @@
                                     <constraint firstAttribute="width" secondItem="AHM-aV-IVS" secondAttribute="height" multiplier="32:9" id="uey-OE-bBh"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QR9-zt-AK6">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QR9-zt-AK6" userLabel="mainRootView" customClass="MainRootView" customModule="spajam" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="90" width="320" height="478"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -58,6 +58,9 @@
                             <constraint firstItem="QR9-zt-AK6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="wnV-9z-VcL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainRootView" destination="QR9-zt-AK6" id="GFu-Nj-55R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
