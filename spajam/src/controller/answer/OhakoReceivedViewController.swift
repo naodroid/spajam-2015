@@ -9,11 +9,13 @@
 import UIKit
 
 class OhakoReceivedViewController: UIViewController {
-
     
-    class func createVC() -> OhakoReceivedViewController {
+    private var quiz : Quiz! = nil
+    
+    class func createVCWithQuiz(quiz : Quiz) -> OhakoReceivedViewController {
         let sb = UIStoryboard(name: "Answer", bundle: nil)
         let vc = sb.instantiateInitialViewController() as! OhakoReceivedViewController
+        vc.quiz = quiz
         return vc
     }
     
@@ -43,6 +45,11 @@ class OhakoReceivedViewController: UIViewController {
         
 
     @IBAction func didClickOpen(sender: AnyObject) {
+        let vc = AnswerViewController.createVCWithQuiz(self.storyboard!, quiz: self.quiz)
+        self.addChildViewController(vc)
+        vc.didMoveToParentViewController(self)
+        self.view.addSubview(vc.view)
+        vc.view.frame = self.view.bounds
     }
     
     @IBAction func didClickCancel(sender: AnyObject) {

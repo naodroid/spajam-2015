@@ -11,6 +11,7 @@
 		359713301B48B0B800976153 /* color_pink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597132F1B48B0B800976153 /* color_pink@2x.png */; };
 		359713331B48B28700976153 /* Answer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 359713321B48B28700976153 /* Answer.storyboard */; };
 		359713351B48B55800976153 /* OhakoReceivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359713341B48B55800976153 /* OhakoReceivedViewController.swift */; };
+		359713371B48BB3200976153 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359713361B48BB3200976153 /* AnswerViewController.swift */; };
 		35AF74431B488FBD003E7D88 /* AutoScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AF74421B488FBD003E7D88 /* AutoScaleView.swift */; };
 		35AF744E1B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AF74441B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png */; };
 		35AF744F1B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AF74451B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png */; };
@@ -96,6 +97,7 @@
 		3597132F1B48B0B800976153 /* color_pink@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "color_pink@2x.png"; sourceTree = "<group>"; };
 		359713321B48B28700976153 /* Answer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Answer.storyboard; sourceTree = "<group>"; };
 		359713341B48B55800976153 /* OhakoReceivedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OhakoReceivedViewController.swift; sourceTree = "<group>"; };
+		359713361B48BB3200976153 /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		35AF74421B488FBD003E7D88 /* AutoScaleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoScaleView.swift; sourceTree = "<group>"; };
 		35AF74441B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ohako_kentei_setting_1_button_default@2x.png"; sourceTree = "<group>"; };
 		35AF74451B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ohako_kentei_setting_1_button_selected@2x.png"; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			children = (
 				359713321B48B28700976153 /* Answer.storyboard */,
 				359713341B48B55800976153 /* OhakoReceivedViewController.swift */,
+				359713361B48BB3200976153 /* AnswerViewController.swift */,
 			);
 			path = answer;
 			sourceTree = "<group>";
@@ -706,6 +709,7 @@
 				35EE20521B457BD300C92DE4 /* AbstractEvent.swift in Sources */,
 				35EE20251B457BCA00C92DE4 /* AutoLayoutUtil.swift in Sources */,
 				35B177461B4823A1000FD71A /* User.swift in Sources */,
+				359713371B48BB3200976153 /* AnswerViewController.swift in Sources */,
 				35EE205D1B457BD300C92DE4 /* LaunchCameraButton.m in Sources */,
 				35B177401B481527000FD71A /* Api.swift in Sources */,
 				35EE208C1B47FCED00C92DE4 /* MyQuiz.swift in Sources */,

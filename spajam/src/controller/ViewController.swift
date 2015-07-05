@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     private func accessToUserQuiz(userId : Int) {
         Api.quizListProcess(72).then {(quizList) -> Void in
             if let quiz = self.isMatchCategory(quizList) {
-                let vc = OhakoReceivedViewController.createVC()
+                let vc = OhakoReceivedViewController.createVCWithQuiz(quiz)
                 let nc = UINavigationController(rootViewController: vc)
                 nc.setNavigationBarHidden(true, animated: false)
                 
