@@ -21,7 +21,20 @@
             "utyureader: "
         ]
     },
-
+    {
+        "name": "ラブライブ",
+        "image": "http://a1916.phobos.apple.com/us/r30/Purple4/v4/fb/06/46/fb06460a-26a0-628e-6c1b-c345e1603f69/Icon.png",
+        "schemes": [
+            "jp.co.bushimo.3: "
+        ]
+    },
+    {
+        "name": "白猫",
+        "image": "http://a895.phobos.apple.com/us/r30/Purple1/v4/20/e6/2c/20e62c54-2f88-a400-2b0f-a45089b1867b/AppIcon57x57.png",
+        "schemes": [
+            "coloplwcat: "
+        ]
+    },
     {
         "name": "オオカミ姫",
         "image": "https://yt3.ggpht.com/-K_azuqeROsg/AAAAAAAAAAI/AAAAAAAAAAA/lAsxxhrcKOw/s100-c-k-no/photo.jpg",
@@ -63,20 +76,6 @@
         "image": "http://a920.phobos.apple.com/us/r30/Purple3/v4/f3/f8/df/f3f8dfd3-f07e-d6d6-097d-7336ef6031ab/AppIcon60x60_U00402x.png",
         "schemes": [
             "pdclaunch: "
-        ]
-    },
-    {
-        "name": "ラブライブ",
-        "image": "http://a1916.phobos.apple.com/us/r30/Purple4/v4/fb/06/46/fb06460a-26a0-628e-6c1b-c345e1603f69/Icon.png",
-        "schemes": [
-            "jp.co.bushimo.3: "
-        ]
-    },
-    {
-        "name": "白猫",
-        "image": "http://a895.phobos.apple.com/us/r30/Purple1/v4/20/e6/2c/20e62c54-2f88-a400-2b0f-a45089b1867b/AppIcon57x57.png",
-        "schemes": [
-            "coloplwcat: "
         ]
     }
 ]
