@@ -61,8 +61,9 @@ class MyQuizViewController: UIViewController,
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.setupTableViewFromCategories(self.categories)
         MyQuizUpdatedEvent.register(self) {(event : MyQuizUpdatedEvent) in
-            self.collectionView.reloadData()
+            self.setupTableViewFromCategories(self.categories)
         }
     }
     override func viewWillDisappear(animated: Bool) {
