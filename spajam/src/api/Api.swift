@@ -116,7 +116,6 @@ class Api {
         if let res = response as? NSHTTPURLResponse {
             let url = NSURL(string : path)!
             
-            println("ALL:\(res.allHeaderFields)")
             let cookies = NSHTTPCookie.cookiesWithResponseHeaderFields(res.allHeaderFields, forURL: url)
             let headers = NSHTTPCookie.requestHeaderFieldsWithCookies(cookies)
             if let str = headers["Cookie"] as? String {

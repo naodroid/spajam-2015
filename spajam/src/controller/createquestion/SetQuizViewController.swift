@@ -41,7 +41,7 @@ class SetQuizViewController: UIViewController {
         self.imageButtons.foreach {
             $0.addTarget(self, action: "didClickImageButton:", forControlEvents: .TouchUpInside)
             
-            $0.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+            $0.imageView?.contentMode = UIViewContentMode.ScaleAspectFill
         }
         self.rankViews.foreach {(view) in
             view.didRankChange = {(rank) -> Void in

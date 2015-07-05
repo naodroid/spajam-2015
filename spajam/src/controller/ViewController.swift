@@ -148,12 +148,32 @@ class ViewController: UIViewController {
     func accessFriendList() {
         //フレンド一覧のポーリング
         Api.getFriendList().then {(list) -> Void in
-            if (list.count != self.lastFriendCount) {
-                self.mainRootView.friends = list
-                self.lastFriendCount = list.count;
+            let merged = self.mergeFriends(list)
+            
+            if (merged.count != self.lastFriendCount) {
+                self.mainRootView.friends = merged
+                self.lastFriendCount = merged.count;
             }
         }
     }
+    func mergeFriends(list : [Friend]) -> [Friend] {
+        var aList = AnsweredFriendList.instance().list
+        var result = list
+        for f in aList {
+            var add = true
+            for f2 in result {
+                if f2.userId == f.userId {
+                    add = false
+                    break;
+                }
+            }
+            if (add) {
+                result.append(f)
+            }
+        }
+        return result
+    }
+    
     
     func startPolling() {
         let time = NSDate.timeIntervalSinceReferenceDate()

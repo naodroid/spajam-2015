@@ -112,12 +112,18 @@ class AnswerViewController: UIViewController {
             answerRank: rank,
             selectedImage: img,
             category: self.quiz.category).then {(result) -> Void in
-               self.showResultWithRank(rank)
+                self.showResultWithRank(img, rank: rank)
         }
     }
-    func showResultWithRank(rank: QuizRank) {
+    func showResultWithRank(image: String, rank: QuizRank) {
         //結果をどう表示すべきか
-        EventBus.sendEvent(FriendListUpdateRequestEvent())
+        let quiz = self.quiz
+        
+        let fr = Friend(userId: quiz.userId, name: quiz.userName, image: image, category: quiz.category, rank: rank)
+        AnsweredFriendList.instance().list.append(fr)
+        AnsweredFriendList.instance().writeToFile()
+        
+        EventBus.sendEvent(FriendListUpdateRequestEvent())        
         
         self.resultImageView.hidden = false
         self.resultImageView.transform = CGAffineTransformMakeScale(1.5, 1.5)
