@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PromiseKit
 
 class ViewController: UIViewController {
 
@@ -76,7 +77,16 @@ class ViewController: UIViewController {
         //特定ユーザIDを決め打ちで取得する
         accessToUserQuiz(89)
     }
-    private func accessToUserQuiz(userId : Int) {
+    
+    private func accessToUsers(users : [User]) {
+        if users.count < 1 {
+            return
+        }
+        let user = users[0]
+        self.accessToUserQuiz(user.userId.toInt()!)
+    }
+    
+    private func accessToUserQuiz(userId : Int)  {
         Api.quizListProcess(userId).then {(quizList) -> Void in
             if let quiz = self.findEnableQuiz(userId, quizList: quizList) {
                 let vc = OhakoReceivedViewController.createVCWithQuiz(quiz)
@@ -131,14 +141,29 @@ class ViewController: UIViewController {
             return
         }
         Api.getAllUsers().then {(users) -> Void in
-            if let picked = self.randomPick(users) {
-                self.accessToUserQuiz(picked.userId.toInt()!)
-            }
+            let r = self.randomSort(users)
+            self.accessToUsers(r)
         }.finally(on: dispatch_get_main_queue()) { () -> Void in
             dispatchAfterOnMain(10) {
                 self.pollingProcess(time)
             }
         }
+    }
+    
+    func randomSort(users : [User]) -> [User] {
+        if users.count < 2 {
+            return users
+        }
+        var list = users
+        let count = users.count
+        for i in 0..<20 {
+            let index1 = Int(arc4random_uniform(UInt32(count)))
+            let index2 = Int(arc4random_uniform(UInt32(count)))
+            var dum = list[index1]
+            list[index1] = list[index2]
+            list[index2] = dum
+        }
+        return list
     }
     ///ランダムに抽出
     func randomPick(users : [User]) -> User? {
