@@ -38,11 +38,11 @@ class ViewController: UIViewController {
     //MARK: event
     
     @IBAction func didClickDebug(sender: AnyObject) {
-        //72のユーザIDを決め打ちで取得する
-        accessToUserQuiz(72)
+        //特定ユーザIDを決め打ちで取得する
+        accessToUserQuiz(83)
     }
     private func accessToUserQuiz(userId : Int) {
-        Api.quizListProcess(72).then {(quizList) -> Void in
+        Api.quizListProcess(userId).then {(quizList) -> Void in
             if let quiz = self.isMatchCategory(quizList) {
                 let vc = OhakoReceivedViewController.createVCWithQuiz(quiz)
                 let nc = UINavigationController(rootViewController: vc)

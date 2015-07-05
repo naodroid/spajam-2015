@@ -190,7 +190,11 @@ class Api {
         
         return getPromise(path).then {(data : NSData) -> [Quiz] in
             let json = JSON(data : data)
-            return json.arrayValue.map(Quiz.parse)
+            let userId = json["user"]["id"].stringValue.toInt()!
+            let userName = json["user"]["name"].stringValue
+            return json["quiz"].arrayValue.map{
+                return Quiz.parse(userId, userName: userName, json:$0)
+            }
         }
     }
     ///クイズ回答
