@@ -170,6 +170,7 @@ class AnswerViewController: UIViewController {
         }
         if countdownTime <= 0 {
             // 終了
+            self.dismissViewControllerAnimated(true, completion: nil)
             return
         }
         self.countDownLabel.text = String(countdownTime)
