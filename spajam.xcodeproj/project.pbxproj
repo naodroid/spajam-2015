@@ -20,6 +20,8 @@
 		359713451B48C22E00976153 /* receive_ohako_dialog_cancel_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597133D1B48C22E00976153 /* receive_ohako_dialog_cancel_button@2x.png */; };
 		359713461B48C22E00976153 /* receive_ohako_dialog_mock.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597133E1B48C22E00976153 /* receive_ohako_dialog_mock.png */; };
 		359713471B48C22E00976153 /* receive_ohako_dialog_open_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3597133F1B48C22E00976153 /* receive_ohako_dialog_open_button@2x.png */; };
+		359713491B48CB3A00976153 /* MainRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359713481B48CB3A00976153 /* MainRootView.swift */; };
+		3597134B1B48CBE700976153 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3597134A1B48CBE700976153 /* Friend.swift */; };
 		35AF74431B488FBD003E7D88 /* AutoScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AF74421B488FBD003E7D88 /* AutoScaleView.swift */; };
 		35AF744E1B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AF74441B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png */; };
 		35AF744F1B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AF74451B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png */; };
@@ -114,6 +116,8 @@
 		3597133D1B48C22E00976153 /* receive_ohako_dialog_cancel_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "receive_ohako_dialog_cancel_button@2x.png"; sourceTree = "<group>"; };
 		3597133E1B48C22E00976153 /* receive_ohako_dialog_mock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = receive_ohako_dialog_mock.png; sourceTree = "<group>"; };
 		3597133F1B48C22E00976153 /* receive_ohako_dialog_open_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "receive_ohako_dialog_open_button@2x.png"; sourceTree = "<group>"; };
+		359713481B48CB3A00976153 /* MainRootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRootView.swift; sourceTree = "<group>"; };
+		3597134A1B48CBE700976153 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		35AF74421B488FBD003E7D88 /* AutoScaleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoScaleView.swift; sourceTree = "<group>"; };
 		35AF74441B4895BB003E7D88 /* ohako_kentei_setting_1_button_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ohako_kentei_setting_1_button_default@2x.png"; sourceTree = "<group>"; };
 		35AF74451B4895BB003E7D88 /* ohako_kentei_setting_1_button_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ohako_kentei_setting_1_button_selected@2x.png"; sourceTree = "<group>"; };
@@ -454,6 +458,7 @@
 				35EE208D1B47FDB700C92DE4 /* createquestion */,
 				35EE20691B457C6900C92DE4 /* Main.storyboard */,
 				35EE206A1B457C6900C92DE4 /* ViewController.swift */,
+				359713481B48CB3A00976153 /* MainRootView.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -473,6 +478,7 @@
 				35B177451B4823A1000FD71A /* User.swift */,
 				35EE208B1B47FCED00C92DE4 /* MyQuiz.swift */,
 				35B177471B484340000FD71A /* Quiz.swift */,
+				3597134A1B48CBE700976153 /* Friend.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -760,11 +766,13 @@
 				35EE20531B457BD300C92DE4 /* EventBus.swift in Sources */,
 				35EE20581B457BD300C92DE4 /* CameraDismissButton.m in Sources */,
 				35B177421B48189B000FD71A /* SetQuizViewController.swift in Sources */,
+				3597134B1B48CBE700976153 /* Friend.swift in Sources */,
 				35AF74591B489DDF003E7D88 /* QuizRankChoiceView.swift in Sources */,
 				35EE20571B457BD300C92DE4 /* CameraSessionView.m in Sources */,
 				35EE20541B457BD300C92DE4 /* Array+Ext.swift in Sources */,
 				35EE20911B47FDB700C92DE4 /* MyQuizViewController.swift in Sources */,
 				35EE20591B457BD300C92DE4 /* CameraFlashButton.m in Sources */,
+				359713491B48CB3A00976153 /* MainRootView.swift in Sources */,
 				35EE20631B457BD300C92DE4 /* UIView+Toast.m in Sources */,
 				35EE20261B457BCA00C92DE4 /* FileUtil.swift in Sources */,
 				35EE20551B457BD300C92DE4 /* PromiseKit+Ext.swift in Sources */,

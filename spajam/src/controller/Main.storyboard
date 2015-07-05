@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,8 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="5ne-Vb-Dlw" userLabel="bgImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkS-Ni-oZy">
-                                <rect key="frame" x="108" y="269" width="105" height="30"/>
+                                <rect key="frame" x="16" y="530" width="105" height="30"/>
                                 <state key="normal" title="デバッグボタン">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -25,19 +29,44 @@
                                     <action selector="didClickDebug:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Oxj-Vi-TQh"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHM-aV-IVS" userLabel="dummyHeader">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AHM-aV-IVS" secondAttribute="height" multiplier="32:9" id="uey-OE-bBh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QR9-zt-AK6">
+                                <rect key="frame" x="0.0" y="90" width="320" height="478"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="TkS-Ni-oZy" secondAttribute="centerX" id="Zlu-Vj-Plv"/>
-                            <constraint firstAttribute="centerY" secondItem="TkS-Ni-oZy" secondAttribute="centerY" id="wXd-7t-8VZ"/>
+                            <constraint firstAttribute="trailing" secondItem="AHM-aV-IVS" secondAttribute="trailing" id="2yj-8e-Ea5"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="TkS-Ni-oZy" secondAttribute="bottom" constant="8" id="336-b0-aAT"/>
+                            <constraint firstItem="AHM-aV-IVS" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="79g-gZ-Z9X"/>
+                            <constraint firstAttribute="trailing" secondItem="QR9-zt-AK6" secondAttribute="trailing" id="7BU-Jx-J06"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="QR9-zt-AK6" secondAttribute="bottom" id="HPK-WL-wjI"/>
+                            <constraint firstItem="TkS-Ni-oZy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="RFu-Zi-bK8"/>
+                            <constraint firstItem="QR9-zt-AK6" firstAttribute="top" secondItem="AHM-aV-IVS" secondAttribute="bottom" id="T0s-N5-3JZ"/>
+                            <constraint firstItem="5ne-Vb-Dlw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="V5S-IK-c9w"/>
+                            <constraint firstItem="5ne-Vb-Dlw" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="gaj-Jz-RIx"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5ne-Vb-Dlw" secondAttribute="bottom" id="hMH-Qh-Ezg"/>
+                            <constraint firstItem="AHM-aV-IVS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="kQ7-e8-kjh"/>
+                            <constraint firstAttribute="trailing" secondItem="5ne-Vb-Dlw" secondAttribute="trailing" id="v2k-Qm-awa"/>
+                            <constraint firstItem="QR9-zt-AK6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="wnV-9z-VcL"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134.93333333333334" y="259.38666666666666"/>
+            <point key="canvasLocation" x="134" y="259"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="main_bg.png" width="320" height="568"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

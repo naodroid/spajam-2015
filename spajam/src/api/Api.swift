@@ -67,6 +67,31 @@ class Api {
         }
         return promise
     }
+    class func postPromise(path : String, json : NSDictionary) -> Promise<NSData> {
+        let (promise, fulfill, reject) = Promise<NSData>.defer()
+        
+        dispatchOnGlobal {
+            let request = OMGHTTPURLRQ.POST(path, JSON: json)
+            request.HTTPShouldHandleCookies = true
+            self.addCookiesToRequest(request, path : path)
+            
+            var error : NSError? = nil
+            var response : NSURLResponse? = nil
+            let data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: &error)
+            
+            dispatchOnMain {
+                if let e = error {
+                    reject(e)
+                } else if let d = data {
+                    self.checkCookie(path, response: response)
+                    fulfill(d)
+                } else {
+                }
+            }
+        }
+        return promise
+    }
+    
     
     private class func addCookiesToRequest(request : NSMutableURLRequest, path : String) {
         if _cookieString == nil {
@@ -132,16 +157,15 @@ class Api {
         
         let path = "\(basePath)/setquiz"
         
-        
         let multipart = OMGMultipartFormData()
-        
         multipart.addParameters(["category" : category])
         
         for i in 0..<answers.count {
             let img = answers[i].image!
             let rank = answers[i].rank!
             
-            let data = UIImagePNGRepresentation(img)
+            //let data = UIImagePNGRepresentation(img)
+            let data = UIImageJPEGRepresentation(img, 0.8)
             
             let imgParamName = "answer\(i + 1)Image"
             let imgFileName = "image\(i + 1).png"
@@ -169,8 +193,31 @@ class Api {
             return json.arrayValue.map(Quiz.parse)
         }
     }
-    
-    
+    ///クイズ回答
+    class func addFriend(targetUser: Int,
+        answerRank: QuizRank, selectedImage : String, category : String) -> Promise<String>
+    {
+        let path = "\(basePath)/addfriend"
+        
+        let dict = NSMutableDictionary()
+        dict["userId"] = targetUser
+        dict["rank"] = answerRank.rawValue
+        dict["image"] = selectedImage
+        dict["category"] = category
+        
+        return postPromise(path, json: dict).then {(data: NSData) -> String in
+            return "SUCCESS"
+        }
+    }
+    ///フレンド一覧取得
+    class func getFriendList() -> Promise<[Friend]> {
+        let path = "\(basePath)/friends"
+        
+        return getPromise(path).then {(data : NSData) -> [Friend] in
+            let json = JSON(data : data)
+            return json.arrayValue.map(Friend.parse)
+        }
+    }
     
     
 }
