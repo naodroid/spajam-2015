@@ -119,7 +119,7 @@ class Api {
             let cookies = NSHTTPCookie.cookiesWithResponseHeaderFields(res.allHeaderFields, forURL: url)
             let headers = NSHTTPCookie.requestHeaderFieldsWithCookies(cookies)
             if let str = headers["Cookie"] as? String {
-                if count(str) > 0 {
+                if count(str) > 0 && _cookieString == nil {
                     _cookieString = str
                     self.writeCookie()
                 }
@@ -135,10 +135,12 @@ class Api {
         }
     }
     private class func writeCookie() {
-        if let c = _cookieString {
-            println("USERID:\(c)")
-            let path = FileUtil.filePathForName("cookie")
-            NSKeyedArchiver.archiveRootObject(c, toFile: path)
+        dispatchOnMain {
+            if let c = _cookieString {
+                println("USERID:\(c)")
+                let path = FileUtil.filePathForName("cookie")
+                NSKeyedArchiver.archiveRootObject(c, toFile: path)
+            }
         }
     }
     
