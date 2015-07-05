@@ -39,11 +39,37 @@ class ViewController: UIViewController {
     
     @IBAction func didClickDebug(sender: AnyObject) {
         //72のユーザIDを決め打ちで取得する
+        accessToUserQuiz(72)
+    }
+    private func accessToUserQuiz(userId : Int) {
         Api.quizListProcess(72).then {(quizList) -> Void in
-            
-            
+            if let quiz = self.isMatchCategory(quizList) {
+                let vc = OhakoReceivedViewController.createVC()
+                let nc = UINavigationController(rootViewController: vc)
+                nc.setNavigationBarHidden(true, animated: false)
+                
+                self.addChildViewController(nc)
+                nc.didMoveToParentViewController(self)
+                self.view.addSubview(nc.view)
+                vc.startEnterAnimation()
+            }
         }
     }
+    private func isMatchCategory(quizList : [Quiz]) -> Quiz? {
+        let myList = MyQuizList.instance().list
+        return quizList.reduce(nil) {(value : Quiz?, quiz) -> Quiz? in
+            if (value != nil) {
+                return value
+            }
+            let c = quiz.category
+            if myList[c] != nil {
+                return quiz
+            }
+            return nil
+        }
+    }
+    
+    
     
     
     
